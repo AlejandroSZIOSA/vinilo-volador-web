@@ -1,12 +1,12 @@
 import { type FC } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 
-import { useAuth } from "../store/authAdmin-Context";
+import { useAuth_Ctx } from "../store/auth-Context";
 
 const AdminRootLayout: FC = () => {
-  const { isAuthenticated } = useAuth();
+  const { is_Authenticated } = useAuth_Ctx();
 
-  return isAuthenticated ? (
+  return is_Authenticated ? (
     <>
       <main>
         <Outlet />

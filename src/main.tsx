@@ -2,12 +2,12 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
-import { AuthProvider } from "./store/authAdmin-Context.tsx";
+import { AuthProvider_Ctx } from "./store/auth-Context.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <AuthProvider>
+    <AuthProvider_Ctx>
       <App />
-    </AuthProvider>
+    </AuthProvider_Ctx>
   </StrictMode>
 );

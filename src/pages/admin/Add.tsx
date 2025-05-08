@@ -1,18 +1,17 @@
 import { type FC } from "react";
-import { useAuth } from "../../store/authAdmin-Context";
-
+import { useAuth_Ctx } from "../../store/auth-Context";
 import { useNavigate } from "react-router-dom";
 
 const AddPage: FC = () => {
-  const { logout, isAuthenticated } = useAuth();
+  const { logout_Fn, is_Authenticated } = useAuth_Ctx();
 
   const navigate = useNavigate();
   function handleLogOut() {
-    logout();
+    logout_Fn();
     navigate("/");
   }
 
-  console.log(isAuthenticated);
+  console.log(is_Authenticated);
   return (
     <>
       <p>Add Page</p>
