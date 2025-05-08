@@ -1,25 +1,35 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/Home";
-import LoginPage from "./pages/admin/Login";
-import OrganizePage from "./pages/admin/Organize";
+import LoginPage from "./pages/Login";
 import AdminRootLayout from "./layouts/AdminRoot";
+import AddPage from "./pages/admin/Add";
+import UserRootPage from "./layouts/UserRoot";
+import RemovePage from "./pages/admin/Remove";
+import ShowPage from "./pages/admin/Show";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      index: true,
-      element: <HomePage />,
+      element: <UserRootPage />,
+      children: [
+        { index: true, element: <HomePage /> },
+        { path: "login", element: <LoginPage /> },
+      ],
     },
     {
       path: "admin",
       element: <AdminRootLayout />,
       children: [
-        { index: true, element: <LoginPage /> },
+        { index: true, element: <AddPage /> },
         {
           /* index: true, */
-          path: "organize",
-          element: <OrganizePage />,
+          path: "remove",
+          element: <RemovePage />,
+        },
+        {
+          path: "show",
+          element: <ShowPage />,
         },
       ],
     },
