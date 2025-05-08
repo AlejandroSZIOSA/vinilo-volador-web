@@ -1,17 +1,17 @@
 import { createContext, useContext, useState, type ReactNode } from "react";
 
 interface AuthContextType {
-  isAuthenticated: boolean;
-  login: () => void;
+  isAuthenticated: boolean | string;
+  login: (token: string) => void;
   logout: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [isAuthenticated, setAuthenticated] = useState(false);
+  const [isAuthenticated, setAuthenticated] = useState<string | boolean>(false);
 
-  const login = () => setAuthenticated(true);
+  const login = (t: string) => setAuthenticated(t);
   const logout = () => setAuthenticated(false);
 
   return (

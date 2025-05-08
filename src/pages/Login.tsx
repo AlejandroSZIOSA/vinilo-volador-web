@@ -6,14 +6,11 @@ const LoginPage: FC = () => {
   const navigate = useNavigate();
 
   console.log(isAuthenticated);
-  const handleLogin = () => {
-    navigate("/admin");
-  };
   return (
     <>
       <h1>Admin Login page</h1>
-      <button onClick={() => login()}>Login</button>
-      <button onClick={handleLogin}>to admin</button>
+      <button onClick={() => login("token")}>Login</button>
+      <button onClick={() => navigate("/admin")}>to admin</button>
     </>
   );
 };
