@@ -6,6 +6,7 @@ import AddPage from "./pages/admin/Add";
 import UserRootPage from "./layouts/UserRoot";
 import RemovePage from "./pages/admin/Remove";
 import ShowPage from "./pages/admin/Show";
+import EditPage from "./pages/admin/Edit";
 
 function App() {
   const router = createBrowserRouter([
@@ -30,6 +31,10 @@ function App() {
         {
           path: "show",
           element: <ShowPage />,
+        },
+        {
+          path: "edit",
+          element: <EditPage />,
         },
       ],
     },
