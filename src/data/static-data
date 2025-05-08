@@ -1,0 +1,11 @@
+type User = {
+  id: string;
+  username: string;
+  password: "123" | "234";
+};
+
+export const USER_TEST: User = {
+  id: "userTest",
+  username: "user1",
+  password: "123",
+};
