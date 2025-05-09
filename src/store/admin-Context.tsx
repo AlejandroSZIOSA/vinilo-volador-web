@@ -12,17 +12,21 @@ interface AdminContextType {
   vinyls: Vinyl[] | null;
 
   nextEvent: Event;
-  updatedList: Date;
+
+  updatedListDate: string;
 
   add_Vinyl: (v: Vinyl) => void;
-  remove_Vinyl: (v: string) => void;
+  remove_Vinyl: (id: string) => void;
 
+  set_Next_Event: (e: Event) => void;
+
+  set_UpdatedListDate: (d: string) => void;
   /* is_Authenticated: boolean | string;
   login_Fn: (token: string) => void;
   logout_Fn: () => void; */
 }
 
-//Reducers
+//Reducers Vinyls List
 
 //discriminant types
 type ADD_VINYL = {
@@ -57,17 +61,30 @@ export const AdminProvider_Ctx = ({ children }: { children: ReactNode }) => {
    */
 
   const [vinylsState, dispatch] = useReducer(vinylsReducer, VINYLS);
-
+  const [nextEvent, setNextEvent] = useState(NEXT_EVENT);
+  const [updatedListDate, setUpdatedListDate] = useState(
+    "2024-05-08T10:00:00.000Z"
+  );
   /*  const login_Fn = (t: string) => setAuthenticated(t); 
   const logout_Fn = () => setAuthenticated(false); */
 
   const ctx: AdminContextType = {
     vinyls: vinylsState,
+    nextEvent: nextEvent,
+    updatedListDate: updatedListDate,
     add_Vinyl(v) {
       dispatch({ type: "ADD_VINYL", payload: v });
     },
-    remove_Vinyl(v) {
-      dispatch({ type: "REMOVE_VINYL", payload: v });
+    remove_Vinyl(id) {
+      dispatch({ type: "REMOVE_VINYL", payload: id });
+    },
+
+    set_Next_Event(e) {
+      setNextEvent(e);
+    },
+
+    set_UpdatedListDate(d) {
+      setUpdatedListDate(d);
     },
   };
 

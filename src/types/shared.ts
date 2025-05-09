@@ -1,5 +1,5 @@
 export type Event = {
-  name_of_place: string;
+  place: string;
   date: Date;
   from: string;
   to: string;

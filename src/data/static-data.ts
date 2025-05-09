@@ -7,7 +7,7 @@ export const USER: User = {
 };
 
 export const NEXT_EVENT: Event = {
-  name_of_place: "some place",
+  place: "some name place",
   date: new Date(),
   from: "20",
   to: "22",
