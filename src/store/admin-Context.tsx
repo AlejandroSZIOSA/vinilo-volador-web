@@ -9,21 +9,13 @@ import type { Event, Vinyl } from "../types/shared";
 import { VINYLS, NEXT_EVENT } from "../data/static-data";
 
 interface AdminContextType {
-  vinyls: Vinyl[] | null;
-
-  nextEvent: Event;
-
-  updatedListDate: string;
-
-  add_Vinyl: (v: Vinyl) => void;
-  remove_Vinyl: (id: string) => void;
-
-  set_Next_Event: (e: Event) => void;
-
-  set_UpdatedListDate: (d: string) => void;
-  /* is_Authenticated: boolean | string;
-  login_Fn: (token: string) => void;
-  logout_Fn: () => void; */
+  vinyls_: Vinyl[] | null;
+  next_Event: Event | null;
+  updated_ListDate: string;
+  addVinyl_Fn: (v: Vinyl) => void;
+  removeVinyl_Fn: (id: string) => void;
+  setNextEvent_Fn: (e: Event) => void;
+  setUpdatedListDate_Fn: (d: string) => void;
 }
 
 //Reducers Vinyls List
@@ -61,7 +53,7 @@ export const AdminProvider_Ctx = ({ children }: { children: ReactNode }) => {
    */
 
   const [vinylsState, dispatch] = useReducer(vinylsReducer, VINYLS);
-  const [nextEvent, setNextEvent] = useState(NEXT_EVENT);
+  const [nextEvent, setNextEvent] = useState<Event | null>(NEXT_EVENT);
   const [updatedListDate, setUpdatedListDate] = useState(
     "2024-05-08T10:00:00.000Z"
   );
@@ -69,21 +61,21 @@ export const AdminProvider_Ctx = ({ children }: { children: ReactNode }) => {
   const logout_Fn = () => setAuthenticated(false); */
 
   const ctx: AdminContextType = {
-    vinyls: vinylsState,
-    nextEvent: nextEvent,
-    updatedListDate: updatedListDate,
-    add_Vinyl(v) {
+    vinyls_: vinylsState,
+    next_Event: nextEvent,
+    updated_ListDate: updatedListDate,
+    addVinyl_Fn(v) {
       dispatch({ type: "ADD_VINYL", payload: v });
     },
-    remove_Vinyl(id) {
+    removeVinyl_Fn(id) {
       dispatch({ type: "REMOVE_VINYL", payload: id });
     },
 
-    set_Next_Event(e) {
+    setNextEvent_Fn(e) {
       setNextEvent(e);
     },
 
-    set_UpdatedListDate(d) {
+    setUpdatedListDate_Fn(d) {
       setUpdatedListDate(d);
     },
   };

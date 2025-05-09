@@ -18,23 +18,29 @@ const newEvent: Event = {
 const newDate = new Date().toISOString();
 
 const HomePage: FC = () => {
-  const vinyls = useAdmin_Ctx();
-  const { nextEvent, set_Next_Event, updatedListDate, set_UpdatedListDate } =
-    useAdmin_Ctx();
+  const vinyls_ = useAdmin_Ctx();
+  const {
+    next_Event,
+    setNextEvent_Fn,
+    updated_ListDate,
+    setUpdatedListDate_Fn,
+  } = useAdmin_Ctx();
 
   /* console.log(vinyls.vinyls); */
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <h1>home Page</h1>
-      <button onClick={() => console.log(vinyls)}>show vinyls</button>
-      <button onClick={() => vinyls.add_Vinyl(testNewVinyl)}>ADD VINYL</button>
-      <button onClick={() => vinyls.remove_Vinyl("1")}>Remove</button>
-      <button onClick={() => console.log(nextEvent)}>show event</button>
-      <button onClick={() => set_Next_Event(newEvent)}>Update event</button>
-      <button onClick={() => console.log(updatedListDate)}>
+      <button onClick={() => console.log(vinyls_)}>show vinyls</button>
+      <button onClick={() => vinyls_.addVinyl_Fn(testNewVinyl)}>
+        ADD VINYL
+      </button>
+      <button onClick={() => vinyls_.removeVinyl_Fn("1")}>Remove</button>
+      <button onClick={() => console.log(next_Event)}>show event</button>
+      <button onClick={() => setNextEvent_Fn(newEvent)}>Update event</button>
+      <button onClick={() => console.log(updated_ListDate)}>
         Show updated date list
       </button>
-      <button onClick={() => set_UpdatedListDate(newDate)}>
+      <button onClick={() => setUpdatedListDate_Fn(newDate)}>
         Update last date
       </button>
     </div>
