@@ -1,7 +1,7 @@
 import { type FC } from "react";
 
-const UserFooter: FC = () => {
+const Footer: FC = () => {
   return <div> USER FOOTER</div>;
 };
 
-export default UserFooter;
+export default Footer;

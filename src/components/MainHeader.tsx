@@ -1,6 +1,6 @@
 import { type FC } from "react";
-import NavBar from "./in-MainHeader/NavBar";
-import Logo from "./Logo";
+import NavBar from "./in-Header/NavBar";
+/* import Logo from "./Logo"; */
 import { useAuth_Ctx } from "../store/auth-Context";
 
 const MainHeader: FC = () => {

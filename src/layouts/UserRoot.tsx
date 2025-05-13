@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import { Outlet } from "react-router-dom";
-import UserFooter from "../components/UserFooter";
+import Footer from "../components/user/Footer";
 import MainHeader from "../components/MainHeader";
 
 const UserRootPage: FC = () => {
@@ -10,7 +10,7 @@ const UserRootPage: FC = () => {
       <main>
         <Outlet />
       </main>
-      <UserFooter />
+      <Footer />
     </>
   );
 };

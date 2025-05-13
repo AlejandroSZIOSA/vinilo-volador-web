@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import { useAdmin_Ctx } from "../store/admin-Context";
 import type { Vinyl, Event } from "../types/shared";
+import Tabs from "../components/user/Tabs";
 
 const testNewVinyl: Vinyl = {
   id: "1",
@@ -26,11 +27,20 @@ const HomePage: FC = () => {
     setUpdatedListDate_Fn,
   } = useAdmin_Ctx();
 
+  const tabData = [
+    { label: "Info", content: <div>Vinyl information här</div> },
+    { label: "Låtar", content: <div>Lista med låtar</div> },
+    { label: "Recensioner", content: <div>Recensioner kommer här</div> },
+  ];
+
   /* console.log(vinyls.vinyls); */
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <h1>home Page</h1>
-      <button onClick={() => console.log(vinyls_)}>show vinyls</button>
+      <h1>Tabs</h1>
+      <Tabs tabs={tabData} />
+
+      {/* <button onClick={() => console.log(vinyls_)}>show vinyls</button>
       <button onClick={() => vinyls_.addVinyl_Fn(testNewVinyl)}>
         ADD VINYL
       </button>
@@ -42,7 +52,7 @@ const HomePage: FC = () => {
       </button>
       <button onClick={() => setUpdatedListDate_Fn(newDate)}>
         Update last date
-      </button>
+      </button> */}
     </div>
   );
 };
