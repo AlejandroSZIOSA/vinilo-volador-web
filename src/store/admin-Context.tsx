@@ -14,7 +14,7 @@ interface AdminContextType {
   updated_ListDate: string;
   addVinyl_Fn: (v: Vinyl) => void;
   removeVinyl_Fn: (id: string) => void;
-  /* updateVinyl_Fn: (id: string, updatedVinyl: Vinyl) => void; */
+  updateVinyl_Fn: (id: string, updatedVinyl: Vinyl) => void;
   setNextEvent_Fn: (e: Event) => void;
   setUpdatedListDate_Fn: (d: string) => void;
 }
@@ -32,14 +32,15 @@ type REMOVE_VINYL = {
   payload: string;
 };
 
-/* type UPDATE_VINYL = {
+type UPDATE_VINYL = {
   type: "UPDATE_VINYL";
   payload: {
     id: string;
-    updatedVinyl:Vinyl};
-}; */
+    updatedVinyl: Vinyl;
+  };
+};
 
-type Action = ADD_VINYL | REMOVE_VINYL; // discriminant union
+type Action = ADD_VINYL | REMOVE_VINYL | UPDATE_VINYL; // discriminant union
 
 function vinylsReducer(state: Vinyl[] | null, action: Action): Vinyl[] {
   switch (action.type) {
@@ -47,12 +48,14 @@ function vinylsReducer(state: Vinyl[] | null, action: Action): Vinyl[] {
       return state ? [...state, action.payload] : [action.payload];
     case "REMOVE_VINYL":
       return state ? state.filter((vinyl) => vinyl.id !== action.payload) : [];
-    /*  case "UPDATE_VINYL":
+    case "UPDATE_VINYL":
       return state
-        ? state.map((vinyl) =>
-            vinyl.id === action.payload.id ? action.payload : vinyl
+        ? state.map((v) =>
+            v.id === action.payload.id
+              ? { ...v, ...action.payload.updatedVinyl }
+              : v
           )
-        : []; */
+        : [];
     default:
       return state || [];
   }
@@ -61,9 +64,6 @@ function vinylsReducer(state: Vinyl[] | null, action: Action): Vinyl[] {
 const AdminContext = createContext<AdminContextType | null>(null);
 
 export const AdminProvider_Ctx = ({ children }: { children: ReactNode }) => {
-  /*   const [vinyls, setVinyls] = useState<Vinyl[] | null>(VINYLS);
-   */
-
   const [vinylsState, dispatch] = useReducer(vinylsReducer, VINYLS);
   const [nextEvent, setNextEvent] = useState<Event | null>(NEXT_EVENT);
   const [updatedListDate, setUpdatedListDate] = useState(
@@ -83,9 +83,12 @@ export const AdminProvider_Ctx = ({ children }: { children: ReactNode }) => {
       dispatch({ type: "REMOVE_VINYL", payload: id });
     },
 
-    /* updateVinyl_Fn(updatedVinyl){
-      dispatch({ type: "UPDATE_VINYL", payload: updatedVinyl });
-    } */
+    updateVinyl_Fn(id, updatedVinyl) {
+      dispatch({
+        type: "UPDATE_VINYL",
+        payload: { id, updatedVinyl },
+      });
+    },
 
     setNextEvent_Fn(e) {
       setNextEvent(e);
