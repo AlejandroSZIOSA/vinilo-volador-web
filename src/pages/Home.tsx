@@ -2,10 +2,11 @@ import { type FC } from "react";
 import { useAdmin_Ctx } from "../store/admin-Context";
 import type { Vinyl, Event } from "../types/shared";
 import Tabs from "../components/user/Tabs";
-import Search from "../components/user/Search";
-import News from "../components/user/News";
+import News from "../components/user/NewsSection";
+import SearchSection from "../components/user/SearchSection";
+import NewsSection from "../components/user/NewsSection";
 
-const testNewVinyl: Vinyl = {
+/* const testNewVinyl: Vinyl = {
   id: "1",
   album: "Test Album 1",
   artist: "Test Artist1",
@@ -24,7 +25,7 @@ const newVinyl: Vinyl = {
   id: "updated",
   album: "Updated Album 1",
   artist: "Updated Artist1",
-};
+}; */
 
 const HomePage: FC = () => {
   const vinyls_ = useAdmin_Ctx();
@@ -37,11 +38,11 @@ const HomePage: FC = () => {
   } = useAdmin_Ctx();
 
   const tabData = [
-    { label: "SEARCH", content: <Search /> },
-    { label: "NEWS", content: <News /> },
+    { label: "SEARCH", content: <SearchSection /> },
+    { label: "NEWS", content: <NewsSection /> },
   ];
 
-  console.log(vinyls_);
+  /*  console.log(vinyls_); */
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <h1>home Page</h1>

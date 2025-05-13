@@ -14,6 +14,7 @@ const TabNav = () => {
           textDecoration: "none",
           color: "black",
         })}
+        end /* Fix problem */
       >
         Add
       </NavLink>

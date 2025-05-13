@@ -1,7 +1,7 @@
 import { type FC } from "react";
 
-const News: FC = () => {
+const NewsSection: FC = () => {
   return <div>News</div>;
 };
 
-export default News;
+export default NewsSection;
