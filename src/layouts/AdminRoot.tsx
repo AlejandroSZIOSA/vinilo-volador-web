@@ -3,6 +3,7 @@ import { Navigate, Outlet } from "react-router-dom";
 
 import { useAuth_Ctx } from "../store/auth-Context";
 import MainHeader from "../components/MainHeader";
+import TabNav from "../components/admin/TabNav";
 
 const AdminRootLayout: FC = () => {
   const { is_Authenticated } = useAuth_Ctx();
@@ -11,6 +12,7 @@ const AdminRootLayout: FC = () => {
     <>
       <MainHeader />
       <main>
+        <TabNav />
         <Outlet />
       </main>
     </>

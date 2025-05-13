@@ -1,7 +1,7 @@
 import { type FC } from "react";
 
 const EditPage: FC = () => {
-  return <div></div>;
+  return <div>Update Vinyl</div>;
 };
 
 export default EditPage;

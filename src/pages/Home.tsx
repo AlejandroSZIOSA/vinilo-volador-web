@@ -48,7 +48,7 @@ const HomePage: FC = () => {
       <h1>Tabs</h1>
       <Tabs tabs={tabData} />
 
-      {/* <button onClick={() => console.log(vinyls_)}>show vinyls</button>
+      {/*       <button onClick={() => console.log(vinyls_)}>show vinyls</button>
       <button onClick={() => vinyls_.addVinyl_Fn(testNewVinyl)}>
         ADD VINYL
       </button>
@@ -60,10 +60,10 @@ const HomePage: FC = () => {
       </button>
       <button onClick={() => setUpdatedListDate_Fn(newDate)}>
         Update last date
-      </button> */}
+      </button>
       <button onClick={() => updateVinyl_Fn("vinyl1", newVinyl)}>
         Update Vinyl
-      </button>
+      </button> */}
     </div>
   );
 };
