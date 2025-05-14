@@ -1,9 +1,9 @@
-import { useState, type FC } from "react";
-import { RadioGroup } from "../RadioGroup";
-import { SearchBar2 } from "../SearchBar2";
-import type { RadioOption } from "../RadioGroup";
+import { useState } from "react";
+import { RadioGroup } from "./searchbar/RadioGroup";
+import { SearchBar } from "./searchbar/SearchBar";
+import type { RadioOption } from "./searchbar/RadioGroup";
 
-type SeachSection3Props = {
+type SearchSectionProps = {
   variant: "user" | "admin";
 };
 
@@ -16,7 +16,7 @@ const vinylsReal = [
   { id: "4", artist: "ar4", album: "al4" },
 ];
 
-const SearchSection3 = ({ variant }: SeachSection3Props) => {
+const SearchSection = ({ variant }: SearchSectionProps) => {
   const [search, setSearch] = useState("");
   const [searchByFilter, setSearchByFilter] = useState<SearchBy>("artist");
 
@@ -44,16 +44,16 @@ const SearchSection3 = ({ variant }: SeachSection3Props) => {
 
   //as prop
 
-  let genreOptions: RadioOption<SearchBy>[] = [];
+  let searchByOptions: RadioOption<SearchBy>[] = [];
   if (variant === "user") {
-    genreOptions = [
+    searchByOptions = [
       { label: "Artist", value: "artist" },
       { label: "Album", value: "album" },
     ];
   }
 
   if (variant === "admin") {
-    genreOptions = [
+    searchByOptions = [
       { label: "Artist", value: "artist" },
       { label: "Album", value: "album" },
       { label: "Id", value: "id" },
@@ -62,16 +62,16 @@ const SearchSection3 = ({ variant }: SeachSection3Props) => {
 
   return (
     <div style={{ maxWidth: "600px", margin: "2rem auto" }}>
-      <h2>Vinyls Inventory</h2>
-      <SearchBar2
+      {variant === "user" ? <h2>Search Vinyl</h2> : <h2>Find Vinyl</h2>}
+      <SearchBar
         value={search}
         onChange={setSearch}
-        placeholder="Sök titel..." /* as prop */
+        placeholder="search title..." /* as prop */
       />
 
       <RadioGroup<SearchBy>
-        name="genre"
-        options={genreOptions}
+        name="searchBy"
+        options={searchByOptions}
         selectedValue={searchByFilter}
         onChange={setSearchByFilter}
       />
@@ -87,4 +87,4 @@ const SearchSection3 = ({ variant }: SeachSection3Props) => {
   );
 };
 
-export default SearchSection3;
+export default SearchSection;

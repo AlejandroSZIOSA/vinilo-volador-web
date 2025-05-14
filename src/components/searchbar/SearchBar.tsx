@@ -6,7 +6,7 @@ interface SearchBarProps {
   placeholder?: string;
 }
 
-const SearchBar = ({
+export const SearchBar = ({
   value,
   onChange,
   placeholder = "Sök...",
@@ -22,14 +22,13 @@ const SearchBar = ({
       onChange={handleChange}
       placeholder={placeholder}
       style={{
-        padding: "0.5rem 1rem",
+        padding: "0.5rem",
         border: "1px solid #ccc",
         borderRadius: "6px",
         width: "100%",
         maxWidth: "400px",
+        marginBottom: "1rem",
       }}
     />
   );
 };
-
-export default SearchBar;

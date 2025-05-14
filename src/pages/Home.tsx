@@ -1,47 +1,12 @@
 import { type FC } from "react";
-import { useAdmin_Ctx } from "../store/admin-Context";
-import type { Vinyl, Event } from "../types/shared";
 import Tabs from "../components/user/Tabs";
-import News from "../components/user/NewsSection";
-import SearchSection from "../components/user/SearchSection";
-import SearchSection2 from "../components/user/SearchSection2";
-import NewsSection from "../components/user/NewsSection";
-
-import SearchSection3 from "../components/user/SearchSection3";
-/* const testNewVinyl: Vinyl = {
-  id: "1",
-  album: "Test Album 1",
-  artist: "Test Artist1",
-};
-
-const newEvent: Event = {
-  place: "New Place",
-  date: new Date(),
-  from: "12",
-  to: "14",
-};
-
-const newDate = new Date().toISOString();
-
-const newVinyl: Vinyl = {
-  id: "updated",
-  album: "Updated Album 1",
-  artist: "Updated Artist1",
-}; */
+import News from "../components/user/News";
+import SearchSection from "../components/SearchSection";
 
 const HomePage: FC = () => {
-  const vinyls_ = useAdmin_Ctx();
-  const {
-    next_Event,
-    setNextEvent_Fn,
-    updated_ListDate,
-    setUpdatedListDate_Fn,
-    updateVinyl_Fn,
-  } = useAdmin_Ctx();
-
   const tabData = [
-    { label: "SEARCH", content: <SearchSection3 variant="user" /> },
-    { label: "NEWS", content: <NewsSection /> },
+    { label: "SEARCH", content: <SearchSection variant="user" /> },
+    { label: "NEWS", content: <News /> },
   ];
 
   /*  console.log(vinyls_); */
