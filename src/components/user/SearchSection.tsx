@@ -39,11 +39,13 @@ const SearchSection: FC = () => {
   const [genreFilter, setGenreFilter] = useState<Genre>("all");
 
   const filtered = vinyls.filter((v) => {
+    //as prop
     const matchesSearch = v.title.toLowerCase().includes(search.toLowerCase());
     const matchesGenre = genreFilter === "all" || v.genre === genreFilter;
     return matchesSearch && matchesGenre;
   });
 
+  //as prop
   const genreOptions: RadioOption<Genre>[] = [
     { label: "Alla", value: "all" },
     { label: "Rock", value: "rock" },
@@ -57,7 +59,7 @@ const SearchSection: FC = () => {
       <SearchBar2
         value={search}
         onChange={setSearch}
-        placeholder="Sök titel..."
+        placeholder="Sök titel..." /* as prop */
       />
 
       <RadioGroup<Genre>

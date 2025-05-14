@@ -4,6 +4,7 @@ import type { Vinyl, Event } from "../types/shared";
 import Tabs from "../components/user/Tabs";
 import News from "../components/user/NewsSection";
 import SearchSection from "../components/user/SearchSection";
+import SearchSection2 from "../components/user/SearchSection2";
 import NewsSection from "../components/user/NewsSection";
 
 /* const testNewVinyl: Vinyl = {
@@ -38,7 +39,7 @@ const HomePage: FC = () => {
   } = useAdmin_Ctx();
 
   const tabData = [
-    { label: "SEARCH", content: <SearchSection /> },
+    { label: "SEARCH", content: <SearchSection2 /> },
     { label: "NEWS", content: <NewsSection /> },
   ];
 
