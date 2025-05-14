@@ -1,5 +1,4 @@
 import { type FC, type ReactNode, useState } from "react";
-import SearchBar from "../SearchBar";
 import { RadioGroup } from "../RadioGroup";
 import { SearchBar2 } from "../SearchBar2";
 import type { RadioOption } from "../RadioGroup";
@@ -37,10 +36,9 @@ const SearchSection2: FC = () => {
 
   //as prop
   const genreOptions: RadioOption<SearchBy>[] = [
-    /* { label: "Alla", value: "all" }, */
     { label: "Artist", value: "artist" },
     { label: "Album", value: "album" },
-    { label: "Id", value: "id" },
+    /*   { label: "Id", value: "id" }, */
   ];
 
   let content: ReactNode;
@@ -87,7 +85,7 @@ const SearchSection2: FC = () => {
 
   return (
     <div style={{ maxWidth: "600px", margin: "2rem auto" }}>
-      <h2>Mina Vinyls</h2>
+      <h2>Vinyls Inventory</h2>
       <SearchBar2
         value={search}
         onChange={setSearch}

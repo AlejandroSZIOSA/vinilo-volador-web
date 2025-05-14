@@ -7,6 +7,7 @@ import SearchSection from "../components/user/SearchSection";
 import SearchSection2 from "../components/user/SearchSection2";
 import NewsSection from "../components/user/NewsSection";
 
+import SearchSection3 from "../components/user/SearchSection3";
 /* const testNewVinyl: Vinyl = {
   id: "1",
   album: "Test Album 1",
@@ -39,7 +40,7 @@ const HomePage: FC = () => {
   } = useAdmin_Ctx();
 
   const tabData = [
-    { label: "SEARCH", content: <SearchSection2 /> },
+    { label: "SEARCH", content: <SearchSection3 variant="user" /> },
     { label: "NEWS", content: <NewsSection /> },
   ];
 
