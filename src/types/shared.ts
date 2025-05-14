@@ -6,7 +6,7 @@ export type Event = {
 };
 export type User = {
   id: string;
-  username: string;
+  alias: string;
   password: "123" | "234";
 };
 

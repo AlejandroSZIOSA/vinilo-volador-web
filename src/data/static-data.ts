@@ -2,7 +2,7 @@ import type { Event, User, Vinyl } from "../types/shared";
 
 export const USER: User = {
   id: "userTest",
-  username: "user1",
+  alias: "user1",
   password: "123",
 };
 
