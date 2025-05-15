@@ -4,6 +4,7 @@ export type Event = {
   from: string;
   to: string;
 };
+
 export type User = {
   id: string;
   alias: string;

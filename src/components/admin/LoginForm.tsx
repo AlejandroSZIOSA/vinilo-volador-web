@@ -30,7 +30,7 @@ const LoginForm = ({ handleLoginFn }: LoginFormProps) => {
       <input
         placeholder={USER.alias}
         id="alias"
-        type="alias"
+        type="text"
         name="alias"
         disabled={areInputsLocked} // check the login status here and disable the button accordingly
         ref={alias}
