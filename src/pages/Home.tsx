@@ -2,14 +2,20 @@ import { type FC } from "react";
 import Tabs from "../components/user/Tabs";
 import News from "../components/user/News";
 import SearchSection from "../components/SearchSection";
+import { useAdmin_Ctx } from "../store/admin-Context";
 
 const HomePage: FC = () => {
+  const { vinyls_ } = useAdmin_Ctx();
+
   const tabData = [
-    { label: "SEARCH", content: <SearchSection variant="user" /> },
+    {
+      label: "SEARCH",
+      content: <SearchSection variant="user" tableListVariant="user" />,
+    },
     { label: "NEWS", content: <News /> },
   ];
 
-  /*  console.log(vinyls_); */
+  console.log(vinyls_);
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <h1>home Page</h1>

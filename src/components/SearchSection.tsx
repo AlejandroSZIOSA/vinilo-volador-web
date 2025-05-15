@@ -2,25 +2,30 @@ import { useState } from "react";
 import { RadioGroup } from "./searchbar/RadioGroup";
 import { SearchBar } from "./searchbar/SearchBar";
 import type { RadioOption } from "./searchbar/RadioGroup";
+import TableList from "./tableList";
+import { useAdmin_Ctx } from "../store/admin-Context";
 
 type SearchSectionProps = {
   variant: "user" | "admin";
+  tableListVariant: "admin-show" | "admin-remove" | "admin-add" | "user";
 };
 
 type SearchBy = "artist" | "album" | "id";
 
-const vinylsReal = [
+/* const vinylsReal = [
   { id: "1", artist: "ar1", album: "al1" },
   { id: "2", artist: "ar2", album: "al2" },
   { id: "3", artist: "ar3", album: "al3" },
   { id: "4", artist: "ar4", album: "al4" },
-];
+]; */
 
-const SearchSection = ({ variant }: SearchSectionProps) => {
+const SearchSection = ({ variant, tableListVariant }: SearchSectionProps) => {
+  const { vinyls_ } = useAdmin_Ctx();
+
   const [search, setSearch] = useState("");
   const [searchByFilter, setSearchByFilter] = useState<SearchBy>("artist");
 
-  const filtered = vinylsReal.filter((v) => {
+  const filtered = vinyls_?.filter((v) => {
     if (searchByFilter === "artist") {
       const matchesSearch = v.artist
         .toLowerCase()
@@ -75,14 +80,16 @@ const SearchSection = ({ variant }: SearchSectionProps) => {
         selectedValue={searchByFilter}
         onChange={setSearchByFilter}
       />
-      <ul style={{ marginTop: "1rem" }}>
+
+      <TableList variant={tableListVariant} filteredItems={filtered} />
+      {/* <ul style={{ marginTop: "1rem" }}>
         {filtered.map((v) => (
           <li key={v.id}>
             {v.artist} {v.album}-{v.id}
           </li>
         ))}
         {filtered.length === 0 && <li>No Matches!</li>}
-      </ul>
+      </ul> */}
     </div>
   );
 };

@@ -1,7 +1,11 @@
-import { type FC, useRef, type FormEvent } from "react";
+import { useRef, type FormEvent } from "react";
 import type { Vinyl } from "../../types/shared";
 
-const CreateForm: FC = () => {
+type CreateFormProps = {
+  handleCreateItemFn: (newVinyl: Vinyl) => void;
+};
+
+const CreateForm = ({ handleCreateItemFn }: CreateFormProps) => {
   const artist = useRef<HTMLInputElement>(null); /* fix */
   const album = useRef<HTMLInputElement>(null); /* fix */
   const price = useRef<HTMLInputElement>(null); /* fix */
@@ -17,12 +21,9 @@ const CreateForm: FC = () => {
       artist: enteredArtist,
       album: enteredAlbum,
       price: enteredPrice,
+      createdAt: new Date().toISOString(),
     };
-    handleCreateItem(newVinyl);
-  }
-
-  function handleCreateItem(newVinyl: Vinyl) {
-    console.log(newVinyl);
+    handleCreateItemFn(newVinyl);
   }
 
   return (

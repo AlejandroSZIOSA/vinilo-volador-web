@@ -16,4 +16,5 @@ export type Vinyl = {
   artist: string;
   album: string;
   price: number;
+  createdAt: string;
 };
