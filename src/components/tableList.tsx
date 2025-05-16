@@ -1,25 +1,23 @@
 import { type ReactNode } from "react";
-import { useAdmin_Ctx } from "../store/admin-Context";
 import TableItemBtn from "./buttons/TableItemBtn";
 import type { Vinyl } from "../types/shared";
 
 type TableListProps = {
-  variant: "admin-show" | "admin-remove" | "admin-add" | "user";
+  variant: "admin-show" | "admin-remove" | "admin-add" | "admin-edit" | "user";
   filteredItems?: Vinyl[];
 };
 
-const AdminContentTd = (id: string, variant: string) => {
+const AdminContentTd = (createdAt: string, variant: string) => {
   switch (variant) {
     case "admin-show":
       return (
         <>
-          <td>{id}</td>
+          <td>{createdAt}</td>
         </>
       );
     case "admin-remove":
       return (
         <>
-          <td>{id}</td>
           <td>
             <TableItemBtn>Remove</TableItemBtn>
           </td>
@@ -28,9 +26,17 @@ const AdminContentTd = (id: string, variant: string) => {
     case "admin-add":
       return (
         <>
-          <td>{id}</td>
           <td>
             <TableItemBtn>Add</TableItemBtn>
+          </td>
+        </>
+      );
+    case "admin-edit":
+      return (
+        <>
+          <td>{createdAt}</td>
+          <td>
+            <TableItemBtn>Edit</TableItemBtn>
           </td>
         </>
       );
@@ -41,73 +47,58 @@ const AdminContentTd = (id: string, variant: string) => {
 
 //TODO: passar como prop una lista filtrada de vinilos
 const TableList = ({ variant, filteredItems }: TableListProps) => {
-  const { vinyls_ } = useAdmin_Ctx();
+  let adminContentTh: ReactNode;
 
-  let showAllVinyls: ReactNode;
-  let contentAdminTh: ReactNode;
-
-  if (variant !== "user") {
+  if (variant === "admin-show") {
     //TODO: extraer valores del string variable
-    contentAdminTh = (
+    adminContentTh = (
       <>
-        <th>Id</th>
+        <th>Created</th>
+      </>
+    );
+  }
+
+  if (variant === "admin-remove") {
+    adminContentTh = (
+      <>
         <th>{variant}</th>
       </>
     );
   }
 
-  if (variant === "admin-show") {
-    showAllVinyls = (
-      <table>
-        <thead>
-          <tr>
-            <th>Artist</th>
-            <th>Album</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          {vinyls_?.map((v) => (
-            <tr key={v.id}>
-              <td>{v.artist}</td>
-              <td>{v.album}</td>
-              <td>{v.price}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+  if (variant === "admin-edit") {
+    adminContentTh = (
+      <>
+        <th>{variant}</th>
+      </>
     );
   }
 
-  console.log(vinyls_);
+  /* console.log(vinyls_); */
   return (
-    <>
-      {variant === "admin-show" ? (
-        showAllVinyls
-      ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>Artist</th>
-              <th>Album</th>
-              <th>Price</th>
-              {contentAdminTh}
-            </tr>
-          </thead>
-          <tbody>
-            {filteredItems?.map((v) => (
-              <tr key={v.id}>
-                <td>{v.artist}</td>
-                <td>{v.album}</td>
-                <td>{v.price}</td>
-                {variant !== "user" && AdminContentTd(v.id, variant)}
-              </tr>
-            ))}
-            {filteredItems?.length === 0 && <li>No Matches!</li>}
-          </tbody>
-        </table>
-      )}
-    </>
+    <table>
+      <thead>
+        <tr>
+          <th>Artist</th>
+          <th>Album</th>
+          <th>Price</th>
+          <th>Id</th>
+          {adminContentTh}
+        </tr>
+      </thead>
+      <tbody>
+        {filteredItems?.map((v) => (
+          <tr key={v.id}>
+            <td>{v.artist}</td>
+            <td>{v.album}</td>
+            <td>{v.price}</td>
+            <td>{v.id}</td>
+            {variant !== "user" && AdminContentTd(v.createdAt, variant)}
+          </tr>
+        ))}
+        {filteredItems?.length === 0 && <li>No Matches!</li>}
+      </tbody>
+    </table>
   );
 };
 

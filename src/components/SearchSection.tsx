@@ -7,17 +7,15 @@ import { useAdmin_Ctx } from "../store/admin-Context";
 
 type SearchSectionProps = {
   variant: "user" | "admin";
-  tableListVariant: "admin-show" | "admin-remove" | "admin-add" | "user";
+  tableListVariant:
+    | "admin-show"
+    | "admin-remove"
+    | "admin-add"
+    | "admin-edit"
+    | "user";
 };
 
 type SearchBy = "artist" | "album" | "id";
-
-/* const vinylsReal = [
-  { id: "1", artist: "ar1", album: "al1" },
-  { id: "2", artist: "ar2", album: "al2" },
-  { id: "3", artist: "ar3", album: "al3" },
-  { id: "4", artist: "ar4", album: "al4" },
-]; */
 
 const SearchSection = ({ variant, tableListVariant }: SearchSectionProps) => {
   const { vinyls_ } = useAdmin_Ctx();
@@ -46,8 +44,6 @@ const SearchSection = ({ variant, tableListVariant }: SearchSectionProps) => {
       return matchesSearch && selectedRadioOption;
     }
   });
-
-  //as prop
 
   let searchByOptions: RadioOption<SearchBy>[] = [];
   if (variant === "user") {
