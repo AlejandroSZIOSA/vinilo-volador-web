@@ -42,8 +42,8 @@ const TableListShow = ({ variant }: TableListShowProps) => {
             <td>{v.artist}</td>
             <td>{v.album}</td>
             <td>{v.price}</td>
-            {variant === "admin-latest" && <td>{v.createdAt}</td>}
             <td>{v.id}</td>
+            {variant === "admin-latest" && <td>{v.createdAt}</td>}
           </tr>
         ))}
       </tbody>

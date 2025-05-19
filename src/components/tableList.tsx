@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
 import TableItemBtn from "./buttons/TableItemBtn";
 import type { Vinyl } from "../types/shared";
-import { BASE_TH_KEYS, ADMIN_TH_KEYS, USER_TH_KEYS } from "../utils/constants";
+import { USER_TH_KEYS } from "../utils/constants";
 
 type TableListProps = {
   variant: "admin-show" | "admin-remove" | "admin-add" | "admin-edit" | "user";
@@ -35,7 +35,6 @@ const AdminContentTd = (createdAt: string, variant: string) => {
     case "admin-edit":
       return (
         <>
-          <td>{createdAt}</td>
           <td>
             <TableItemBtn>Edit</TableItemBtn>
           </td>
@@ -47,7 +46,7 @@ const AdminContentTd = (createdAt: string, variant: string) => {
 };
 
 const TableList = ({ variant, filteredItems }: TableListProps) => {
-  const adminEditThKeys: string[] = ["CreatedAt", "EDIT iMG"];
+  const adminEditThKeys: string[] = ["EDIT iMG"];
 
   let adminContentTh: ReactNode;
 
@@ -93,7 +92,6 @@ const TableList = ({ variant, filteredItems }: TableListProps) => {
             <td>{v.artist}</td>
             <td>{v.album}</td>
             <td>{v.price}</td>
-
             <td>{v.id}</td>
             {variant !== "user" && AdminContentTd(v.createdAt, variant)}
           </tr>
