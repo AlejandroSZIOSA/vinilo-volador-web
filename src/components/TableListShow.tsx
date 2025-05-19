@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { type ReactNode, type FC } from "react";
 import { useAdmin_Ctx } from "../store/admin-Context";
 import { BASE_TH_KEYS, ADMIN_TH_KEYS, USER_TH_KEYS } from "../utils/constants";
 
@@ -6,7 +6,7 @@ type TableListShowProps = {
   variant: "user-latest" | "admin-latest";
 };
 
-const TableListShow = ({ variant }: TableListShowProps) => {
+const TableListShow: FC<TableListShowProps> = ({ variant }) => {
   const { vinyls_ } = useAdmin_Ctx();
 
   let contentTh: ReactNode;

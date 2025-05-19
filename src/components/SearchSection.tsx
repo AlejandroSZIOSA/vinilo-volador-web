@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FC } from "react";
 import { RadioGroup } from "./searchbar/RadioGroup";
 import { SearchBar } from "./searchbar/SearchBar";
 import type { RadioOption } from "./searchbar/RadioGroup";
@@ -17,7 +17,10 @@ type SearchSectionProps = {
 
 type SearchBy = "artist" | "album" | "id";
 
-const SearchSection = ({ variant, tableListVariant }: SearchSectionProps) => {
+const SearchSection: FC<SearchSectionProps> = ({
+  variant,
+  tableListVariant,
+}) => {
   const { vinyls_ } = useAdmin_Ctx();
 
   const [search, setSearch] = useState("");

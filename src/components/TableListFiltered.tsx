@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { type ReactNode, type FC } from "react";
 import TableItemBtn from "./buttons/TableItemBtn";
 import type { Vinyl } from "../types/shared";
 import { USER_TH_KEYS } from "../utils/constants";
@@ -45,7 +45,7 @@ const AdminContentTd = (createdAt: string, variant: string) => {
   }
 };
 
-const TableListFiltered = ({ variant, filteredItems }: TableListProps) => {
+const TableListFiltered: FC<TableListProps> = ({ variant, filteredItems }) => {
   const adminEditThKeys: string[] = ["EDIT iMG"];
 
   let adminContentTh: ReactNode;
