@@ -45,7 +45,7 @@ const AdminContentTd = (createdAt: string, variant: string) => {
   }
 };
 
-const TableList = ({ variant, filteredItems }: TableListProps) => {
+const TableListFiltered = ({ variant, filteredItems }: TableListProps) => {
   const adminEditThKeys: string[] = ["EDIT iMG"];
 
   let adminContentTh: ReactNode;
@@ -106,4 +106,4 @@ const TableList = ({ variant, filteredItems }: TableListProps) => {
   );
 };
 
-export default TableList;
+export default TableListFiltered;

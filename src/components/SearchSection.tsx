@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RadioGroup } from "./searchbar/RadioGroup";
 import { SearchBar } from "./searchbar/SearchBar";
 import type { RadioOption } from "./searchbar/RadioGroup";
-import TableList from "./tableList";
+import TableListFiltered from "./TableListFiltered";
 import { useAdmin_Ctx } from "../store/admin-Context";
 
 type SearchSectionProps = {
@@ -77,15 +77,7 @@ const SearchSection = ({ variant, tableListVariant }: SearchSectionProps) => {
         onChange={setSearchByFilter}
       />
 
-      <TableList variant={tableListVariant} filteredItems={filtered} />
-      {/* <ul style={{ marginTop: "1rem" }}>
-        {filtered.map((v) => (
-          <li key={v.id}>
-            {v.artist} {v.album}-{v.id}
-          </li>
-        ))}
-        {filtered.length === 0 && <li>No Matches!</li>}
-      </ul> */}
+      <TableListFiltered variant={tableListVariant} filteredItems={filtered} />
     </div>
   );
 };
