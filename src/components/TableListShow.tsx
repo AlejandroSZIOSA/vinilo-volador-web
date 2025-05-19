@@ -1,5 +1,6 @@
 import { type ReactNode } from "react";
 import { useAdmin_Ctx } from "../store/admin-Context";
+import { BASE_TH_KEYS, ADMIN_TH_KEYS, USER_TH_KEYS } from "../utils/constants";
 
 type TableListShowProps = {
   variant: "user-latest" | "admin-latest";
@@ -7,23 +8,15 @@ type TableListShowProps = {
 
 const TableListShow = ({ variant }: TableListShowProps) => {
   const { vinyls_ } = useAdmin_Ctx();
-  const keys = Object.keys(vinyls_?.[0] || {});
-
-  keys[0] = "artist";
-  keys[1] = "album";
-  keys[2] = "price";
-  keys[3] = "id";
-  keys[4] = "createdAt";
 
   let contentTh: ReactNode;
 
   if (variant === "user-latest") {
     contentTh = (
       <tr>
-        <th>Artist</th>
-        <th>Album</th>
-        <th>Price</th>
-        <th>ID</th>
+        {USER_TH_KEYS.map((k, index) => (
+          <th key={index}>{k}</th>
+        ))}
       </tr>
     );
   }
@@ -31,14 +24,15 @@ const TableListShow = ({ variant }: TableListShowProps) => {
   if (variant === "admin-latest") {
     contentTh = (
       <tr>
-        {keys.map((key) => (
-          <th key={key}>{key}</th>
+        {BASE_TH_KEYS.map((k) => (
+          <th key={k}>{k}</th>
+        ))}
+        {ADMIN_TH_KEYS.map((k) => (
+          <th key={k}>{k}</th>
         ))}
       </tr>
     );
   }
-
-  console.log(keys);
   return (
     <table>
       <thead>{contentTh}</thead>
@@ -48,8 +42,8 @@ const TableListShow = ({ variant }: TableListShowProps) => {
             <td>{v.artist}</td>
             <td>{v.album}</td>
             <td>{v.price}</td>
-            <td>{v.id}</td>
             {variant === "admin-latest" && <td>{v.createdAt}</td>}
+            <td>{v.id}</td>
           </tr>
         ))}
       </tbody>

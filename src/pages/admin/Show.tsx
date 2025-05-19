@@ -1,15 +1,12 @@
 import { type FC } from "react";
-import TableListShow from "../../components/TableListShow";
+import SearchSection from "../../components/SearchSection";
 
 const ShowPage: FC = () => {
   return (
     <div>
       <h1>Show page</h1>
-      {/*  <SearchSection
-        variant="admin"
-        tableListVariant="admin-show"
-      ></SearchSection> */}
-      <TableListShow variant="admin-latest" />
+      {/* <TableListShow variant="admin-latest" /> */}
+      <SearchSection variant="admin" tableListVariant="admin-show" />
     </div>
   );
 };

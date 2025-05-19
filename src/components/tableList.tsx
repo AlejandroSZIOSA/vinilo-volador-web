@@ -1,6 +1,7 @@
 import { type ReactNode } from "react";
 import TableItemBtn from "./buttons/TableItemBtn";
 import type { Vinyl } from "../types/shared";
+import { BASE_TH_KEYS, ADMIN_TH_KEYS, USER_TH_KEYS } from "../utils/constants";
 
 type TableListProps = {
   variant: "admin-show" | "admin-remove" | "admin-add" | "admin-edit" | "user";
@@ -45,12 +46,12 @@ const AdminContentTd = (createdAt: string, variant: string) => {
   }
 };
 
-//TODO: passar como prop una lista filtrada de vinilos
 const TableList = ({ variant, filteredItems }: TableListProps) => {
+  const adminEditThKeys: string[] = ["CreatedAt", "EDIT iMG"];
+
   let adminContentTh: ReactNode;
 
   if (variant === "admin-show") {
-    //TODO: extraer valores del string variable
     adminContentTh = (
       <>
         <th>Created</th>
@@ -58,31 +59,31 @@ const TableList = ({ variant, filteredItems }: TableListProps) => {
     );
   }
 
-  if (variant === "admin-remove") {
-    adminContentTh = (
-      <>
-        <th>{variant}</th>
-      </>
-    );
-  }
-
   if (variant === "admin-edit") {
     adminContentTh = (
       <>
-        <th>{variant}</th>
+        {adminEditThKeys.map((k, index) => (
+          <th key={index}>{k}</th>
+        ))}
       </>
     );
   }
 
-  /* console.log(vinyls_); */
+  if (variant === "admin-remove") {
+    adminContentTh = (
+      <>
+        <th>Remove img</th>
+      </>
+    );
+  }
+
   return (
     <table>
       <thead>
         <tr>
-          <th>Artist</th>
-          <th>Album</th>
-          <th>Price</th>
-          <th>Id</th>
+          {USER_TH_KEYS.map((k, index) => (
+            <th key={index}>{k}</th>
+          ))}
           {adminContentTh}
         </tr>
       </thead>
@@ -92,11 +93,16 @@ const TableList = ({ variant, filteredItems }: TableListProps) => {
             <td>{v.artist}</td>
             <td>{v.album}</td>
             <td>{v.price}</td>
+
             <td>{v.id}</td>
             {variant !== "user" && AdminContentTd(v.createdAt, variant)}
           </tr>
         ))}
-        {filteredItems?.length === 0 && <li>No Matches!</li>}
+        {filteredItems?.length === 0 && (
+          <tr>
+            <td>No Matches!</td>
+          </tr>
+        )}
       </tbody>
     </table>
   );

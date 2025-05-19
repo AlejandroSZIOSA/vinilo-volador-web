@@ -3,7 +3,7 @@ import { useAuth_Ctx } from "../../store/auth-Context";
 import { useNavigate } from "react-router-dom";
 import CreateForm from "../../components/admin/CreateForm";
 import type { Vinyl } from "../../types/shared";
-import SearchSection from "../../components/SearchSection";
+import TableListShow from "../../components/TableListShow";
 
 const AddPage: FC = () => {
   const { logout_Fn, is_Authenticated } = useAuth_Ctx();
@@ -25,10 +25,7 @@ const AddPage: FC = () => {
       <p>Add Page</p>
       <button onClick={handleLogOut}>logOut</button>
       <CreateForm handleCreateItemFn={handleCreateItem} />
-      <SearchSection
-        variant="admin"
-        tableListVariant="admin-show"
-      ></SearchSection>
+      <TableListShow variant="admin-latest" />
       {/* <button onClick={() => navigate("/admin/remove")}>to remove</button> */}
       {/*   <button onClick={() => navigate("./")}>to remove</button> */}
     </>
