@@ -1,4 +1,4 @@
-import { useRef, type FormEvent, type FC } from "react";
+import { useRef, type FormEvent, type MouseEvent, type FC } from "react";
 import type { Vinyl } from "../../types/shared";
 
 type CreateFormProps = {
@@ -28,12 +28,13 @@ const CreateItemForm: FC<CreateFormProps> = ({ handleCreateItemFn }) => {
     handleCreateItemFn(newVinyl);
   }
 
-  const handleOpenDialog = (e: React.FormEvent) => {
+  //Dialog for creating new Item
+  const handleOpenDialog = (e: FormEvent) => {
     e.preventDefault();
     dialogRef.current?.showModal();
   };
 
-  const handleConfirmSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleConfirmSubmit = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const formEvent = new Event(
       "submit"
@@ -45,6 +46,7 @@ const CreateItemForm: FC<CreateFormProps> = ({ handleCreateItemFn }) => {
   const handleCancel = () => {
     dialogRef.current?.close();
   };
+
   return (
     <div>
       <form onSubmit={handleOpenDialog}>

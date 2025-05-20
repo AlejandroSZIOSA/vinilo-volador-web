@@ -1,4 +1,4 @@
-import { useRef, type FC, type FormEvent } from "react";
+import { useRef, type FC, type FormEvent, type MouseEvent } from "react";
 import { useAdmin_Ctx } from "../../store/admin-Context";
 
 const CreateEventForm: FC = () => {
@@ -9,6 +9,8 @@ const CreateEventForm: FC = () => {
   const date = useRef<HTMLInputElement>(null);
   const timeFrom = useRef<HTMLInputElement>(null);
   const timeTo = useRef<HTMLInputElement>(null);
+
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   function handleCreateEvent(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -28,9 +30,28 @@ const CreateEventForm: FC = () => {
     console.log("Event created:", newEvent);
   }
 
+  //Dialog for creating new event
+  const handleOpenDialog = (e: FormEvent) => {
+    e.preventDefault();
+    dialogRef.current?.showModal();
+  };
+
+  const handleConfirmSubmit = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const formEvent = new Event(
+      "submit"
+    ) as unknown as FormEvent<HTMLFormElement>;
+    handleCreateEvent(formEvent);
+    dialogRef.current?.close();
+  };
+
+  const handleCancel = () => {
+    dialogRef.current?.close();
+  };
+
   return (
-    <>
-      <form onSubmit={handleCreateEvent}>
+    <div>
+      <form onSubmit={handleOpenDialog}>
         <label>Place</label>
         <input
           placeholder="place"
@@ -81,7 +102,24 @@ const CreateEventForm: FC = () => {
         />
         <button type="submit">Create</button>
       </form>
-    </>
+      <dialog ref={dialogRef} className="rounded-md p-6 shadow-lg">
+        <p>Are you sure you want to submit this form?</p>
+        <div className="mt-4 flex gap-4 justify-end">
+          <button
+            onClick={handleConfirmSubmit}
+            className="bg-green-500 text-white px-4 py-2 rounded"
+          >
+            Yes, Submit
+          </button>
+          <button
+            onClick={handleCancel}
+            className="bg-gray-400 text-white px-4 py-2 rounded"
+          >
+            Cancel
+          </button>
+        </div>
+      </dialog>
+    </div>
   );
 };
 
