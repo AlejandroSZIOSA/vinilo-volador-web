@@ -1,5 +1,5 @@
 import { useState, useRef, type FormEvent, type FC } from "react";
-import { USER } from "../../data/static-data";
+import { ADMIN } from "../../data/static-data";
 
 type LoginFormProps = {
   handleLoginFn: () => void;
@@ -16,7 +16,7 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
     event.preventDefault();
     const enteredAlias = alias.current!.value;
     const enteredPassword = password.current!.value;
-    if (enteredAlias === USER.alias && enteredPassword === USER.password) {
+    if (enteredAlias === ADMIN.alias && enteredPassword === ADMIN.password) {
       handleLoginFn();
     }
   }
@@ -28,7 +28,7 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
     <form onSubmit={handleSubmit}>
       <label>Alias</label>
       <input
-        placeholder={USER.alias}
+        placeholder={ADMIN.alias}
         id="alias"
         type="text"
         name="alias"
@@ -39,7 +39,7 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
       <label>Password</label>
       <div>
         <input
-          placeholder={USER.password}
+          placeholder={ADMIN.password}
           id="password"
           type={isPasswordShowing ? "text" : "password"}
           name="password"

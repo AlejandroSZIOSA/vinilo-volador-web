@@ -1,8 +1,8 @@
-import type { Event, User, Vinyl } from "../types/shared";
+import type { Event, Admin, Vinyl } from "../types/shared";
 
-export const USER: User = {
-  id: "userTest",
-  alias: "user1",
+export const ADMIN: Admin = {
+  id: "adminTest",
+  alias: "admin",
   password: "123",
 };
 

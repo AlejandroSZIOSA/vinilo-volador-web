@@ -6,7 +6,7 @@ export type Event = {
   to: string;
 };
 
-export type User = {
+export type Admin = {
   id: string;
   alias: string;
   password: "123" | "234";
