@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
+import { type FC } from "react";
 
-const TabNav = () => {
+const TabNav: FC = () => {
   return (
     <div
       style={{ display: "flex", gap: "1rem", borderBottom: "1px solid #ccc" }}
@@ -53,6 +54,18 @@ const TabNav = () => {
         })}
       >
         Show
+      </NavLink>
+      <NavLink
+        to="/admin/event"
+        style={({ isActive }) => ({
+          padding: "0.5rem 1rem",
+          fontWeight: isActive ? "bold" : "normal",
+          borderBottom: isActive ? "2px solid blue" : "none",
+          textDecoration: "none",
+          color: "black",
+        })}
+      >
+        Event
       </NavLink>
     </div>
   );

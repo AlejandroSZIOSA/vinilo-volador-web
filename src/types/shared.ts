@@ -1,6 +1,7 @@
 export type Event = {
   place: string;
-  date: Date;
+  address: string;
+  date: string;
   from: string;
   to: string;
 };

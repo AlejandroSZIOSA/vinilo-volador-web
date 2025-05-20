@@ -7,6 +7,7 @@ import UserRootPage from "./layouts/UserRoot";
 import RemovePage from "./pages/admin/Remove";
 import ShowPage from "./pages/admin/Show";
 import EditPage from "./pages/admin/Edit";
+import EventPage from "./pages/admin/Event";
 
 function App() {
   const router = createBrowserRouter([
@@ -35,6 +36,10 @@ function App() {
         {
           path: "edit",
           element: <EditPage />,
+        },
+        {
+          path: "event",
+          element: <EventPage />,
         },
       ],
     },

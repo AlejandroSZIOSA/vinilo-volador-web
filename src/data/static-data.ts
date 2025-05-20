@@ -8,7 +8,8 @@ export const USER: User = {
 
 export const NEXT_EVENT: Event = {
   place: "some name place",
-  date: new Date(),
+  address: "some address",
+  date: new Date().toISOString(),
   from: "20",
   to: "22",
 };
