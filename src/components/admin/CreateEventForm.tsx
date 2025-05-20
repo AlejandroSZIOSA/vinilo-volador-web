@@ -1,5 +1,6 @@
-import { useRef, type FC, type FormEvent, type MouseEvent } from "react";
+import { useRef, type FC, type FormEvent } from "react";
 import { useAdmin_Ctx } from "../../store/admin-Context";
+import ConfirmDialog, { type ConfirmDialogRef } from "./ConfirmDialog";
 
 const CreateEventForm: FC = () => {
   const { setNextEvent_Fn } = useAdmin_Ctx();
@@ -10,7 +11,7 @@ const CreateEventForm: FC = () => {
   const timeFrom = useRef<HTMLInputElement>(null);
   const timeTo = useRef<HTMLInputElement>(null);
 
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const dialogRef = useRef<ConfirmDialogRef>(null); //Imported type for ConfirmDialogRef
 
   function handleCreateEvent(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -30,23 +31,17 @@ const CreateEventForm: FC = () => {
     console.log("Event created:", newEvent);
   }
 
-  //Dialog for creating new event
+  //Dialog functions for creating new Event
   const handleOpenDialog = (e: FormEvent) => {
     e.preventDefault();
-    dialogRef.current?.showModal();
+    dialogRef.current?.open();
   };
 
-  const handleConfirmSubmit = (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+  const confirmAction = () => {
     const formEvent = new Event(
       "submit"
     ) as unknown as FormEvent<HTMLFormElement>;
     handleCreateEvent(formEvent);
-    dialogRef.current?.close();
-  };
-
-  const handleCancel = () => {
-    dialogRef.current?.close();
   };
 
   return (
@@ -85,7 +80,6 @@ const CreateEventForm: FC = () => {
           type="time"
           id="timeFrom"
           name="timeFrom"
-          /* value="13:30" */
           min="09:00"
           max="17:00"
           ref={timeFrom}
@@ -95,30 +89,18 @@ const CreateEventForm: FC = () => {
           type="time"
           id="timeTo"
           name="timeTo"
-          /*  value="13:30" */
           min="09:00"
           max="17:00"
           ref={timeTo}
         />
         <button type="submit">Create</button>
       </form>
-      <dialog ref={dialogRef} className="rounded-md p-6 shadow-lg">
-        <p>Are you sure you want to submit this form?</p>
-        <div className="mt-4 flex gap-4 justify-end">
-          <button
-            onClick={handleConfirmSubmit}
-            className="bg-green-500 text-white px-4 py-2 rounded"
-          >
-            Yes, Submit
-          </button>
-          <button
-            onClick={handleCancel}
-            className="bg-gray-400 text-white px-4 py-2 rounded"
-          >
-            Cancel
-          </button>
-        </div>
-      </dialog>
+      <ConfirmDialog
+        ref={dialogRef}
+        title="Create Event"
+        message="Are you sure you want to Create this item?"
+        onConfirm={confirmAction}
+      />
     </div>
   );
 };
