@@ -8,7 +8,7 @@ describe("task page", () => {
     cy.get("a").contains("Show").click(); // select element anchor then look for a text
     /*  cy.contains("show")  */
     cy.get('input[type="radio"][value="album"]').check();
-    cy.get('input[placeholder="search title..."]').type("al1");
+    cy.get('input[name="search"]').type("al1");
     cy.get("tr").should("contain", "al1"); // select table row and check if it contains text
   });
 });

@@ -1,11 +1,11 @@
-import { useRef, type FormEvent } from "react";
+import { useRef, type FormEvent, type FC } from "react";
 import type { Vinyl } from "../../types/shared";
 
 type CreateFormProps = {
   handleCreateItemFn: (newVinyl: Vinyl) => void;
 };
 
-const CreateForm = ({ handleCreateItemFn }: CreateFormProps) => {
+const CreateForm: FC<CreateFormProps> = ({ handleCreateItemFn }) => {
   const artist = useRef<HTMLInputElement>(null); /* fix */
   const album = useRef<HTMLInputElement>(null); /* fix */
   const price = useRef<HTMLInputElement>(null); /* fix */

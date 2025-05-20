@@ -1,11 +1,11 @@
-import { useState, useRef, type FormEvent } from "react";
+import { useState, useRef, type FormEvent, type FC } from "react";
 import { USER } from "../../data/static-data";
 
 type LoginFormProps = {
   handleLoginFn: () => void;
 };
 
-const LoginForm = ({ handleLoginFn }: LoginFormProps) => {
+const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
   const alias = useRef<HTMLInputElement>(null); /* fix */
   const password = useRef<HTMLInputElement>(null); /* fix */
 

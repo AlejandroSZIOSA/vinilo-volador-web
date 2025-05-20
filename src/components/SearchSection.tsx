@@ -70,7 +70,7 @@ const SearchSection: FC<SearchSectionProps> = ({
       <SearchBar
         value={search}
         onChange={setSearch}
-        placeholder="search title..." /* as prop */
+        /*   placeholder="search title..." */
       />
 
       <RadioGroup<SearchBy>

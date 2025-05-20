@@ -9,7 +9,7 @@ interface SearchBarProps {
 export const SearchBar = ({
   value,
   onChange,
-  placeholder = "Sök...",
+  placeholder = "Search title...",
 }: SearchBarProps) => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     onChange(e.target.value);
