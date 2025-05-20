@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import { useAuth_Ctx } from "../../store/auth-Context";
 import { useNavigate } from "react-router-dom";
-import CreateForm from "../../components/admin/CreateForm";
+import CreateItemForm from "../../components/admin/CreateItemForm";
 import type { Vinyl } from "../../types/shared";
 import TableListShow from "../../components/TableListShow";
 import { useAdmin_Ctx } from "../../store/admin-Context";
@@ -25,7 +25,7 @@ const AddPage: FC = () => {
     <>
       <p>Add Page</p>
       <button onClick={handleLogOut}>logOut</button>
-      <CreateForm handleCreateItemFn={handleCreateItem} />
+      <CreateItemForm handleCreateItemFn={handleCreateItem} />
       <TableListShow variant="admin-latest" />
     </>
   );
