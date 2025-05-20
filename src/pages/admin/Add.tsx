@@ -2,13 +2,10 @@ import { type FC } from "react";
 import { useAuth_Ctx } from "../../store/auth-Context";
 import { useNavigate } from "react-router-dom";
 import CreateItemForm from "../../components/admin/CreateItemForm";
-import type { Vinyl } from "../../types/shared";
 import TableListShow from "../../components/TableListShow";
-import { useAdmin_Ctx } from "../../store/admin-Context";
 
 const AddPage: FC = () => {
   const { logout_Fn } = useAuth_Ctx();
-  const { addVinyl_Fn } = useAdmin_Ctx();
 
   const navigate = useNavigate();
   function handleLogOut() {
@@ -16,16 +13,11 @@ const AddPage: FC = () => {
     navigate("/");
   }
 
-  //callback function to handle form submission
-  function handleCreateItem(newVinyl: Vinyl) {
-    addVinyl_Fn(newVinyl);
-  }
-
   return (
     <>
       <p>Add Page</p>
       <button onClick={handleLogOut}>logOut</button>
-      <CreateItemForm handleCreateItemFn={handleCreateItem} />
+      <CreateItemForm />
       <TableListShow variant="admin-latest" />
     </>
   );

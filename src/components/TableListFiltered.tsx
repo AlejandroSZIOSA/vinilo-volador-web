@@ -8,7 +8,7 @@ type TableListProps = {
   filteredItems?: Vinyl[];
 };
 
-const AdminContentTd = (createdAt: string, variant: string) => {
+const AdminContentTd = (createdAt: string, variant: string, id: string) => {
   switch (variant) {
     case "admin-show":
       return (
@@ -20,23 +20,20 @@ const AdminContentTd = (createdAt: string, variant: string) => {
       return (
         <>
           <td>
-            <TableItemBtn>Remove</TableItemBtn>
+            <TableItemBtn variant="remove" itemId={id}>
+              Remove
+            </TableItemBtn>
           </td>
         </>
       );
-    case "admin-add":
-      return (
-        <>
-          <td>
-            <TableItemBtn>Add</TableItemBtn>
-          </td>
-        </>
-      );
+
     case "admin-edit":
       return (
         <>
           <td>
-            <TableItemBtn>Edit</TableItemBtn>
+            <TableItemBtn variant="edit" itemId={id}>
+              Edit
+            </TableItemBtn>
           </td>
         </>
       );
@@ -93,7 +90,7 @@ const TableListFiltered: FC<TableListProps> = ({ variant, filteredItems }) => {
             <td>{v.album}</td>
             <td>{v.price}</td>
             <td>{v.id}</td>
-            {variant !== "user" && AdminContentTd(v.createdAt, variant)}
+            {variant !== "user" && AdminContentTd(v.createdAt, variant, v.id)}
           </tr>
         ))}
         {filteredItems?.length === 0 && (

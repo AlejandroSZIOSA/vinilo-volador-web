@@ -1,16 +1,16 @@
-import { useRef, type FormEvent, type MouseEvent, type FC } from "react";
+import { useRef, type FormEvent, type FC } from "react";
 import type { Vinyl } from "../../types/shared";
+import ConfirmDialog, { type ConfirmDialogRef } from "./ConfirmDialog";
+import { useAdmin_Ctx } from "../../store/admin-Context";
 
-type CreateFormProps = {
-  handleCreateItemFn: (newVinyl: Vinyl) => void;
-};
+const CreateItemForm: FC = () => {
+  const { addVinyl_Fn } = useAdmin_Ctx();
 
-const CreateItemForm: FC<CreateFormProps> = ({ handleCreateItemFn }) => {
   const artist = useRef<HTMLInputElement>(null);
   const album = useRef<HTMLInputElement>(null);
   const price = useRef<HTMLInputElement>(null);
 
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const dialogRef = useRef<ConfirmDialogRef>(null); //Imported type for ConfirmDialogRef
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -25,26 +25,19 @@ const CreateItemForm: FC<CreateFormProps> = ({ handleCreateItemFn }) => {
       price: enteredPrice,
       createdAt: new Date().toISOString(),
     };
-    handleCreateItemFn(newVinyl);
+    addVinyl_Fn(newVinyl);
   }
 
-  //Dialog for creating new Item
   const handleOpenDialog = (e: FormEvent) => {
     e.preventDefault();
-    dialogRef.current?.showModal();
+    dialogRef.current?.open();
   };
 
-  const handleConfirmSubmit = (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+  const confirmAction = () => {
     const formEvent = new Event(
       "submit"
     ) as unknown as FormEvent<HTMLFormElement>;
     handleSubmit(formEvent);
-    dialogRef.current?.close();
-  };
-
-  const handleCancel = () => {
-    dialogRef.current?.close();
   };
 
   return (
@@ -85,23 +78,12 @@ const CreateItemForm: FC<CreateFormProps> = ({ handleCreateItemFn }) => {
           <button type="submit">Create</button>
         </div>
       </form>
-      <dialog ref={dialogRef} className="rounded-md p-6 shadow-lg">
-        <p>Are you sure you want to submit this form?</p>
-        <div className="mt-4 flex gap-4 justify-end">
-          <button
-            onClick={handleConfirmSubmit}
-            className="bg-green-500 text-white px-4 py-2 rounded"
-          >
-            Yes, Submit
-          </button>
-          <button
-            onClick={handleCancel}
-            className="bg-gray-400 text-white px-4 py-2 rounded"
-          >
-            Cancel
-          </button>
-        </div>
-      </dialog>
+      <ConfirmDialog
+        ref={dialogRef}
+        title="Add new Vinyl"
+        message="Are you sure you want Add this item to the list?"
+        onConfirm={confirmAction}
+      />
     </div>
   );
 };
