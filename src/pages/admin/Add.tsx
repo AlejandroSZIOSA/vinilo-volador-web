@@ -7,7 +7,7 @@ import TableListShow from "../../components/TableListShow";
 import { useAdmin_Ctx } from "../../store/admin-Context";
 
 const AddPage: FC = () => {
-  const { logout_Fn, is_Authenticated } = useAuth_Ctx();
+  const { logout_Fn } = useAuth_Ctx();
   const { addVinyl_Fn } = useAdmin_Ctx();
 
   const navigate = useNavigate();
@@ -21,7 +21,6 @@ const AddPage: FC = () => {
     addVinyl_Fn(newVinyl);
   }
 
-  console.log(is_Authenticated);
   return (
     <>
       <p>Add Page</p>
