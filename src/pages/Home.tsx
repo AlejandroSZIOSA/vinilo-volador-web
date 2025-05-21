@@ -3,6 +3,7 @@ import Tabs from "../components/user/Tabs";
 import News from "../components/user/News";
 import SearchSection from "../components/SearchSection";
 import { useAdmin_Ctx } from "../store/admin-Context";
+import DarkLightToggle from "../components/DarkLightToggle";
 
 const HomePage: FC = () => {
   const { vinyls_ } = useAdmin_Ctx();
@@ -19,7 +20,7 @@ const HomePage: FC = () => {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <h1>home Page</h1>
-      <h1>Tabs</h1>
+      <DarkLightToggle />
       <Tabs tabs={tabData} />
 
       {/*       <button onClick={() => console.log(vinyls_)}>show vinyls</button>

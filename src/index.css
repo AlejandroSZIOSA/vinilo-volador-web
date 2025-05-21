@@ -74,6 +74,17 @@ button:focus-visible {
   margin: 0;
 }
 
+/*TODO: problem dark mode  */
+:root {
+  --background-color: white;
+  --text-color: black;
+}
+
+.dark {
+  --background-color: #121212;
+  --text-color: white;
+}
+
 body {
   display: flex;
   flex-direction: column;
