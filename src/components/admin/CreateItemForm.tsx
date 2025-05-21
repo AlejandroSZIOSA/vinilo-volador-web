@@ -12,18 +12,26 @@ const CreateItemForm: FC = () => {
 
   const dialogRef = useRef<ConfirmDialogRef>(null); //Imported type for ConfirmDialogRef
 
+  //NOTE: Can use a library like "nanoid" instead
+  function generateRandomNumericId() {
+    return Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
+  }
+
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const enteredArtist = artist.current!.value;
     const enteredAlbum = album.current!.value;
     const enteredPrice = parseInt(price.current!.value);
 
+    const dateToday = new Date();
+    const created = dateToday.toLocaleDateString("en-CA");
+
     const newVinyl: Vinyl = {
-      id: crypto.randomUUID().toString(),
+      id: generateRandomNumericId().toString(),
       artist: enteredArtist,
       album: enteredAlbum,
       price: enteredPrice,
-      createdAt: new Date().toISOString(),
+      createdAt: created,
     };
     addVinyl_Fn(newVinyl);
   }

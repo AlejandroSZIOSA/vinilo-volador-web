@@ -19,7 +19,7 @@ const RemovePage: FC = () => {
     removeVinyl_Fn(id);
   };
 
-  //CALLBACK FN X 4
+  //CALLBACK FN X 3
   function handleRemoveClick(id: string) {
     setId(id);
     handleOpenDialog();
