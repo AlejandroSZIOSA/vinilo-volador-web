@@ -6,9 +6,15 @@ import { USER_TH_KEYS } from "../utils/constants";
 type TableListProps = {
   variant: "admin-show" | "admin-remove" | "admin-add" | "admin-edit" | "user";
   filteredItems?: Vinyl[];
+  onRemoveFn?: (id: string) => void;
 };
 
-const AdminContentTd = (createdAt: string, variant: string, id: string) => {
+const AdminContentTd = (
+  createdAt: string,
+  variant: string,
+  id: string,
+  onRemoveFn?: (id: string) => void
+) => {
   switch (variant) {
     case "admin-show":
       return (
@@ -20,7 +26,7 @@ const AdminContentTd = (createdAt: string, variant: string, id: string) => {
       return (
         <>
           <td>
-            <TableItemBtn variant="remove" itemId={id}>
+            <TableItemBtn variant="remove" itemId={id} onRemoveFn={onRemoveFn}>
               Remove
             </TableItemBtn>
           </td>
@@ -42,7 +48,11 @@ const AdminContentTd = (createdAt: string, variant: string, id: string) => {
   }
 };
 
-const TableListFiltered: FC<TableListProps> = ({ variant, filteredItems }) => {
+const TableListFiltered: FC<TableListProps> = ({
+  variant,
+  filteredItems,
+  onRemoveFn,
+}) => {
   const adminEditThKeys: string[] = ["EDIT iMG"];
 
   let adminContentTh: ReactNode;
@@ -90,7 +100,8 @@ const TableListFiltered: FC<TableListProps> = ({ variant, filteredItems }) => {
             <td>{v.album}</td>
             <td>{v.price}</td>
             <td>{v.id}</td>
-            {variant !== "user" && AdminContentTd(v.createdAt, variant, v.id)}
+            {variant !== "user" &&
+              AdminContentTd(v.createdAt, variant, v.id, onRemoveFn)}
           </tr>
         ))}
         {filteredItems?.length === 0 && (

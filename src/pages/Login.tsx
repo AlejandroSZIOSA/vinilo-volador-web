@@ -6,18 +6,15 @@ const LoginPage: FC = () => {
   const { login_Fn } = useAuth_Ctx();
   const navigate = useNavigate();
 
+  //This CB function can change in the future for async API calls
   function handleLogin() {
     login_Fn("token");
     navigate("/admin");
   }
   return (
     <>
-      <h1>Admin Login page</h1>
-
+      <h1>Login page</h1>
       <LoginForm handleLoginFn={handleLogin} />
-
-      {/*  <button onClick={handleLogin}>Login</button> */}
-      {/* <button onClick={() => navigate("/admin")}>to admin</button> */}
     </>
   );
 };

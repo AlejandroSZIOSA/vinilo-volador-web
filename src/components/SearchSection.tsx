@@ -13,6 +13,7 @@ type SearchSectionProps = {
     | "admin-add"
     | "admin-edit"
     | "user";
+  onRemoveFn?: (id: string) => void;
 };
 
 type SearchBy = "artist" | "album" | "id";
@@ -20,6 +21,7 @@ type SearchBy = "artist" | "album" | "id";
 const SearchSection: FC<SearchSectionProps> = ({
   variant,
   tableListVariant,
+  onRemoveFn,
 }) => {
   const { vinyls_ } = useAdmin_Ctx();
 
@@ -80,7 +82,11 @@ const SearchSection: FC<SearchSectionProps> = ({
         onChange={setSearchByFilter}
       />
 
-      <TableListFiltered variant={tableListVariant} filteredItems={filtered} />
+      <TableListFiltered
+        variant={tableListVariant}
+        filteredItems={filtered}
+        onRemoveFn={onRemoveFn}
+      />
     </div>
   );
 };
