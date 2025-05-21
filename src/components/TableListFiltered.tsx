@@ -7,13 +7,15 @@ type TableListProps = {
   variant: "admin-show" | "admin-remove" | "admin-add" | "admin-edit" | "user";
   filteredItems?: Vinyl[];
   onRemoveFn?: (id: string) => void;
+  onEditFn?: (item: Vinyl) => void;
 };
 
 const AdminContentTd = (
   createdAt: string,
   variant: string,
-  id: string,
-  onRemoveFn?: (id: string) => void
+  item: Vinyl,
+  onRemoveFn?: (id: string) => void,
+  onEditFn?: (item: Vinyl) => void
 ) => {
   switch (variant) {
     case "admin-show":
@@ -26,7 +28,7 @@ const AdminContentTd = (
       return (
         <>
           <td>
-            <TableItemBtn variant="remove" itemId={id} onRemoveFn={onRemoveFn}>
+            <TableItemBtn variant="remove" item={item} onRemoveFn={onRemoveFn}>
               Remove
             </TableItemBtn>
           </td>
@@ -37,7 +39,7 @@ const AdminContentTd = (
       return (
         <>
           <td>
-            <TableItemBtn variant="edit" itemId={id}>
+            <TableItemBtn variant="edit" item={item} onEditFn={onEditFn}>
               Edit
             </TableItemBtn>
           </td>
@@ -52,6 +54,7 @@ const TableListFiltered: FC<TableListProps> = ({
   variant,
   filteredItems,
   onRemoveFn,
+  onEditFn,
 }) => {
   const adminEditThKeys: string[] = ["EDIT iMG"];
 
@@ -101,7 +104,7 @@ const TableListFiltered: FC<TableListProps> = ({
             <td>{v.price}</td>
             <td>{v.id}</td>
             {variant !== "user" &&
-              AdminContentTd(v.createdAt, variant, v.id, onRemoveFn)}
+              AdminContentTd(v.createdAt, variant, v, onRemoveFn, onEditFn)}
           </tr>
         ))}
         {filteredItems?.length === 0 && (

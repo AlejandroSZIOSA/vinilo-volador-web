@@ -1,35 +1,28 @@
 import { type ReactNode, type FC } from "react";
+import type { Vinyl } from "../../types/shared";
 
 type TableItemBtnProps = {
   variant?: "remove" | "edit";
   children: ReactNode;
-  itemId: string;
+  item: Vinyl;
   onRemoveFn?: (id: string) => void; // for admin-remove variant only
+  onEditFn?: (item: Vinyl) => void; // for admin-edit variant only
 };
 
 const TableItemBtn: FC<TableItemBtnProps> = ({
   children,
   variant,
-  itemId,
-  onRemoveFn,
+  item,
+  onRemoveFn, // Call Back FN  X 4
+  onEditFn, // Call Back FN  X 4
 }) => {
-  /*  const { removeVinyl_Fn } = useAdmin_Ctx(); */
-
-  //Remove an item
-  /* function handleRemoveClick() {
-    removeVinyl_Fn(itemId);
-  } */
-
-  function handleEditClick() {
-    console.log("Edit", itemId);
-  }
-
+  const { id } = item;
   return (
     <>
       {variant === "remove" ? (
-        <button onClick={() => onRemoveFn?.(itemId)}>{children}</button>
+        <button onClick={() => onRemoveFn?.(id)}>{children}</button>
       ) : (
-        <button onClick={handleEditClick}>{children}</button>
+        <button onClick={() => onEditFn?.(item)}>{children}</button>
       )}
     </>
   );

@@ -4,6 +4,7 @@ import { SearchBar } from "./searchbar/SearchBar";
 import type { RadioOption } from "./searchbar/RadioGroup";
 import TableListFiltered from "./TableListFiltered";
 import { useAdmin_Ctx } from "../store/admin-Context";
+import type { Vinyl } from "../types/shared";
 
 type SearchSectionProps = {
   variant: "user" | "admin";
@@ -14,6 +15,7 @@ type SearchSectionProps = {
     | "admin-edit"
     | "user";
   onRemoveFn?: (id: string) => void;
+  onEditFn?: (item: Vinyl) => void;
 };
 
 type SearchBy = "artist" | "album" | "id";
@@ -22,6 +24,7 @@ const SearchSection: FC<SearchSectionProps> = ({
   variant,
   tableListVariant,
   onRemoveFn,
+  onEditFn,
 }) => {
   const { vinyls_ } = useAdmin_Ctx();
 
@@ -86,6 +89,7 @@ const SearchSection: FC<SearchSectionProps> = ({
         variant={tableListVariant}
         filteredItems={filtered}
         onRemoveFn={onRemoveFn}
+        onEditFn={onEditFn}
       />
     </div>
   );
