@@ -69,8 +69,6 @@ export const AdminProvider_Ctx = ({ children }: { children: ReactNode }) => {
   const [updatedListDate, setUpdatedListDate] = useState(
     "2024-05-08T10:00:00.000Z"
   );
-  /*  const login_Fn = (t: string) => setAuthenticated(t); 
-  const logout_Fn = () => setAuthenticated(false); */
 
   const ctx: AdminContextType = {
     vinyls_: vinylsState,
@@ -104,6 +102,7 @@ export const AdminProvider_Ctx = ({ children }: { children: ReactNode }) => {
 
 export const useAdmin_Ctx = () => {
   const context = useContext(AdminContext);
-  if (!context) throw new Error("useAuth must be used within an AdminProvider");
+  if (!context)
+    throw new Error("useAdmin must be used within an AdminProvider");
   return context;
 };

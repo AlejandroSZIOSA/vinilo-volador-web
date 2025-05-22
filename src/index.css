@@ -74,15 +74,14 @@ button:focus-visible {
   margin: 0;
 }
 
-/*TODO: problem dark mode  */
-:root {
-  --background-color: white;
-  --text-color: black;
+.dark {
+  background-color: #121212;
+  color: #ffffff;
 }
 
-.dark {
-  --background-color: #121212;
-  --text-color: white;
+.light {
+  background-color: #d0d0d0;
+  color: #000000;
 }
 
 body {
@@ -90,7 +89,7 @@ body {
   flex-direction: column;
   width: 430px;
   height: 932px;
-  background-color: rgb(196, 196, 196);
+  /* background-color: rgb(196, 196, 196); */
 }
 
 /* h1 {
