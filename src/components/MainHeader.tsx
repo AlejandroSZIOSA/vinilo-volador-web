@@ -3,14 +3,18 @@ import NavBar from "./in-Header/NavBar";
 /* import Logo from "./Logo"; */
 import { useAuth_Ctx } from "../store/auth-Context";
 import ShowDateTime from "./in-Header/ShowDateTime";
+import DarkLightToggle from "./DarkLightToggle";
+import classes from "./MainHeader.module.css";
+import { Link } from "react-router-dom";
 
 const MainHeader: FC = () => {
   const { is_Authenticated } = useAuth_Ctx();
+
   return (
-    <header style={{ display: "flex", flexDirection: "column" }}>
-      <div style={{ display: "flex", flexDirection: "row" }}>
-        <p>{is_Authenticated ? "Admin" : "User"}</p>
-        <h1>Main Header</h1>
+    <header className={classes.header}>
+      <div className={classes.innerContainer}>
+        {is_Authenticated ? <p>Admin</p> : <Link to={"/"}>User</Link>}
+        <DarkLightToggle />
         <NavBar />
       </div>
       <ShowDateTime />
