@@ -3,7 +3,7 @@ import HomePage from "./pages/Home";
 import LoginPage from "./pages/Login";
 import AdminRootLayout from "./layouts/AdminRoot";
 import AddPage from "./pages/admin/Add";
-import UserRootPage from "./layouts/UserRoot";
+import UserRootLayout from "./layouts/UserRoot";
 import RemovePage from "./pages/admin/Remove";
 import ShowPage from "./pages/admin/Show";
 import EditPage from "./pages/admin/Edit";
@@ -13,7 +13,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <UserRootPage />,
+      element: <UserRootLayout />,
       children: [
         { index: true, element: <HomePage /> },
         { path: "login", element: <LoginPage /> },

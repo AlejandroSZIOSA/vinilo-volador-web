@@ -20,11 +20,13 @@ const Tabs = ({ tabs }: TabsProps) => {
           <button
             key={index}
             style={{
+              borderTop: "none" /* fix */,
+              borderLeft: "none" /* fix */,
+              borderRight: "none" /* fix */,
               borderBottom: activeIndex === index ? "2px solid blue" : "none",
               fontWeight: activeIndex === index ? "bold" : "normal",
               padding: "0.5rem 1rem",
               background: "none",
-              border: "none",
               cursor: "pointer",
             }}
             onClick={() => setActiveIndex(index)}

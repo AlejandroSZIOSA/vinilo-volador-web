@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "../components/user/Footer";
 import MainHeader from "../components/MainHeader";
 
-const UserRootPage: FC = () => {
+const UserRootLayout: FC = () => {
   return (
     <>
       <MainHeader />
@@ -15,4 +15,4 @@ const UserRootPage: FC = () => {
   );
 };
 
-export default UserRootPage;
+export default UserRootLayout;

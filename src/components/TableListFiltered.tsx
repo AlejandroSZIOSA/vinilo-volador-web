@@ -10,6 +10,7 @@ type TableListProps = {
   onEditFn?: (item: Vinyl) => void;
 };
 
+//Component
 const AdminContentTd = (
   createdAt: string,
   variant: string,
@@ -19,71 +20,48 @@ const AdminContentTd = (
 ) => {
   switch (variant) {
     case "admin-show":
-      return (
-        <>
-          <td>{createdAt}</td>
-        </>
-      );
+      return <td>{createdAt}</td>;
     case "admin-remove":
       return (
-        <>
-          <td>
-            <TableItemBtn variant="remove" item={item} onRemoveFn={onRemoveFn}>
-              Remove
-            </TableItemBtn>
-          </td>
-        </>
+        <td>
+          <TableItemBtn variant="remove" item={item} onRemoveFn={onRemoveFn}>
+            Remove
+          </TableItemBtn>
+        </td>
       );
 
     case "admin-edit":
       return (
-        <>
-          <td>
-            <TableItemBtn variant="edit" item={item} onEditFn={onEditFn}>
-              Edit
-            </TableItemBtn>
-          </td>
-        </>
+        <td>
+          <TableItemBtn variant="edit" item={item} onEditFn={onEditFn}>
+            Edit
+          </TableItemBtn>
+        </td>
       );
     default:
       return null;
   }
 };
 
+//Component
 const TableListFiltered: FC<TableListProps> = ({
   variant,
   filteredItems,
   onRemoveFn,
   onEditFn,
 }) => {
-  const adminEditThKeys: string[] = ["EDIT iMG"];
-
   let adminContentTh: ReactNode;
 
   if (variant === "admin-show") {
-    adminContentTh = (
-      <>
-        <th>Created</th>
-      </>
-    );
+    adminContentTh = <th>Created</th>;
   }
 
   if (variant === "admin-edit") {
-    adminContentTh = (
-      <>
-        {adminEditThKeys.map((k, index) => (
-          <th key={index}>{k}</th>
-        ))}
-      </>
-    );
+    adminContentTh = <th>Edit</th>;
   }
 
   if (variant === "admin-remove") {
-    adminContentTh = (
-      <>
-        <th>Remove img</th>
-      </>
-    );
+    adminContentTh = <th>Remove</th>;
   }
 
   return (
