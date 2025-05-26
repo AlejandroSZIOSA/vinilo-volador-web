@@ -15,7 +15,7 @@ const AddPage: FC = () => {
 
   return (
     <>
-      <p>Add Page</p>
+      <p>Add New Item</p>
       <button onClick={handleLogOut}>logOut</button>
       <CreateItemForm />
       <TableListShow variant="admin-latest" />

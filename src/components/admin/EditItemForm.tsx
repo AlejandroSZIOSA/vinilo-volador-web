@@ -68,7 +68,7 @@ export default function EditItemForm({
         </div>
         <div>
           <label className="block">Price</label>
-          <input name="album" value={form.price} onChange={handleChange} />
+          <input name="price" value={form.price} onChange={handleChange} />
         </div>
 
         <div className="flex gap-2">

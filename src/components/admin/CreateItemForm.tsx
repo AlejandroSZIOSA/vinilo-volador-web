@@ -2,9 +2,10 @@ import { useRef, type FormEvent, type FC } from "react";
 import type { Vinyl } from "../../types/shared";
 import ConfirmDialog, { type ConfirmDialogRef } from "./ConfirmDialog";
 import { useAdmin_Ctx } from "../../store/admin-Context";
+import { getCurrentDateTime } from "../../utils/functions";
 
 const CreateItemForm: FC = () => {
-  const { addVinyl_Fn } = useAdmin_Ctx();
+  const { addVinyl_Fn, setUpdatedListDate_Fn } = useAdmin_Ctx();
 
   const artist = useRef<HTMLInputElement>(null);
   const album = useRef<HTMLInputElement>(null);
@@ -22,7 +23,6 @@ const CreateItemForm: FC = () => {
     const enteredArtist = artist.current!.value;
     const enteredAlbum = album.current!.value;
     const enteredPrice = parseInt(price.current!.value);
-
     const dateToday = new Date();
     const created = dateToday.toLocaleDateString("en-CA");
 
@@ -34,6 +34,7 @@ const CreateItemForm: FC = () => {
       createdAt: created,
     };
     addVinyl_Fn(newVinyl);
+    setUpdatedListDate_Fn(getCurrentDateTime());
   }
 
   const handleOpenDialog = (e: FormEvent) => {

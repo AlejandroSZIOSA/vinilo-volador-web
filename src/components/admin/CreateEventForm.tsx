@@ -1,9 +1,10 @@
 import { useRef, type FC, type FormEvent } from "react";
 import { useAdmin_Ctx } from "../../store/admin-Context";
 import ConfirmDialog, { type ConfirmDialogRef } from "./ConfirmDialog";
+import { getCurrentDateTime } from "../../utils/functions";
 
 const CreateEventForm: FC = () => {
-  const { setNextEvent_Fn } = useAdmin_Ctx();
+  const { setNextEvent_Fn, setUpdatedListDate_Fn } = useAdmin_Ctx();
 
   const place = useRef<HTMLInputElement>(null);
   const address = useRef<HTMLInputElement>(null);
@@ -28,7 +29,7 @@ const CreateEventForm: FC = () => {
       to: enteredTimeTo,
     };
     setNextEvent_Fn(newEvent);
-    console.log("Event created:", newEvent);
+    setUpdatedListDate_Fn(getCurrentDateTime());
   }
 
   //Dialog functions for creating new Event
