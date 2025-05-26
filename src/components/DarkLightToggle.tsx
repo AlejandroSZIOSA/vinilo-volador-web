@@ -6,7 +6,7 @@ const DarkLightToggle: FC = () => {
   return (
     <button
       onClick={toggleTheme_Fn}
-      style={{ padding: "10px", fontSize: "16px" }}
+      style={{ padding: "16px", fontSize: "12px" }}
     >
       {theme_ === "light" ? "Dark Mode" : "Light Mode"}
     </button>

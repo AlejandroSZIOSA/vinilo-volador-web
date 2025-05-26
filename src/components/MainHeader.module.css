@@ -4,7 +4,7 @@
   position: sticky;
   top: 0;
   color: rgb(0, 0, 0);
-  padding: 15px;
+  padding: 10px 0px 0px 0px;
   text-align: center;
   z-index: 1000;
   background-color: #ffffff;
@@ -12,5 +12,10 @@
 .innerContainer {
   display: flex;
   flex-direction: row;
+  height: 62px;
   justify-content: space-between;
+}
+
+.innerContainer img {
+  padding-bottom: 5px;
 }

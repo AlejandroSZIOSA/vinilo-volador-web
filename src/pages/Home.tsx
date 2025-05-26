@@ -6,7 +6,7 @@ import SearchSection from "../components/SearchSection";
 const HomePage: FC = () => {
   const tabData = [
     {
-      label: "SEARCH",
+      label: "HOME",
       content: <SearchSection variant="user" tableListVariant="user" />,
     },
     { label: "NEWS", content: <News /> },
@@ -14,7 +14,6 @@ const HomePage: FC = () => {
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <h1>home Page</h1>
       <Tabs tabs={tabData} />
     </div>
   );
