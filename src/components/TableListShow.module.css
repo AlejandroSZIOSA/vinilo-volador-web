@@ -8,7 +8,7 @@
   position: sticky;
   top: 0; /* or left/right/bottom */
   z-index: 10; /* optional: keep it above other content */
-  background-color: rgb(133, 133, 133);
+  background-color: rgb(190, 190, 190);
 }
 
 .container th {

@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 60px;
+  align-items: center;
+  background: #b51717;
+  color: white;
+  font-size: larger;
+}
+
+.innerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 180px;
+  /*   background-color: rgb(0, 0, 0);
+ */
+}

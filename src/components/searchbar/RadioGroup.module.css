@@ -1,6 +1,18 @@
 .container {
   display: flex;
   justify-content: space-evenly;
-  background-color: beige;
-  padding: 5px 5px;
+  padding: 12px 12px;
+  font-size: x-large;
+  background-color: #d0d0d0;
+}
+
+.container label {
+  display: flex;
+  width: 90px;
+  justify-content: space-between;
+  /* background-color: brown; */
+}
+
+.container input {
+  transform: scale(1.5); /* Increase size */
 }

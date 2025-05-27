@@ -1,17 +1,45 @@
 import { type FC } from "react";
 import TableListShow from "../TableListShow";
 import { useAdmin_Ctx } from "../../store/admin-Context";
+import classes from "./News.module.css";
 
 const News: FC = () => {
   const { next_Event } = useAdmin_Ctx();
   return (
-    <div>
-      <h1>News</h1>
-      <h2>Next Pick up place</h2>
-      <p>{next_Event?.place}</p>
-      <h2>Last Items Added</h2>
-      <TableListShow variant="user-latest" />
-    </div>
+    <section className={classes.container}>
+      <h1>Next Pick up place</h1>
+      <div className={classes.newsContainer}>
+        <div className={classes.newsInnerContainer}>
+          <div>
+            <p>
+              <strong>Place:</strong> {next_Event?.place}
+            </p>
+            <p>
+              <strong>Address:</strong> {next_Event?.address}
+            </p>
+            <p>
+              <strong>Date:</strong> {next_Event?.date}
+            </p>
+          </div>
+          <p style={{ textAlign: "center" }}>
+            <strong>Time</strong>
+          </p>
+          <div className={classes.timeContainer}>
+            <p>
+              <strong>From:</strong> {next_Event?.from}
+            </p>
+            <p>
+              <strong>To:</strong>
+              {next_Event?.to}
+            </p>
+          </div>
+        </div>
+      </div>
+      <h1>Last Items Added</h1>
+      <div className={classes.tableShowContainer}>
+        <TableListShow variant="user-latest" />
+      </div>
+    </section>
   );
 };
 

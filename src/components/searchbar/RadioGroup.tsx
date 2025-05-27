@@ -21,17 +21,14 @@ export function RadioGroup<T extends string>({
   return (
     <div className={classes.container}>
       {options.map((option) => (
-        <label
-          key={option.value}
-          style={{ display: "block", marginBottom: "0.25rem" }}
-        >
+        <label key={option.value}>
           <input
             type="radio"
             name={name}
             value={option.value}
             checked={selectedValue === option.value}
             onChange={() => onChange(option.value)}
-          />{" "}
+          />
           {option.label}
         </label>
       ))}

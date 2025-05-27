@@ -1,0 +1,43 @@
+.container {
+  /* display: flex;
+  flex-direction: column; */
+  height: 680px;
+  /* background-color: lightgrey; */
+}
+.container h1 {
+  text-align: center;
+  padding: 8px 8px;
+}
+
+.newsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbffb0;
+  border: 3px solid black;
+  border-radius: 2%;
+  font-size: larger;
+}
+
+.timeContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.newsContainer p {
+  padding: 5px 5px;
+}
+
+.newsInnerContainer {
+  width: 90%;
+  height: 90%;
+  /*  background: peru; */
+}
+.tableShowContainer {
+  height: 390px;
+  overflow-y: auto;
+  border: 1px solid #000000;
+  background: white;
+}
