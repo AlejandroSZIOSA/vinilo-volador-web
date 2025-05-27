@@ -5,6 +5,7 @@ import type { RadioOption } from "./searchbar/RadioGroup";
 import TableListFiltered from "./TableListFiltered";
 import { useAdmin_Ctx } from "../store/admin-Context";
 import type { Vinyl } from "../types/shared";
+import classes from "./SearchSection.module.css";
 
 type SearchSectionProps = {
   variant: "user" | "admin";
@@ -70,27 +71,26 @@ const SearchSection: FC<SearchSectionProps> = ({
   }
 
   return (
-    <div style={{ maxWidth: "600px", margin: "2rem auto" }}>
-      {variant === "user" ? <h2>Search Vinyl</h2> : <h2>Find Vinyl</h2>}
-      <SearchBar
-        value={search}
-        onChange={setSearch}
-        /*   placeholder="search title..." */
-      />
-
-      <RadioGroup<SearchBy>
-        name="searchBy"
-        options={searchByOptions}
-        selectedValue={searchByFilter}
-        onChange={setSearchByFilter}
-      />
-
-      <TableListFiltered
-        variant={tableListVariant}
-        filteredItems={filtered}
-        onRemoveFn={onRemoveFn}
-        onEditFn={onEditFn}
-      />
+    <div className={classes.container}>
+      {/* {variant === "user" ? <h2>Search Vinyl</h2> : <h2>Find Vinyl</h2>} */}
+      <div>
+        <SearchBar value={search} onChange={setSearch} />
+        {/*  RadioGroup Component using generic types */}
+        <RadioGroup<SearchBy>
+          name="searchBy"
+          options={searchByOptions}
+          selectedValue={searchByFilter}
+          onChange={setSearchByFilter}
+        />
+      </div>
+      <div className={classes.tableContainer}>
+        <TableListFiltered
+          variant={tableListVariant}
+          filteredItems={filtered}
+          onRemoveFn={onRemoveFn}
+          onEditFn={onEditFn}
+        />
+      </div>
     </div>
   );
 };

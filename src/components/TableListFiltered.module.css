@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: larger;
+}
+
+.container th {
+  border: 1px solid #000000;
+}
+
+.container td {
+  border: 1px solid #000000;
+}

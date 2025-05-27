@@ -1,8 +1,12 @@
 .container {
   display: flex;
-  height: 43px;
+  height: 35px;
   background-color: #555555;
   color: white;
   align-items: center;
   justify-content: center;
+}
+
+.container img {
+  margin-right: 10px;
 }

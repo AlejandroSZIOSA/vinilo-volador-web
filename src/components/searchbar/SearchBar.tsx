@@ -1,4 +1,5 @@
 import { type ChangeEvent } from "react";
+import classes from "./SearchBar.module.css";
 
 interface SearchBarProps {
   value: string;
@@ -22,14 +23,7 @@ export const SearchBar = ({
       name="search"
       onChange={handleChange}
       placeholder={placeholder}
-      style={{
-        padding: "0.5rem",
-        border: "1px solid #ccc",
-        borderRadius: "6px",
-        width: "100%",
-        maxWidth: "400px",
-        marginBottom: "1rem",
-      }}
+      className={classes.searchBarInput}
     />
   );
 };

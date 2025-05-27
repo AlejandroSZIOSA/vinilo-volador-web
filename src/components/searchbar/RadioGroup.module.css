@@ -1,0 +1,6 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: beige;
+  padding: 5px 5px;
+}

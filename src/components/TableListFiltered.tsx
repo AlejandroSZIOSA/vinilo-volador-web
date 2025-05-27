@@ -2,6 +2,7 @@ import { type ReactNode, type FC } from "react";
 import TableItemBtn from "./buttons/TableItemBtn";
 import type { Vinyl } from "../types/shared";
 import { USER_TH_KEYS } from "../utils/constants";
+import classes from "./TableListFiltered.module.css";
 
 type TableListProps = {
   variant: "admin-show" | "admin-remove" | "admin-add" | "admin-edit" | "user";
@@ -65,7 +66,7 @@ const TableListFiltered: FC<TableListProps> = ({
   }
 
   return (
-    <table>
+    <table className={classes.container}>
       <thead>
         <tr>
           {USER_TH_KEYS.map((k, index) => (

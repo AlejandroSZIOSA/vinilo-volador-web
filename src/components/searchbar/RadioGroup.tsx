@@ -1,3 +1,5 @@
+import classes from "./RadioGroup.module.css";
+
 export type RadioOption<T> = {
   label: string;
   value: T;
@@ -17,7 +19,7 @@ export function RadioGroup<T extends string>({
   onChange,
 }: RadioGroupProps<T>) {
   return (
-    <div style={{ marginBottom: "1rem" }}>
+    <div className={classes.container}>
       {options.map((option) => (
         <label
           key={option.value}
