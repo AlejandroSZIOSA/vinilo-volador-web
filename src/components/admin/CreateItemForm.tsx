@@ -57,37 +57,43 @@ const CreateItemForm: FC = () => {
   return (
     <>
       <form onSubmit={handleOpenDialog} className={classes.container}>
-        <label>Artist</label>
-        <input
-          placeholder="artist"
-          id="artist"
-          type="text"
-          name="artist"
-          ref={artist}
-          required
-        />
-        <label>Album</label>
-        <input
-          placeholder="album"
-          id="album"
-          type="text"
-          name="album"
-          maxLength={20}
-          ref={album}
-          required
-        />
+        <div>
+          <label>Artist</label>
+          <input
+            placeholder="artist"
+            id="artist"
+            type="text"
+            name="artist"
+            ref={artist}
+            required
+          />
+        </div>
+        <div>
+          <label>Album</label>
+          <input
+            placeholder="album"
+            id="album"
+            type="text"
+            name="album"
+            maxLength={20}
+            ref={album}
+            required
+          />
+        </div>
 
-        <label>Price</label>
-        <input
-          placeholder="price"
-          id="price"
-          type="number"
-          className={classes.inputPrice}
-          name="price"
-          ref={price}
-          required
-        />
-        <div style={{ paddingTop: "20px" }}>
+        <div className={classes.priceContainer}>
+          <label>Price</label>
+          <input
+            placeholder="price"
+            id="price"
+            type="number"
+            className={classes.inputPrice}
+            name="price"
+            ref={price}
+            required
+          />
+        </div>
+        <div className={classes.submitBtnContainer}>
           <ButtonSubmitForm type="submit">Add</ButtonSubmitForm>
         </div>
       </form>
