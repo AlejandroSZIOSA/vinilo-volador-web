@@ -6,7 +6,7 @@ import classes from "./Add.module.css";
 const AddPage: FC = () => {
   return (
     <div className={classes.container}>
-      <h1>Add Item</h1>
+      <h1>Add</h1>
       <div className={classes.formContainer}>
         <CreateItemForm />
       </div>

@@ -4,7 +4,9 @@ import type { Vinyl } from "../../types/shared";
 import EditItemForm from "../../components/admin/EditItemForm";
 import { useAdmin_Ctx } from "../../store/admin-Context";
 import { getCurrentDateTime } from "../../utils/functions";
+import classes from "./Edit.module.css";
 
+//TODO: Fix Change price type to string
 const EditPage: FC = () => {
   const [itemId, setItemId] = useState<string>("");
   const [vinyl, setVinyl] = useState<Vinyl>({
@@ -17,7 +19,7 @@ const EditPage: FC = () => {
 
   const { updateVinyl_Fn, setUpdatedListDate_Fn } = useAdmin_Ctx();
 
-  //CallBack Fn
+  //CallBack Fn Edit The Item
   const handleSave = (updatedVinyl: typeof vinyl) => {
     setVinyl(updatedVinyl);
     updateVinyl_Fn(itemId, updatedVinyl);
@@ -31,14 +33,18 @@ const EditPage: FC = () => {
   }
 
   return (
-    <div>
-      <h1>Edit Vinyl</h1>
-      <EditItemForm initialData={vinyl} onSave={handleSave} />
-      <SearchSection
-        variant="admin"
-        tableListVariant="admin-edit"
-        onEditFn={handleEdit}
-      />
+    <div className={classes.container}>
+      <h1>Edit</h1>
+      <div className={classes.formContainer}>
+        <EditItemForm initialData={vinyl} onSave={handleSave} />
+      </div>
+      <div className={classes.searchContainer}>
+        <SearchSection
+          variant="admin"
+          tableListVariant="admin-edit"
+          onEditFn={handleEdit}
+        />
+      </div>
     </div>
   );
 };

@@ -11,9 +11,7 @@ const AdminRootLayout: FC = () => {
     <>
       <MainHeader />
       <main>
-        <div>
-          <TabNav />
-        </div>
+        <TabNav />
         <Outlet />
       </main>
     </>

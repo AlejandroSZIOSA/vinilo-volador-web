@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 0px 5px 0px 5px; */
+}
+
+.container h1 {
+  text-align: center;
+  padding: 12px 12px;
+}
+
+.formContainer {
+  height: 280px;
+  width: 95%;
+  background-color: #fbffb0;
+  border: 2px solid black;
+  border-radius: 5%;
+  margin-bottom: 40px;
+}
+
+.searchContainer {
+  padding: 0px 14px 0px 14px;
+}

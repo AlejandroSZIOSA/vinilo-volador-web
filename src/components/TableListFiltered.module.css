@@ -19,3 +19,17 @@
 .container td {
   border: 1px solid #000000;
 }
+
+.tdImageDelete {
+  background-color: yellow;
+}
+.tdImageDelete div {
+  margin-left: 24px;
+}
+
+.tdImageEdit {
+  background-color: rgb(238, 185, 61);
+}
+.tdImageEdit div {
+  margin-left: 10px;
+}

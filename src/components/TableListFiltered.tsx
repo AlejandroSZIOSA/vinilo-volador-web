@@ -26,8 +26,8 @@ const AdminContentTd = (
       return <td>{createdAt}</td>;
     case "admin-remove":
       return (
-        <td style={{ background: "yellow" }}>
-          <div style={{ marginLeft: "24px" }}>
+        <td className={classes.tdImageDelete}>
+          <div>
             <TableItemBtn variant="remove" item={item} onRemoveFn={onRemoveFn}>
               <img
                 src="/src/assets/icons/delete.svg"
@@ -41,10 +41,16 @@ const AdminContentTd = (
 
     case "admin-edit":
       return (
-        <td>
-          <TableItemBtn variant="edit" item={item} onEditFn={onEditFn}>
-            Edit
-          </TableItemBtn>
+        <td className={classes.tdImageEdit}>
+          <div>
+            <TableItemBtn variant="edit" item={item} onEditFn={onEditFn}>
+              <img
+                src="/src/assets/icons/edit.svg"
+                width={TABLE_ICONS_SIZES.width}
+                height={TABLE_ICONS_SIZES.height}
+              ></img>
+            </TableItemBtn>
+          </div>
         </td>
       );
     default:
