@@ -1,8 +1,8 @@
 import { type FC, type ReactNode } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useAuth_Ctx } from "../../store/auth-Context";
-import classes from "./NavBar.module.css";
 import { HEADER_ICONS_SIZES } from "../../utils/constants";
+import classes from "./NavBar.module.css";
+import { useAuth_Ctx } from "../../store/auth-Context";
 
 const NavBar: FC = () => {
   const { is_Authenticated, logout_Fn } = useAuth_Ctx();
@@ -20,15 +20,20 @@ const NavBar: FC = () => {
   if (is_Authenticated) {
     content = (
       <li>
-        <button onClick={handleLogOut}>Log out</button>
+        <img
+          src="/src/assets/icons/logout-lock.svg"
+          width={width}
+          height={height}
+          onClick={handleLogOut}
+        ></img>
       </li>
     );
   } else {
     content = (
-      <li style={{ listStyle: "none" }}>
-        <NavLink to="/login" className={classes.NavLink}>
+      <li>
+        <NavLink to="/login">
           <img
-            src="/src/assets/icons/admin.svg"
+            src="/src/assets/icons/adminLock.svg"
             width={width}
             height={height}
           ></img>
@@ -38,8 +43,8 @@ const NavBar: FC = () => {
   }
 
   return (
-    <nav className={classes.navbar}>
-      <ul>{content}</ul>
+    <nav>
+      <ul className={classes.listStyle}>{content}</ul>
     </nav>
   );
 };

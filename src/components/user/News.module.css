@@ -1,6 +1,4 @@
 .container {
-  /* display: flex;
-  flex-direction: column; */
   height: 680px;
   /* background-color: lightgrey; */
 }
@@ -35,9 +33,11 @@
   height: 90%;
   /*  background: peru; */
 }
+
 .tableShowContainer {
-  height: 390px;
+  /* height: 390px;
   overflow-y: auto;
   border: 1px solid #000000;
-  background: white;
+  background: white; */
+  font-size: large;
 }

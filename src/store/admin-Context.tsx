@@ -66,9 +66,7 @@ const AdminContext = createContext<AdminContextType | null>(null);
 export const AdminProvider_Ctx = ({ children }: { children: ReactNode }) => {
   const [vinylsState, dispatch] = useReducer(vinylsReducer, VINYLS);
   const [nextEvent, setNextEvent] = useState<Event | null>(NEXT_EVENT);
-  const [updatedListDate, setUpdatedListDate] = useState(
-    "2024-05-08T10:00:00.000Z"
-  );
+  const [updatedListDate, setUpdatedListDate] = useState("2025/05/08 10:30");
 
   const ctx: AdminContextType = {
     vinyls_: vinylsState,

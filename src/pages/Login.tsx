@@ -2,6 +2,8 @@ import { type FC } from "react";
 import { useAuth_Ctx } from "../store/auth-Context";
 import { useNavigate } from "react-router-dom";
 import LoginForm from "../components/admin/LoginForm";
+import classes from "./Login.module.css";
+
 const LoginPage: FC = () => {
   const { login_Fn } = useAuth_Ctx();
   const navigate = useNavigate();
@@ -12,10 +14,12 @@ const LoginPage: FC = () => {
     navigate("/admin");
   }
   return (
-    <>
-      <h1>Login page</h1>
-      <LoginForm handleLoginFn={handleLogin} />
-    </>
+    <div className={classes.container}>
+      <h1>Login Admin Account</h1>
+      <div className={classes.formContainer}>
+        <LoginForm handleLoginFn={handleLogin} />
+      </div>
+    </div>
   );
 };
 

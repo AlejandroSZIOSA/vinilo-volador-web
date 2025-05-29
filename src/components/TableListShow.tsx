@@ -6,7 +6,7 @@ import classes from "./TableListShow.module.css";
 type TableListShowProps = {
   variant: "user-latest" | "admin-latest";
 };
-
+//Show Latest ten added items
 const TableListShow: FC<TableListShowProps> = ({ variant }) => {
   const { vinyls_ } = useAdmin_Ctx();
 
@@ -38,7 +38,7 @@ const TableListShow: FC<TableListShowProps> = ({ variant }) => {
     <table className={classes.container}>
       <thead>{contentTh}</thead>
       <tbody>
-        {vinyls_?.map((v) => (
+        {vinyls_?.slice(-10).map((v) => (
           <tr key={v.id}>
             <td>{v.artist}</td>
             <td>{v.album}</td>

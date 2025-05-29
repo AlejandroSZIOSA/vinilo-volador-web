@@ -1,69 +1,48 @@
-import { NavLink } from "react-router-dom";
 import { type FC } from "react";
+import { NavLink } from "react-router-dom";
+import classes from "./TabNav.module.css";
 
 const TabNav: FC = () => {
   return (
-    <div
-      style={{ display: "flex", gap: "1rem", borderBottom: "1px solid #ccc" }}
-    >
+    <div className={classes.container}>
       <NavLink
         to="/admin"
-        style={({ isActive }) => ({
-          padding: "0.5rem 1rem",
-          fontWeight: isActive ? "bold" : "normal",
-          borderBottom: isActive ? "2px solid blue" : "none",
-          textDecoration: "none",
-          color: "black",
-        })}
+        className={({ isActive }) =>
+          isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive
+        }
         end /* Fix problem */
       >
         Add
       </NavLink>
       <NavLink
         to="/admin/remove"
-        style={({ isActive }) => ({
-          padding: "0.5rem 1rem",
-          fontWeight: isActive ? "bold" : "normal",
-          borderBottom: isActive ? "2px solid blue" : "none",
-          textDecoration: "none",
-          color: "black",
-        })}
+        className={({ isActive }) =>
+          isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive
+        }
       >
         Remove
       </NavLink>
       <NavLink
         to="/admin/edit"
-        style={({ isActive }) => ({
-          padding: "0.5rem 1rem",
-          fontWeight: isActive ? "bold" : "normal",
-          borderBottom: isActive ? "2px solid blue" : "none",
-          textDecoration: "none",
-          color: "black",
-        })}
+        className={({ isActive }) =>
+          isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive
+        }
       >
         Edit
       </NavLink>
       <NavLink
         to="/admin/show"
-        style={({ isActive }) => ({
-          padding: "0.5rem 1rem",
-          fontWeight: isActive ? "bold" : "normal",
-          borderBottom: isActive ? "2px solid blue" : "none",
-          textDecoration: "none",
-          color: "black",
-        })}
+        className={({ isActive }) =>
+          isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive
+        }
       >
         Show
       </NavLink>
       <NavLink
         to="/admin/event"
-        style={({ isActive }) => ({
-          padding: "0.5rem 1rem",
-          fontWeight: isActive ? "bold" : "normal",
-          borderBottom: isActive ? "2px solid blue" : "none",
-          textDecoration: "none",
-          color: "black",
-        })}
+        className={({ isActive }) =>
+          isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive
+        }
       >
         Event
       </NavLink>

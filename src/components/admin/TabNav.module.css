@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #b51717;
+  padding: 10px 10px;
+}
+
+.navLinkIsActive {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: large;
+  border-bottom: 2px solid blue;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: #ffad28;
+}
+
+.navLinkIsNotActive {
+  padding: 0.5rem 1rem;
+  font-weight: normal;
+  font-size: large;
+  border-bottom: none;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: #ffad28;
+}

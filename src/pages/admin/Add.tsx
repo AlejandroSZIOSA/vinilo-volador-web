@@ -1,25 +1,20 @@
 import { type FC } from "react";
-import { useAuth_Ctx } from "../../store/auth-Context";
-import { useNavigate } from "react-router-dom";
 import CreateItemForm from "../../components/admin/CreateItemForm";
 import TableListShow from "../../components/TableListShow";
+import classes from "./Add.module.css";
 
 const AddPage: FC = () => {
-  const { logout_Fn } = useAuth_Ctx();
-
-  const navigate = useNavigate();
-  function handleLogOut() {
-    logout_Fn();
-    navigate("/");
-  }
-
   return (
-    <>
-      <p>Add New Item</p>
-      <button onClick={handleLogOut}>logOut</button>
-      <CreateItemForm />
-      <TableListShow variant="admin-latest" />
-    </>
+    <div className={classes.container}>
+      <h1>Add Item</h1>
+      <div className={classes.formContainer}>
+        <CreateItemForm />
+      </div>
+      <h1>Latest Added Items</h1>
+      <div className={classes.tableContainer}>
+        <TableListShow variant="admin-latest" />
+      </div>
+    </div>
   );
 };
 

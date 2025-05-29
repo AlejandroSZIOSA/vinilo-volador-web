@@ -1,5 +1,6 @@
 import { useState, useRef, type FormEvent, type FC } from "react";
 import { ADMIN } from "../../data/static-data";
+import classes from "./LoginForm.module.css";
 
 type LoginFormProps = {
   handleLoginFn: () => void;
@@ -25,7 +26,7 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
   const toggleShowPassword = () => setIsPasswordShowing(!isPasswordShowing);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={classes.container} onSubmit={handleSubmit}>
       <label>Alias</label>
       <input
         placeholder={ADMIN.alias}
@@ -37,7 +38,7 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
         required
       />
       <label>Password</label>
-      <div>
+      <div className={classes.passwordInputContainer}>
         <input
           placeholder={ADMIN.password}
           id="password"
@@ -51,19 +52,17 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
         <button
           type="button"
           onClick={toggleShowPassword}
+          className={classes.showHideBtn}
           disabled={areInputsLocked}
         >
           {!isPasswordShowing ? "Show" : "Hide"}
         </button>
       </div>
 
-      <div>
-        <button type="button" onClick={toggleLock}>
-          {!areInputsLocked ? "Lock" : "Unlock"}
+      <div className={classes.submitBtnContainer}>
+        <button type="submit" className={classes.submitBtn}>
+          Login
         </button>
-        <div style={{ paddingTop: "20px" }}>
-          <button type="submit">Login</button>
-        </div>
       </div>
     </form>
   );

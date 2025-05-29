@@ -15,7 +15,11 @@ const MainHeader: FC = () => {
     <header className={classes.header}>
       <div className={classes.innerContainer}>
         {is_Authenticated ? (
-          <p>Admin</p>
+          <img
+            src="/src/assets/icons/adminUnlock.svg"
+            width={width}
+            height={height}
+          ></img>
         ) : (
           <Link to={"/"}>
             <img

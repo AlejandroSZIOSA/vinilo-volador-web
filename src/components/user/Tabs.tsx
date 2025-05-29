@@ -46,7 +46,9 @@ const Tabs = ({ tabs }: TabsProps) => {
         ))}
       </div>
 
-      <div style={{ padding: "1rem" }}>{tabs[activeIndex].content}</div>
+      <div className={classes.tabsContentContainer}>
+        {tabs[activeIndex].content}
+      </div>
     </div>
   );
 };

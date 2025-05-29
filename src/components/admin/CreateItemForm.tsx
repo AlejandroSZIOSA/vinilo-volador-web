@@ -3,6 +3,12 @@ import type { Vinyl } from "../../types/shared";
 import ConfirmDialog, { type ConfirmDialogRef } from "./ConfirmDialog";
 import { useAdmin_Ctx } from "../../store/admin-Context";
 import { getCurrentDateTime } from "../../utils/functions";
+import ButtonSubmitForm from "./ButtonSubmitForm";
+import classes from "./CreateItemForm.module.css";
+
+function generateRandomNumericId() {
+  return Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
+}
 
 const CreateItemForm: FC = () => {
   const { addVinyl_Fn, setUpdatedListDate_Fn } = useAdmin_Ctx();
@@ -14,9 +20,6 @@ const CreateItemForm: FC = () => {
   const dialogRef = useRef<ConfirmDialogRef>(null); //Imported type for ConfirmDialogRef
 
   //NOTE: Can use a library like "nanoid" instead
-  function generateRandomNumericId() {
-    return Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
-  }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -49,9 +52,11 @@ const CreateItemForm: FC = () => {
     handleSubmit(formEvent);
   };
 
+  //TODO: Clear Form after Confirmation
+
   return (
-    <div>
-      <form onSubmit={handleOpenDialog}>
+    <>
+      <form onSubmit={handleOpenDialog} className={classes.container}>
         <label>Artist</label>
         <input
           placeholder="artist"
@@ -77,23 +82,22 @@ const CreateItemForm: FC = () => {
           placeholder="price"
           id="price"
           type="number"
+          className={classes.inputPrice}
           name="price"
-          maxLength={20}
           ref={price}
           required
         />
-
         <div style={{ paddingTop: "20px" }}>
-          <button type="submit">Create</button>
+          <ButtonSubmitForm type="submit">Add</ButtonSubmitForm>
         </div>
       </form>
       <ConfirmDialog
         ref={dialogRef}
-        title="Add new Vinyl"
+        title="Add new Item"
         message="Are you sure you want Add this item to the list?"
         onConfirm={confirmAction}
       />
-    </div>
+    </>
   );
 };
 
