@@ -5,6 +5,8 @@ import ConfirmDialog, {
   type ConfirmDialogRef,
 } from "../../components/admin/ConfirmDialog";
 
+import classes from "./Remove.module.css";
+
 const RemovePage: FC = () => {
   const { removeVinyl_Fn } = useAdmin_Ctx();
   const [id, setId] = useState("");
@@ -26,20 +28,22 @@ const RemovePage: FC = () => {
   }
 
   return (
-    <>
+    <div className={classes.container}>
       <h1>Remove</h1>
-      <SearchSection
-        variant="admin"
-        tableListVariant="admin-remove"
-        onRemoveFn={handleRemoveClick}
-      />
+      <div className={classes.searchContainer}>
+        <SearchSection
+          variant="admin"
+          tableListVariant="admin-remove"
+          onRemoveFn={handleRemoveClick}
+        />
+      </div>
       <ConfirmDialog
         ref={dialogRef}
         title="Remove Item"
         message="Are you sure you want Delete this item from the list?"
         onConfirm={confirmAction}
       />
-    </>
+    </div>
   );
 };
 

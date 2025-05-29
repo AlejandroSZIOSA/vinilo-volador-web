@@ -2,6 +2,8 @@ import { type ReactNode, type FC } from "react";
 import TableItemBtn from "./buttons/TableItemBtn";
 import type { Vinyl } from "../types/shared";
 import { USER_TH_KEYS } from "../utils/constants";
+import { TABLE_ICONS_SIZES } from "../utils/constants";
+
 import classes from "./TableListFiltered.module.css";
 
 type TableListProps = {
@@ -24,10 +26,16 @@ const AdminContentTd = (
       return <td>{createdAt}</td>;
     case "admin-remove":
       return (
-        <td>
-          <TableItemBtn variant="remove" item={item} onRemoveFn={onRemoveFn}>
-            Remove
-          </TableItemBtn>
+        <td style={{ background: "yellow" }}>
+          <div style={{ marginLeft: "24px" }}>
+            <TableItemBtn variant="remove" item={item} onRemoveFn={onRemoveFn}>
+              <img
+                src="/src/assets/icons/delete.svg"
+                width={TABLE_ICONS_SIZES.width}
+                height={TABLE_ICONS_SIZES.height}
+              ></img>
+            </TableItemBtn>
+          </div>
         </td>
       );
 

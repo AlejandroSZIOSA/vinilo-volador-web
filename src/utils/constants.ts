@@ -7,3 +7,8 @@ export const HEADER_ICONS_SIZES = {
   width: 60,
   height: 60,
 };
+
+export const TABLE_ICONS_SIZES = {
+  width: 20,
+  height: 20,
+};
