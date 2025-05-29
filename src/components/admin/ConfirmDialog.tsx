@@ -32,19 +32,13 @@ const ConfirmDialog = forwardRef<ConfirmDialogRef, ConfirmDialogProps>(
 
     return (
       <dialog ref={dialogRef} className={classes.container}>
-        <h2 className="text-lg font-bold mb-2">{title}</h2>
-        <p className="mb-4">{message}</p>
-        <div className="flex justify-end gap-2">
-          <button
-            onClick={handleCancel}
-            className="bg-gray-300 px-4 py-2 rounded"
-          >
+        <h2>{title}</h2>
+        <p>{message}</p>
+        <div className={classes.buttonContainer}>
+          <button onClick={handleCancel} className={classes.buttonCancel}>
             Cancel
           </button>
-          <button
-            onClick={handleConfirm}
-            className="bg-blue-600 text-white px-4 py-2 rounded"
-          >
+          <button onClick={handleConfirm} className={classes.buttonConfirm}>
             Confirm
           </button>
         </div>

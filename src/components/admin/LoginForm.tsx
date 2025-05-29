@@ -1,6 +1,7 @@
 import { useState, useRef, type FormEvent, type FC } from "react";
 import { ADMIN } from "../../data/static-data";
 import classes from "./LoginForm.module.css";
+import ButtonSubmitForm from "../buttons/ButtonSubmitForm";
 
 type LoginFormProps = {
   handleLoginFn: () => void;
@@ -11,7 +12,6 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
   const password = useRef<HTMLInputElement>(null); /* fix */
 
   const [isPasswordShowing, setIsPasswordShowing] = useState<boolean>(false);
-  const [areInputsLocked, setAreInputsLocked] = useState<boolean>(false);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -22,7 +22,6 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
     }
   }
 
-  const toggleLock = () => setAreInputsLocked(!areInputsLocked);
   const toggleShowPassword = () => setIsPasswordShowing(!isPasswordShowing);
 
   return (
@@ -33,7 +32,6 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
         id="alias"
         type="text"
         name="alias"
-        disabled={areInputsLocked} // check the login status here and disable the button accordingly
         ref={alias}
         required
       />
@@ -45,7 +43,6 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
           type={isPasswordShowing ? "text" : "password"}
           name="password"
           maxLength={20}
-          disabled={areInputsLocked} // check the login status here and disable the button accordingly  // fix: use useRef here to fix this error.  This is because useRef creates a mutable ref object that can be updated multiple times during the component's rendering phase. It's useful when some value needs to be referenced in the component's render function, but needs to be changed during updates.
           ref={password}
           required
         />
@@ -53,16 +50,12 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
           type="button"
           onClick={toggleShowPassword}
           className={classes.showHideBtn}
-          disabled={areInputsLocked}
         >
           {!isPasswordShowing ? "Show" : "Hide"}
         </button>
       </div>
-
       <div className={classes.submitBtnContainer}>
-        <button type="submit" className={classes.submitBtn}>
-          Login
-        </button>
+        <ButtonSubmitForm type="submit">login</ButtonSubmitForm>
       </div>
     </form>
   );

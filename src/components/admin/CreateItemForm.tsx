@@ -3,7 +3,7 @@ import type { Vinyl } from "../../types/shared";
 import ConfirmDialog, { type ConfirmDialogRef } from "./ConfirmDialog";
 import { useAdmin_Ctx } from "../../store/admin-Context";
 import { getCurrentDateTime } from "../../utils/functions";
-import ButtonSubmitForm from "./ButtonSubmitForm";
+import ButtonSubmitForm from "../buttons/ButtonSubmitForm";
 import classes from "./CreateItemForm.module.css";
 
 function generateRandomNumericId() {
