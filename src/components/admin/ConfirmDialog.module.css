@@ -1,0 +1,16 @@
+.container {
+  position: absolute;
+  top: 40%;
+  bottom: 10%;
+  left: 5%;
+  z-index: 50;
+  padding: 2rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: x-large;
+}
+::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}

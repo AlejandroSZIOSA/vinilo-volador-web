@@ -11,3 +11,10 @@
 .searchContainer {
   padding: 0px 14px 0px 14px;
 }
+
+.dialogContainer {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 600px;
+}

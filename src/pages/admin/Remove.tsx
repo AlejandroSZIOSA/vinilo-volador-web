@@ -37,6 +37,7 @@ const RemovePage: FC = () => {
           onRemoveFn={handleRemoveClick}
         />
       </div>
+
       <ConfirmDialog
         ref={dialogRef}
         title="Remove Item"

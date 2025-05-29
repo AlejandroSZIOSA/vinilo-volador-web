@@ -1,5 +1,5 @@
-// components/ConfirmDialog.tsx
 import { useRef, forwardRef, useImperativeHandle } from "react";
+import classes from "./ConfirmDialog.module.css";
 
 type ConfirmDialogProps = {
   title?: string;
@@ -31,7 +31,7 @@ const ConfirmDialog = forwardRef<ConfirmDialogRef, ConfirmDialogProps>(
     };
 
     return (
-      <dialog ref={dialogRef} className="rounded p-4 shadow-md w-96">
+      <dialog ref={dialogRef} className={classes.container}>
         <h2 className="text-lg font-bold mb-2">{title}</h2>
         <p className="mb-4">{message}</p>
         <div className="flex justify-end gap-2">
