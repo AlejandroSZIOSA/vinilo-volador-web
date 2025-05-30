@@ -6,7 +6,6 @@ const ShowPage: FC = () => {
   return (
     <div className={classes.container}>
       <h1>Show</h1>
-
       <SearchSection variant="admin" tableListVariant="admin-show" />
     </div>
   );
