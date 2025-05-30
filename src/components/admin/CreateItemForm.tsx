@@ -17,6 +17,7 @@ const CreateItemForm: FC = () => {
   const album = useRef<HTMLInputElement>(null);
   const price = useRef<HTMLInputElement>(null);
 
+  const formRef = useRef<HTMLFormElement>(null);
   const dialogRef = useRef<ConfirmDialogRef>(null); //Imported type for ConfirmDialogRef
 
   //NOTE: Can use a library like "nanoid" instead
@@ -50,13 +51,21 @@ const CreateItemForm: FC = () => {
       "submit"
     ) as unknown as FormEvent<HTMLFormElement>;
     handleSubmit(formEvent);
+    formRef.current?.reset(); //Clear the form
   };
 
-  //TODO: Clear Form after Confirmation
+  //DONE: Clear Form after Confirmation
+  const cancelAction = () => {
+    formRef.current?.reset(); //Clear the form
+  };
 
   return (
     <>
-      <form onSubmit={handleOpenDialog} className={classes.container}>
+      <form
+        onSubmit={handleOpenDialog}
+        className={classes.container}
+        ref={formRef}
+      >
         <div>
           <label>Artist</label>
           <input
@@ -102,6 +111,7 @@ const CreateItemForm: FC = () => {
         title="Add new Item"
         message="Are you sure you want Add this item to the list?"
         onConfirm={confirmAction}
+        onCancel={cancelAction}
       />
     </>
   );

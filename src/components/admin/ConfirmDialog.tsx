@@ -5,7 +5,7 @@ type ConfirmDialogProps = {
   title?: string;
   message?: string;
   onConfirm: () => void;
-  onCancel: () => void;
+  onCancel?: () => void;
 };
 
 export type ConfirmDialogRef = {
@@ -31,7 +31,9 @@ const ConfirmDialog = forwardRef<ConfirmDialogRef, ConfirmDialogProps>(
     };
 
     const handleCancel = () => {
-      onCancel();
+      if (onCancel) {
+        onCancel();
+      }
       dialogRef.current?.close();
     };
 

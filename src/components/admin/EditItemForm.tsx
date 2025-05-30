@@ -41,8 +41,6 @@ EditFormProps) {
     onSave(form);
   };
 
-  //Confirmation dialog Fns
-
   const handleOpenDialog = (e: FormEvent) => {
     e.preventDefault();
     dialogRef.current?.open();
@@ -73,11 +71,6 @@ EditFormProps) {
 
         <div className={classes.submitBtnContainer}>
           <ButtonSubmitForm type="submit">Done</ButtonSubmitForm>
-          {/* {onCancel && (
-            <button type="button" onClick={onCancel}>
-              Cancel
-            </button>
-          )} */}
         </div>
       </form>
       <ConfirmDialog

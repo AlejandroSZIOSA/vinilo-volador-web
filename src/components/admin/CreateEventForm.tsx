@@ -46,6 +46,7 @@ const CreateEventForm: FC = () => {
       "submit"
     ) as unknown as FormEvent<HTMLFormElement>;
     handleCreateEvent(formEvent);
+    formRef.current?.reset(); //Clear the form
   };
 
   const cancelAction = () => {
