@@ -14,6 +14,7 @@ const CreateEventForm: FC = () => {
   const timeFrom = useRef<HTMLInputElement>(null);
   const timeTo = useRef<HTMLInputElement>(null);
 
+  const formRef = useRef<HTMLFormElement>(null);
   const dialogRef = useRef<ConfirmDialogRef>(null); //Imported type for ConfirmDialogRef
 
   function handleCreateEvent(event: FormEvent<HTMLFormElement>) {
@@ -47,9 +48,17 @@ const CreateEventForm: FC = () => {
     handleCreateEvent(formEvent);
   };
 
+  const cancelAction = () => {
+    formRef.current?.reset(); //Clear the form
+  };
+
   return (
     <>
-      <form onSubmit={handleOpenDialog} className={classes.formContainer}>
+      <form
+        onSubmit={handleOpenDialog}
+        className={classes.formContainer}
+        ref={formRef}
+      >
         <div>
           <label>Place</label>
           <input
@@ -117,6 +126,7 @@ const CreateEventForm: FC = () => {
         title="Create Event"
         message="Are you sure you want to Create this item?"
         onConfirm={confirmAction}
+        onCancel={cancelAction}
       />
     </>
   );

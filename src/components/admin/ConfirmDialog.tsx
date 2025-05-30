@@ -5,6 +5,7 @@ type ConfirmDialogProps = {
   title?: string;
   message?: string;
   onConfirm: () => void;
+  onCancel: () => void;
 };
 
 export type ConfirmDialogRef = {
@@ -13,7 +14,10 @@ export type ConfirmDialogRef = {
 };
 
 const ConfirmDialog = forwardRef<ConfirmDialogRef, ConfirmDialogProps>(
-  ({ title = "Confirm", message = "Are you sure?", onConfirm }, ref) => {
+  (
+    { title = "Confirm", message = "Are you sure?", onConfirm, onCancel },
+    ref
+  ) => {
     const dialogRef = useRef<HTMLDialogElement>(null);
 
     useImperativeHandle(ref, () => ({
@@ -27,6 +31,7 @@ const ConfirmDialog = forwardRef<ConfirmDialogRef, ConfirmDialogProps>(
     };
 
     const handleCancel = () => {
+      onCancel();
       dialogRef.current?.close();
     };
 
