@@ -1,11 +1,12 @@
 import { type FC } from "react";
 import SearchSection from "../../components/SearchSection";
+import classes from "./Show.module.css";
 
 const ShowPage: FC = () => {
   return (
-    <div>
-      <h1>Show page</h1>
-      {/* <TableListShow variant="admin-latest" /> */}
+    <div className={classes.container}>
+      <h1>Show</h1>
+
       <SearchSection variant="admin" tableListVariant="admin-show" />
     </div>
   );
