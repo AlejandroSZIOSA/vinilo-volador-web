@@ -38,15 +38,18 @@ const TableListShow: FC<TableListShowProps> = ({ variant }) => {
     <table className={classes.container}>
       <thead>{contentTh}</thead>
       <tbody>
-        {vinyls_?.slice(-10).map((v) => (
-          <tr key={v.id}>
-            <td>{v.artist}</td>
-            <td>{v.album}</td>
-            <td>{v.price}</td>
-            <td>{v.id}</td>
-            {variant === "admin-latest" && <td>{v.createdAt}</td>}
-          </tr>
-        ))}
+        {vinyls_
+          ?.slice(-10)
+          .reverse()
+          .map((v) => (
+            <tr key={v.id}>
+              <td>{v.artist}</td>
+              <td>{v.album}</td>
+              <td>{v.price}</td>
+              <td>{v.id}</td>
+              {variant === "admin-latest" && <td>{v.createdAt}</td>}
+            </tr>
+          ))}
       </tbody>
     </table>
   );

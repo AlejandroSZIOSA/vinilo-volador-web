@@ -2,6 +2,8 @@ import { useRef, type FC, type FormEvent } from "react";
 import { useAdmin_Ctx } from "../../store/admin-Context";
 import ConfirmDialog, { type ConfirmDialogRef } from "./ConfirmDialog";
 import { getCurrentDateTime } from "../../utils/functions";
+import classes from "./CreateEventForm.module.css";
+import ButtonSubmitForm from "../buttons/ButtonSubmitForm";
 
 const CreateEventForm: FC = () => {
   const { setNextEvent_Fn, setUpdatedListDate_Fn } = useAdmin_Ctx();
@@ -46,55 +48,69 @@ const CreateEventForm: FC = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleOpenDialog}>
-        <label>Place</label>
-        <input
-          placeholder="place"
-          id="place"
-          type="text"
-          name="place"
-          ref={place}
-          required
-        />
-        <label>Address</label>
-        <input
-          placeholder="address"
-          id="address"
-          type="text"
-          name="address"
-          maxLength={20}
-          ref={address}
-        />
-        <label>Date</label>
-        <input
-          placeholder="date"
-          id="date"
-          type="date"
-          name="date"
-          ref={date}
-        />
+    <>
+      <form onSubmit={handleOpenDialog} className={classes.formContainer}>
+        <div>
+          <label>Place</label>
+          <input
+            placeholder="place"
+            id="place"
+            type="text"
+            name="place"
+            ref={place}
+            required
+          />
+        </div>
+        <div>
+          <label>Address</label>
+          <input
+            placeholder="address"
+            id="address"
+            type="text"
+            name="address"
+            maxLength={20}
+            ref={address}
+          />
+        </div>
+        <div>
+          <label>Date</label>
+          <input
+            placeholder="date"
+            id="date"
+            type="date"
+            name="date"
+            ref={date}
+          />
+        </div>
 
         <h2>Time</h2>
-        <label>From</label>
-        <input
-          type="time"
-          id="timeFrom"
-          name="timeFrom"
-          min="09:00"
-          max="17:00"
-          ref={timeFrom}
-        />
-        <label>To</label>
-        <input
-          type="time"
-          id="timeTo"
-          name="timeTo"
-          min="09:00"
-          max="17:00"
-          ref={timeTo}
-        />
-        <button type="submit">Create</button>
+        <div className={classes.timeContainer}>
+          <div>
+            <label>From</label>
+            <input
+              type="time"
+              id="timeFrom"
+              name="timeFrom"
+              min="09:00"
+              max="17:00"
+              ref={timeFrom}
+            />
+          </div>
+          <div>
+            <label>To</label>
+            <input
+              type="time"
+              id="timeTo"
+              name="timeTo"
+              min="09:00"
+              max="17:00"
+              ref={timeTo}
+            />
+          </div>
+        </div>
+        <div className={classes.submitButtonContainer}>
+          <ButtonSubmitForm type="submit">Create</ButtonSubmitForm>
+        </div>
       </form>
       <ConfirmDialog
         ref={dialogRef}
@@ -102,7 +118,7 @@ const CreateEventForm: FC = () => {
         message="Are you sure you want to Create this item?"
         onConfirm={confirmAction}
       />
-    </div>
+    </>
   );
 };
 

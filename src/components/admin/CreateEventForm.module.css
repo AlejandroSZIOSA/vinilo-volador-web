@@ -1,0 +1,39 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.formContainer label {
+  text-align: center;
+  padding: 5px 5px;
+  /* font-size: large; */
+}
+
+.formContainer input {
+  width: 80%;
+  font-size: medium;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  /* font-size: larger; */
+  background: antiquewhite;
+  transition: border-color 0.2s;
+}
+
+.formContainer h2 {
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.timeContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submitButtonContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
