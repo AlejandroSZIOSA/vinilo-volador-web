@@ -1,10 +1,10 @@
-.container {
+.showPageContainer {
   display: flex;
   flex-direction: column;
   padding: 0px 13px 0px 13px;
 }
 
-.container h1 {
+.showPageContainer h1 {
   text-align: center;
   padding: 12px 12px;
 }

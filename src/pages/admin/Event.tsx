@@ -4,8 +4,8 @@ import classes from "./Event.module.css";
 
 const EventPage: FC = () => {
   return (
-    <div className={classes.container}>
-      <h1> Next Pick Up Place</h1>
+    <div className={classes.eventPageContainer}>
+      <h1> Create "A Pick Up Point"</h1>
       <div className={classes.formOuterContainer}>
         <CreateEventForm />
       </div>

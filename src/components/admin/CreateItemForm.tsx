@@ -63,7 +63,7 @@ const CreateItemForm: FC = () => {
     <>
       <form
         onSubmit={handleOpenDialog}
-        className={classes.container}
+        className={classes.createFormContainer}
         ref={formRef}
       >
         <div>

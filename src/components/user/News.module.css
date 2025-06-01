@@ -1,13 +1,13 @@
-.container {
+.newsSectionContainer {
   height: 680px;
   /* background-color: lightgrey; */
 }
-.container h1 {
+.newsSectionContainer h1 {
   text-align: center;
   padding: 8px 8px;
 }
 
-.newsContainer {
+.newPlaceContainer {
   display: flex;
   flex-direction: column;
   height: 200px;
@@ -24,17 +24,17 @@
   justify-content: space-around;
 }
 
-.newsContainer p {
+.newPlaceContainer p {
   padding: 5px 5px;
 }
 
-.newsInnerContainer {
+.newPlaceInnerContainer {
   width: 90%;
   height: 90%;
   /*  background: peru; */
 }
 
-.tableShowContainer {
+.tableShowOuterContainer {
   /* height: 390px;
   overflow-y: auto;
   border: 1px solid #000000;

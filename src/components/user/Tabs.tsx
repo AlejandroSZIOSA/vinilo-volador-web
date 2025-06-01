@@ -14,16 +14,7 @@ const Tabs = ({ tabs }: TabsProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          /*  gap: "1rem", */
-          borderBottom: "2px solid #ccc",
-          background: "#b51717",
-          padding: "7px",
-          justifyContent: "space-around",
-        }}
-      >
+      <div className={classes.tabOuterContainer}>
         {tabs.map((tab, index) => (
           <button
             key={index}
@@ -39,7 +30,7 @@ const Tabs = ({ tabs }: TabsProps) => {
         ))}
       </div>
 
-      <div className={classes.tabsContentContainer}>
+      <div className={classes.rootContentContainer}>
         {tabs[activeIndex].content}
       </div>
     </div>

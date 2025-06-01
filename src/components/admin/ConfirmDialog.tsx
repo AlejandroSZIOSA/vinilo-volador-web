@@ -38,7 +38,7 @@ const ConfirmDialog = forwardRef<ConfirmDialogRef, ConfirmDialogProps>(
     };
 
     return (
-      <dialog ref={dialogRef} className={classes.container}>
+      <dialog ref={dialogRef} className={classes.confirmDialogContainer}>
         <h2>{title}</h2>
         <p>{message}</p>
         <div className={classes.buttonContainer}>

@@ -4,7 +4,7 @@ import classes from "./TabNav.module.css";
 
 const TabNav: FC = () => {
   return (
-    <div className={classes.container}>
+    <div className={classes.tabNavContainer}>
       <NavLink
         to="/admin"
         className={({ isActive }) =>

@@ -72,8 +72,7 @@ const SearchSection: FC<SearchSectionProps> = ({
   }
 
   return (
-    <div className={classes.container}>
-      {/* {variant === "user" ? <h2>Search Vinyl</h2> : <h2>Find Vinyl</h2>} */}
+    <div className={classes.searchSectionContainer}>
       <div>
         <SearchBar value={search} onChange={setSearch} />
         {/*  RadioGroup Component using generic types */}
@@ -84,7 +83,7 @@ const SearchSection: FC<SearchSectionProps> = ({
           onChange={setSearchByFilter}
         />
       </div>
-      <div className={classes.tableOuterContainer}>
+      <div className={classes.tableFilteredOuterContainer}>
         <TableListFiltered
           variant={tableListVariant}
           filteredItems={filtered}

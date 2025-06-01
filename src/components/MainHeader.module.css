@@ -1,4 +1,4 @@
-.header {
+.headerContainer {
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -9,13 +9,14 @@
   z-index: 1000;
   background-color: #ffffff;
 }
-.innerContainer {
+
+.headerInnerContainer {
   display: flex;
   flex-direction: row;
   height: 62px;
   justify-content: space-between;
 }
 
-.innerContainer img {
+.headerInnerContainer img {
   padding-bottom: 5px;
 }

@@ -13,7 +13,11 @@ const ButtonSubmitForm: FC<ButtonSubmitFormProps> = ({
   onClickFn,
 }) => {
   return (
-    <button className={classes.container} type={type} onClick={onClickFn}>
+    <button
+      className={classes.buttonSubmitContainer}
+      type={type}
+      onClick={onClickFn}
+    >
       {children}
     </button>
   );

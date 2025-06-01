@@ -1,4 +1,4 @@
-.container {
+.footerContainer {
   display: flex;
   justify-content: space-evenly;
   height: 58px;
@@ -8,7 +8,7 @@
   font-size: larger;
 }
 
-.innerContainer {
+.phoneContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -1,16 +1,16 @@
-.container {
+.editItemFormContainer {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
 
-.container label {
+.editItemFormContainer label {
   text-align: center;
   padding: 5px 5px;
   /* font-size: large; */
 }
 
-.container input {
+.editItemFormContainer input {
   width: 84%;
   font-size: medium;
   padding: 0.75rem;

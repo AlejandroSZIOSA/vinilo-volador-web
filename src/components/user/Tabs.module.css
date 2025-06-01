@@ -1,5 +1,14 @@
-.tabsContentContainer {
+.rootContentContainer {
   padding: 1rem;
+}
+
+.tabOuterContainer {
+  display: flex;
+  /*  gap: "1rem", */
+  border-bottom: 2px solid #ccc;
+  background: #b51717;
+  padding: 7px;
+  justify-content: space-around;
 }
 
 .tabBtn {

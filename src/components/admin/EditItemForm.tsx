@@ -55,7 +55,10 @@ EditFormProps) {
 
   return (
     <>
-      <form onSubmit={handleOpenDialog} className={classes.container}>
+      <form
+        onSubmit={handleOpenDialog}
+        className={classes.editItemFormContainer}
+      >
         <div>
           <label>Artist</label>
           <input name="artist" value={form.artist} onChange={handleChange} />

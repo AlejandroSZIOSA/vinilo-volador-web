@@ -1,22 +1,22 @@
-.container {
+.tableShowContainer {
   width: 100%;
   border-collapse: collapse;
   font-size: larger;
   background-color: white;
 }
 
-.container thead {
+.tableShowContainer thead {
   position: sticky;
   top: 0; /* or left/right/bottom */
   z-index: 10; /* optional: keep it above other content */
   background-color: rgb(190, 190, 190);
 }
 
-.container th {
+.tableShowContainer th {
   border: 1px solid #000000;
   font-size: x-large;
 }
 
-.container td {
+.tableShowContainer td {
   border: 1px solid #000000;
 }

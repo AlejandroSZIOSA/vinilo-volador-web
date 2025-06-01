@@ -1,4 +1,4 @@
-.container {
+.addPageContainer {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -7,10 +7,10 @@
   align-items: center;
 }
 
-.container h1 {
+.addPageContainer h1 {
   padding: 12px 12px;
 }
-.formContainer {
+.formOuterContainer {
   height: 280px;
   width: 95%;
   background-color: #fbffb0;
@@ -18,6 +18,6 @@
   border-radius: 5%;
 }
 
-.tableContainer {
+.tableOuterContainer {
   margin: 0px 10px 0px 10px;
 }

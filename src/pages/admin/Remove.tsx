@@ -28,9 +28,9 @@ const RemovePage: FC = () => {
   }
 
   return (
-    <div className={classes.container}>
+    <div className={classes.removePageContainer}>
       <h1>Remove</h1>
-      <div className={classes.searchContainer}>
+      <div className={classes.searchSectionOuterContainer}>
         <SearchSection
           variant="admin"
           tableListVariant="admin-remove"

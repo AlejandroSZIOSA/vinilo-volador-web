@@ -25,7 +25,7 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
   const toggleShowPassword = () => setIsPasswordShowing(!isPasswordShowing);
 
   return (
-    <form className={classes.container} onSubmit={handleSubmit}>
+    <form className={classes.loginFormContainer} onSubmit={handleSubmit}>
       <label>Alias</label>
       <input
         placeholder={ADMIN.alias}
@@ -54,7 +54,7 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
           {!isPasswordShowing ? "Show" : "Hide"}
         </button>
       </div>
-      <div className={classes.submitBtnContainer}>
+      <div className={classes.submitBtnOuterContainer}>
         <ButtonSubmitForm type="submit">login</ButtonSubmitForm>
       </div>
     </form>

@@ -1,16 +1,16 @@
-.container {
+.mainContentContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 770px;
 }
 
-.container h1 {
+.mainContentContainer h1 {
   text-align: center;
   margin-top: 100px;
 }
 
-.formContainer {
+.formOuterContainer {
   display: flex;
   flex-direction: column;
   width: 400px;

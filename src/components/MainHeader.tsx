@@ -12,8 +12,8 @@ const MainHeader: FC = () => {
   const { width, height } = HEADER_ICONS_SIZES;
 
   return (
-    <header className={classes.header}>
-      <div className={classes.innerContainer}>
+    <header className={classes.headerContainer}>
+      <div className={classes.headerInnerContainer}>
         {is_Authenticated ? (
           <img
             src="/src/assets/icons/adminUnlock.svg"

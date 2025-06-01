@@ -33,12 +33,12 @@ const EditPage: FC = () => {
   }
 
   return (
-    <div className={classes.container}>
+    <div className={classes.editPageContainer}>
       <h1>Edit</h1>
-      <div className={classes.formContainer}>
+      <div className={classes.formOuterContainer}>
         <EditItemForm initialData={vinyl} onSave={handleSave} />
       </div>
-      <div className={classes.searchContainer}>
+      <div className={classes.searchSectionOuterContainer}>
         <SearchSection
           variant="admin"
           tableListVariant="admin-edit"

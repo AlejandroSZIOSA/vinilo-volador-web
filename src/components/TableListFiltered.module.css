@@ -1,22 +1,22 @@
-.container {
+.tableFilteredContainer {
   width: 100%;
   border-collapse: collapse;
   font-size: larger;
 }
 
-.container thead {
+.tableFilteredContainer thead {
   position: sticky;
   top: 0; /* or left/right/bottom */
   z-index: 10; /* optional: keep it above other content */
   background-color: rgb(133, 133, 133);
 }
 
-.container th {
+.tableFilteredContainer th {
   border: 1px solid #000000;
   font-size: x-large;
 }
 
-.container td {
+.tableFilteredContainer td {
   border: 1px solid #000000;
 }
 

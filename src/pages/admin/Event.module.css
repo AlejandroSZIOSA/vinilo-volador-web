@@ -1,11 +1,11 @@
-.container {
+.eventPageContainer {
   display: flex;
   flex-direction: column;
   padding: 0px 13px 0px 13px;
   align-items: center;
 }
 
-.container h1 {
+.eventPageContainer h1 {
   padding-top: 40px;
 }
 

@@ -1,16 +1,16 @@
-.container {
+.editPageContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   /* padding: 0px 5px 0px 5px; */
 }
 
-.container h1 {
+.editPageContainer h1 {
   text-align: center;
   padding: 12px 12px;
 }
 
-.formContainer {
+.formOuterContainer {
   height: 280px;
   width: 95%;
   background-color: #fbffb0;
@@ -19,7 +19,7 @@
   margin-bottom: 40px;
 }
 
-.searchContainer {
+.searchSectionOuterContainer {
   width: 100%;
   padding: 0px 14px 0px 14px;
 }

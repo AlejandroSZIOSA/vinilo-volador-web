@@ -1,11 +1,11 @@
-.container {
+.searchSectionContainer {
   display: flex;
   flex-direction: column;
   height: 680px;
   background-color: white;
 }
 
-.tableOuterContainer {
+.tableFilteredOuterContainer {
   max-height: 100%;
   overflow-y: auto;
   border: 1px solid #000000;

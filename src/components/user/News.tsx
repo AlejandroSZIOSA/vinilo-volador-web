@@ -6,10 +6,10 @@ import classes from "./News.module.css";
 const News: FC = () => {
   const { next_Event } = useAdmin_Ctx();
   return (
-    <section className={classes.container}>
+    <section className={classes.newsSectionContainer}>
       <h1>Next Pick up place</h1>
-      <div className={classes.newsContainer}>
-        <div className={classes.newsInnerContainer}>
+      <div className={classes.newPlaceContainer}>
+        <div className={classes.newPlaceInnerContainer}>
           <div>
             <p>
               <strong>Place:</strong> {next_Event?.place}
@@ -36,7 +36,7 @@ const News: FC = () => {
         </div>
       </div>
       <h1>Latest Added Items</h1>
-      <div className={classes.tableShowContainer}>
+      <div className={classes.tableShowOuterContainer}>
         <TableListShow variant="user-latest" />
       </div>
     </section>

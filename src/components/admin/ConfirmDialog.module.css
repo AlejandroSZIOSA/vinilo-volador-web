@@ -1,4 +1,4 @@
-.container {
+.confirmDialogContainer {
   position: absolute;
   top: 40%;
   /* bottom: 10%; */
@@ -15,13 +15,13 @@
   background: rgba(0, 0, 0, 0.8);
 }
 
-.container h2 {
+.confirmDialogContainer h2 {
   font-size: xx-large;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.container p {
+.confirmDialogContainer p {
   margin-bottom: 10px;
 }
 

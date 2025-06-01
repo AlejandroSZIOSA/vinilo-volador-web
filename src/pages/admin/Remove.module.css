@@ -1,14 +1,14 @@
-.container {
+.removePageContainer {
   display: flex;
   flex-direction: column;
 }
 
-.container h1 {
+.removePageContainer h1 {
   text-align: center;
   padding: 12px 12px;
 }
 
-.searchContainer {
+.searchSectionOuterContainer {
   padding: 0px 14px 0px 14px;
 }
 

@@ -1,16 +1,16 @@
-.container {
+.loginFormContainer {
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
 
-.container label {
+.loginFormContainer label {
   text-align: center;
   padding: 5px 5px;
   font-size: x-large;
 }
 
-.container input {
+.loginFormContainer input {
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 1rem;
@@ -35,7 +35,7 @@
   font-size: large;
 }
 
-.submitBtnContainer {
+.submitBtnOuterContainer {
   display: flex;
   justify-content: center;
 }
