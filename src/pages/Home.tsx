@@ -14,7 +14,7 @@ const HomePage: FC = () => {
   ];
 
   return (
-    <div className={classes.container}>
+    <div className={classes.outerTabsContainer}>
       <Tabs tabs={tabData} />
     </div>
   );

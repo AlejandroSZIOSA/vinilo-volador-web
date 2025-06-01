@@ -32,6 +32,7 @@ const SearchSection: FC<SearchSectionProps> = ({
   const [search, setSearch] = useState("");
   const [searchByFilter, setSearchByFilter] = useState<SearchBy>("artist");
 
+  //TODO: implement useMemo Hook
   const filtered = vinyls_?.filter((v) => {
     if (searchByFilter === "artist") {
       const matchesSearch = v.artist
@@ -83,7 +84,7 @@ const SearchSection: FC<SearchSectionProps> = ({
           onChange={setSearchByFilter}
         />
       </div>
-      <div className={classes.tableContainer}>
+      <div className={classes.tableOuterContainer}>
         <TableListFiltered
           variant={tableListVariant}
           filteredItems={filtered}

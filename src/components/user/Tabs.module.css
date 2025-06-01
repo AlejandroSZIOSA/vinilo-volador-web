@@ -1,3 +1,23 @@
 .tabsContentContainer {
   padding: 1rem;
 }
+
+.tabBtn {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 10px 70px 10px 70px;
+  background: #ffad28;
+  color: white;
+  cursor: pointer;
+}
+
+.tabBtnActive {
+  border-bottom: 2px solid blue;
+  font-weight: bold;
+}
+
+.tabBtnDisabled {
+  border-bottom: none;
+  font-weight: normal;
+}
