@@ -73,15 +73,19 @@ const SearchSection: FC<SearchSectionProps> = ({
 
   return (
     <div className={classes.searchSectionContainer}>
-      <div>
-        <SearchBar value={search} onChange={setSearch} />
+      <div className={classes.searchSectionInnerContainer}>
+        <div className={classes.searchbarOuterContainer}>
+          <SearchBar value={search} onChange={setSearch} />
+        </div>
         {/*  RadioGroup Component using generic types */}
-        <RadioGroup<SearchBy>
-          name="searchBy"
-          options={searchByOptions}
-          selectedValue={searchByFilter}
-          onChange={setSearchByFilter}
-        />
+        <div className={classes.radiogroupOuterContainer}>
+          <RadioGroup<SearchBy>
+            name="searchBy"
+            options={searchByOptions}
+            selectedValue={searchByFilter}
+            onChange={setSearchByFilter}
+          />
+        </div>
       </div>
       <div className={classes.tableFilteredOuterContainer}>
         <TableListFiltered

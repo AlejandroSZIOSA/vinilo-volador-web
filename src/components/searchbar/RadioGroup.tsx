@@ -19,7 +19,7 @@ export function RadioGroup<T extends string>({
   onChange,
 }: RadioGroupProps<T>) {
   return (
-    <div className={classes.container}>
+    <div className={classes.radiogroupContainer}>
       {options.map((option) => (
         <label key={option.value}>
           <input

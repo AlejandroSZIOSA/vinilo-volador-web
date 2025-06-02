@@ -1,4 +1,4 @@
-.container {
+.showDateTimeContainer {
   display: flex;
   height: 35px;
   background-color: #555555;
@@ -7,6 +7,6 @@
   justify-content: center;
 }
 
-.container img {
+.showDateTimeContainer img {
   margin-right: 10px;
 }

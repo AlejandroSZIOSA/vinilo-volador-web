@@ -5,10 +5,38 @@
   background-color: white;
 }
 
+.searchSectionInnerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .tableFilteredOuterContainer {
   max-height: 100%;
   overflow-y: auto;
   border: 1px solid #000000;
   /* background: red; */
   margin-top: 10px;
+}
+
+.searchbarOuterContainer {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .searchSectionContainer {
+    height: 860px;
+  }
+
+  .searchSectionInnerContainer {
+    flex-direction: row;
+    justify-content: center;
+    background-color: #d0d0d0;
+    padding: 20px 20px;
+  }
+  .searchbarOuterContainer {
+    width: 30%;
+  }
+  .radiogroupOuterContainer {
+    width: 20%;
+  }
 }

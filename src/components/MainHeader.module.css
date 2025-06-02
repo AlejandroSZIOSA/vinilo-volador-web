@@ -1,10 +1,10 @@
-.headerContainer {
+.mainHeaderContainer {
   display: flex;
   flex-direction: column;
   position: sticky;
   top: 0;
   color: rgb(0, 0, 0);
-  padding: 10px 0px 0px 0px;
+  /* padding-top: 10px; */
   text-align: center;
   z-index: 1000;
   background-color: #ffffff;
@@ -15,8 +15,26 @@
   flex-direction: row;
   height: 62px;
   justify-content: space-between;
+  align-items: center;
+}
+
+.userLogoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.userLogoContainer p {
+  display: none;
 }
 
 .headerInnerContainer img {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  margin-top: 13px;
+}
+
+@media (min-width: 1024px) {
+  .userLogoContainer p {
+    display: block;
+    font-size: xx-large;
+  }
 }

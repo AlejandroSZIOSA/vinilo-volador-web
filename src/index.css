@@ -92,6 +92,23 @@ body {
   /* background-color: rgb(196, 196, 196); */
 }
 
+@media (min-width: 1024px) {
+  body {
+    width: 1440px;
+    height: 1024px;
+    /* background-color: #ffa5a5; */
+  }
+
+  p {
+    font-size: x-large;
+  }
+
+  th,
+  td {
+    font-size: x-large;
+  }
+}
+
 /* h1 {
   font-size: 40px;
 }

@@ -10,7 +10,7 @@ interface SearchBarProps {
 export const SearchBar = ({
   value,
   onChange,
-  placeholder = "Search title...",
+  placeholder = "Search Vinyl title...",
 }: SearchBarProps) => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     onChange(e.target.value);

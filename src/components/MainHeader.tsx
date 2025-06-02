@@ -2,7 +2,7 @@ import { type FC } from "react";
 import NavBar from "./in-Header/NavBar";
 import { useAuth_Ctx } from "../store/auth-Context";
 import ShowDateTime from "./in-Header/ShowDateTime";
-import DarkLightToggle from "./DarkLightToggle";
+import DarkLightToggle from "./in-Header/DarkLightToggle";
 import classes from "./MainHeader.module.css";
 import { Link } from "react-router-dom";
 import { HEADER_ICONS_SIZES } from "../utils/constants";
@@ -12,7 +12,7 @@ const MainHeader: FC = () => {
   const { width, height } = HEADER_ICONS_SIZES;
 
   return (
-    <header className={classes.headerContainer}>
+    <header className={classes.mainHeaderContainer}>
       <div className={classes.headerInnerContainer}>
         {is_Authenticated ? (
           <img
@@ -22,11 +22,14 @@ const MainHeader: FC = () => {
           ></img>
         ) : (
           <Link to={"/"}>
-            <img
-              src="/src/assets/icons/home.svg"
-              width={width}
-              height={height}
-            ></img>
+            <div className={classes.userLogoContainer}>
+              <img
+                src="/src/assets/icons/home.svg"
+                width={width}
+                height={height}
+              ></img>
+              <p>Vinyls</p>
+            </div>
           </Link>
         )}
         <div>

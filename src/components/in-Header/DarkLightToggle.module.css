@@ -1,0 +1,12 @@
+.darkLightToggleContainer {
+  padding: 10px;
+  font-size: 13px;
+}
+
+@media (min-width: 1024px) {
+  .darkLightToggleContainer {
+    padding: 5px;
+    font-size: 20px;
+    margin-right: 100px;
+  }
+}

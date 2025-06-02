@@ -170,6 +170,48 @@ export const VINYLS: Vinyl[] = [
     price: 100,
     createdAt: "2022-03-01",
   },
+  {
+    id: "721323",
+    artist: "Black Sabbath",
+    album: "Heaven and Hell",
+    price: 100,
+    createdAt: "2022-03-01",
+  },
+  {
+    id: "5394993",
+    artist: "Pink Floyd",
+    album: "The wall",
+    price: 200,
+    createdAt: "2022-03-01",
+  },
+  {
+    id: "1230928",
+    artist: "Black Sabbath",
+    album: "Heaven and Hell",
+    price: 100,
+    createdAt: "2022-03-01",
+  },
+  {
+    id: "0982345",
+    artist: "Black Sabbath",
+    album: "Heaven and Hell",
+    price: 100,
+    createdAt: "2022-03-01",
+  },
+  {
+    id: "66554572",
+    artist: "Pink Floyd",
+    album: "The wall",
+    price: 200,
+    createdAt: "2022-03-01",
+  },
+  {
+    id: "1090928",
+    artist: "Black Sabbath",
+    album: "Heaven and Hell",
+    price: 100,
+    createdAt: "2022-03-01",
+  },
 
   //... more vinyls
 ];

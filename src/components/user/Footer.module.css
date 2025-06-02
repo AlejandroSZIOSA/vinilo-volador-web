@@ -8,6 +8,15 @@
   font-size: larger;
 }
 
+.socialMediaContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.socialMediaContainer p {
+  display: none;
+}
+
 .phoneContainer {
   display: flex;
   align-items: center;
@@ -15,4 +24,24 @@
   width: 180px;
   /*   background-color: rgb(0, 0, 0);
  */
+}
+
+@media (min-width: 1024px) {
+  .footerContainer {
+    height: 68px;
+    justify-content: space-between;
+  }
+  .socialMediaContainer {
+    width: 700px;
+    background: black;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .socialMediaContainer p {
+    display: block;
+  }
+  .phoneContainer {
+    margin-right: 70px;
+  }
 }
