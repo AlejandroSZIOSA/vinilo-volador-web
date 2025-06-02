@@ -18,6 +18,7 @@ const EditPage: FC = () => {
   });
 
   const { updateVinyl_Fn, setUpdatedListDate_Fn } = useAdmin_Ctx();
+  const [isDisabled, setIsDisabled] = useState<boolean>(true);
 
   //CallBack Fn Edit The Item
   const handleSave = (updatedVinyl: typeof vinyl) => {
@@ -30,13 +31,18 @@ const EditPage: FC = () => {
     const { id } = item;
     setVinyl(item);
     setItemId(id);
+    setIsDisabled(false); //Disable the form when iteration starts
   }
 
   return (
     <div className={classes.editPageContainer}>
       <h1>Edit</h1>
       <div className={classes.formOuterContainer}>
-        <EditItemForm initialData={vinyl} onSave={handleSave} />
+        <EditItemForm
+          initialData={vinyl}
+          onSave={handleSave}
+          isDisabled={isDisabled}
+        />
       </div>
       <div className={classes.searchSectionOuterContainer}>
         <SearchSection

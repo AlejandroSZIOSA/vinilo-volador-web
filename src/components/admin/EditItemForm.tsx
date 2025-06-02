@@ -13,12 +13,14 @@ import ButtonSubmitForm from "../buttons/ButtonSubmitForm";
 type EditFormProps = {
   initialData: Vinyl;
   onSave: (updatedVinyl: Vinyl) => void;
+  isDisabled: boolean;
   /*  onCancel?: () => void; */
 };
 
 export default function EditItemForm({
   initialData,
   onSave,
+  isDisabled,
 }: /* onCancel, */
 EditFormProps) {
   const [form, setForm] = useState<Vinyl>(initialData);
@@ -61,19 +63,36 @@ EditFormProps) {
       >
         <div>
           <label>Artist</label>
-          <input name="artist" value={form.artist} onChange={handleChange} />
+          <input
+            name="artist"
+            value={form.artist}
+            onChange={handleChange}
+            disabled={isDisabled}
+          />
         </div>
         <div>
           <label>Album</label>
-          <input name="album" value={form.album} onChange={handleChange} />
+          <input
+            name="album"
+            value={form.album}
+            onChange={handleChange}
+            disabled={isDisabled}
+          />
         </div>
         <div>
           <label>Price</label>
-          <input name="price" value={form.price} onChange={handleChange} />
+          <input
+            name="price"
+            value={form.price}
+            onChange={handleChange}
+            disabled={isDisabled}
+          />
         </div>
 
         <div className={classes.submitBtnContainer}>
-          <ButtonSubmitForm type="submit">Done</ButtonSubmitForm>
+          <ButtonSubmitForm type="submit" disabled={isDisabled}>
+            Done
+          </ButtonSubmitForm>
         </div>
       </form>
       <ConfirmDialog
