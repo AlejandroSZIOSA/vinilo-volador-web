@@ -3,6 +3,7 @@
   flex-direction: column;
   height: 680px;
   background-color: white;
+  margin-top: 10px;
 }
 
 .searchSectionInnerContainer {
@@ -24,7 +25,10 @@
 
 @media (min-width: 1024px) {
   .searchSectionContainer {
-    height: 860px;
+    height: 570px;
+  }
+  .tableFilteredOuterContainer {
+    max-height: 100%;
   }
 
   .searchSectionInnerContainer {

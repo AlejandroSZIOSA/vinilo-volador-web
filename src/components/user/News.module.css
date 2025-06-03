@@ -1,5 +1,5 @@
 .newsSectionContainer {
-  height: 680px;
+  height: 690px;
   /* background-color: lightgrey; */
 }
 .newsSectionContainer h1 {
@@ -7,7 +7,7 @@
   padding: 8px 8px;
 }
 
-.newPlaceContainer {
+.newPlaceInfoOuterContainer {
   display: flex;
   flex-direction: column;
   height: 200px;
@@ -24,11 +24,11 @@
   justify-content: space-around;
 }
 
-.newPlaceContainer p {
+.newPlaceInfoOuterContainer p {
   padding: 5px 5px;
 }
 
-.newPlaceInnerContainer {
+.newPlaceInfoInnerContainer {
   width: 90%;
   height: 90%;
   /*  background: peru; */
@@ -40,4 +40,49 @@
   border: 1px solid #000000;
   background: white; */
   font-size: large;
+}
+
+@media (min-width: 1024px) {
+  .newsSectionContainer {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-start; */
+    height: 575px;
+    /* background-color: aqua; */
+  }
+
+  .pickUpPlaceContainer {
+    margin-right: 10px;
+    /* background-color: aqua; */
+    /* height: 800px; */
+  }
+
+  .newPlaceInfoOuterContainer {
+    width: 670px;
+    height: 400px;
+  }
+
+  .newsSectionContainer h1 {
+    padding: 25px 25px;
+  }
+
+  .newPlaceInfoInnerContainer p {
+    font-size: 35px;
+    padding: 10px 10px;
+  }
+
+  .latestAddedItemsContainer {
+    margin-left: 50px;
+    /* background-color: bisque; */
+  }
+
+  .tableShowOuterContainer {
+    width: 650px;
+  }
+
+  .tableShowOuterContainer th,
+  tr,
+  td {
+    font-size: 30px;
+  }
 }

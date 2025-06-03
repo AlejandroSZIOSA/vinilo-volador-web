@@ -94,8 +94,8 @@ body {
 
 @media (min-width: 1024px) {
   body {
-    width: 1440px;
-    height: 1024px;
+    width: 100%;
+    height: 100%;
     /* background-color: #ffa5a5; */
   }
 
@@ -103,10 +103,15 @@ body {
     font-size: x-large;
   }
 
-  th,
-  td {
-    font-size: x-large;
+  h1 {
+    font-size: 45px;
   }
+
+  /* th,
+  tr,
+  td {
+    font-size: normal;
+  } */
 }
 
 /* h1 {
