@@ -11,6 +11,7 @@
 .socialMediaContainer {
   display: flex;
   flex-direction: row;
+  margin-left: 20px;
 }
 
 .socialMediaContainer p {
@@ -32,11 +33,11 @@
     justify-content: space-between;
   }
   .socialMediaContainer {
-    width: 700px;
+    /* width: 700px; */
     /* background: black; */
     justify-content: space-between;
     align-items: center;
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
   .socialMediaContainer p {
     display: block;
@@ -44,6 +45,6 @@
   }
   .phoneContainer {
     width: 200px;
-    margin-right: 70px;
+    margin-right: 20px;
   }
 }

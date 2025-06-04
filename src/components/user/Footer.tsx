@@ -5,6 +5,8 @@ const Footer: FC = () => {
     <footer className={classes.footerContainer}>
       <div className={classes.socialMediaContainer}>
         <p>Contact</p>
+      </div>
+      <div>
         <img src="/src/assets/icons/facebook.svg" width={35} height={35}></img>
       </div>
       <div className={classes.phoneContainer}>

@@ -14,9 +14,9 @@ const LoginPage: FC = () => {
     navigate("/admin");
   }
   return (
-    <div className={classes.mainContentContainer}>
+    <div className={classes.loginPageContainer}>
       <h1>Login Admin Account</h1>
-      <div className={classes.formOuterContainer}>
+      <div className={classes.loginFormOuterContainer}>
         <LoginForm handleLoginFn={handleLogin} />
       </div>
     </div>

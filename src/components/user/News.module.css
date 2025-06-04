@@ -1,10 +1,9 @@
 .newsSectionContainer {
   height: 690px;
-  /* background-color: lightgrey; */
 }
 .newsSectionContainer h1 {
   text-align: center;
-  padding: 8px 8px;
+  padding: 15px 15px;
 }
 
 .newPlaceInfoOuterContainer {
@@ -31,14 +30,9 @@
 .newPlaceInfoInnerContainer {
   width: 90%;
   height: 90%;
-  /*  background: peru; */
 }
 
 .tableShowOuterContainer {
-  /* height: 390px;
-  overflow-y: auto;
-  border: 1px solid #000000;
-  background: white; */
   font-size: large;
 }
 
@@ -46,15 +40,12 @@
   .newsSectionContainer {
     display: flex;
     flex-direction: row;
-    /* justify-content: flex-start; */
-    height: 575px;
-    /* background-color: aqua; */
+    justify-content: center;
+    height: 580px;
   }
 
   .pickUpPlaceContainer {
     margin-right: 10px;
-    /* background-color: aqua; */
-    /* height: 800px; */
   }
 
   .newPlaceInfoOuterContainer {
