@@ -1,12 +1,21 @@
 .darkLightToggleContainer {
-  padding: 10px;
+  padding: 8px;
   font-size: 13px;
+}
+
+.toDarkStyle {
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
+.toLightStyle {
+  color: black;
+  background-color: white;
 }
 
 @media (min-width: 1024px) {
   .darkLightToggleContainer {
     padding: 5px;
     font-size: 20px;
-    margin-right: 100px;
   }
 }

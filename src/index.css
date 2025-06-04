@@ -74,14 +74,35 @@ button:focus-visible {
   margin: 0;
 }
 
-.dark {
-  background-color: #121212;
-  color: #ffffff;
+/* Dark Mode */
+
+.dark table {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid #ffffff;
 }
 
-.light {
+.dark table th {
+  border: 1px solid #ffffff;
+  color: rgb(253, 208, 71);
+  background-color: rgb(133, 133, 133);
+  padding: 3px;
+}
+
+.dark table td {
+  border: 1px solid #ffffff;
+  color: white;
+}
+
+.light table {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #000000;
+}
+
+.light table th {
+  border: 1px solid #000000;
+  color: rgb(0, 102, 255);
   background-color: #d0d0d0;
-  color: #000000;
+  padding: 3px;
 }
 
 body {
@@ -89,13 +110,14 @@ body {
   flex-direction: column;
   width: 430px;
   height: 932px;
-  /* background-color: rgb(196, 196, 196); */
+  background-color: #d0d0d0;
 }
 
 h1 {
   font-size: xx-large;
 }
 
+/* Responsive to macBook Air m1 */
 @media (min-width: 1024px) {
   body {
     width: 100%;
@@ -110,23 +132,4 @@ h1 {
   h1 {
     font-size: xxx-large;
   }
-
-  /* th,
-  tr,
-  td {
-    font-size: normal;
-  } */
 }
-
-/* h1 {
-  font-size: 40px;
-}
-
-p {
-  font-size: large;
-}
-
-label {
-  font-size: x-large;
-}
- */

@@ -31,4 +31,8 @@
     justify-content: center;
     gap: 20px;
   }
+  .navLink {
+    width: 150px;
+    text-align: center;
+  }
 }

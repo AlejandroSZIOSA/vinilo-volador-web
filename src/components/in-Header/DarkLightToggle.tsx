@@ -7,7 +7,11 @@ const DarkLightToggle: FC = () => {
   return (
     <button
       onClick={toggleTheme_Fn}
-      className={classes.darkLightToggleContainer}
+      className={
+        theme_ === "light"
+          ? `${classes.darkLightToggleContainer} ${classes.toDarkStyle}`
+          : `${classes.darkLightToggleContainer} ${classes.toLightStyle}`
+      }
     >
       {theme_ === "light" ? "Dark Mode" : "Light Mode"}
     </button>

@@ -32,7 +32,7 @@ const MainHeader: FC = () => {
             </div>
           </Link>
         )}
-        <div>
+        <div className={classes.darkLightToggleOuterContainer}>
           <DarkLightToggle />
         </div>
         <NavBar />

@@ -8,12 +8,10 @@
   position: sticky;
   top: 0; /* or left/right/bottom */
   z-index: 10; /* optional: keep it above other content */
-  background-color: rgb(133, 133, 133);
 }
 
 .tableFilteredContainer th {
   border: 1px solid #000000;
-  /* font-size: x-large; */
 }
 
 .tableFilteredContainer td {
@@ -21,14 +19,14 @@
 }
 
 .tdImageDelete {
-  background-color: yellow;
+  background-color: red;
 }
 .tdImageDelete div {
   margin-left: 24px;
 }
 
 .tdImageEdit {
-  background-color: rgb(238, 185, 61);
+  background-color: rgb(218, 149, 0);
 }
 .tdImageEdit div {
   margin-left: 10px;
