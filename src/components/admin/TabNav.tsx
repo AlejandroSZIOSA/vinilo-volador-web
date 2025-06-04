@@ -7,9 +7,8 @@ const TabNav: FC = () => {
     <div className={classes.tabNavContainer}>
       <NavLink
         to="/admin"
-        className={({ isActive }) =>
-          isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive
-        }
+        className={({ isActive }) => `${classes.navLink}
+          ${isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive}`}
         end /* Fix problem */
       >
         Add
@@ -17,7 +16,8 @@ const TabNav: FC = () => {
       <NavLink
         to="/admin/remove"
         className={({ isActive }) =>
-          isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive
+          `${classes.navLink}
+          ${isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive}`
         }
       >
         Remove
@@ -25,7 +25,8 @@ const TabNav: FC = () => {
       <NavLink
         to="/admin/edit"
         className={({ isActive }) =>
-          isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive
+          `${classes.navLink}
+          ${isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive}`
         }
       >
         Edit
@@ -33,7 +34,8 @@ const TabNav: FC = () => {
       <NavLink
         to="/admin/show"
         className={({ isActive }) =>
-          isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive
+          `${classes.navLink}
+          ${isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive}`
         }
       >
         Show
@@ -41,7 +43,8 @@ const TabNav: FC = () => {
       <NavLink
         to="/admin/event"
         className={({ isActive }) =>
-          isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive
+          `${classes.navLink}
+          ${isActive ? classes.navLinkIsActive : classes.navLinkIsNotActive}`
         }
       >
         Event

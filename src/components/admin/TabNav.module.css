@@ -7,22 +7,28 @@
   padding: 10px 10px;
 }
 
-.navLinkIsActive {
+.navLink {
   padding: 0.5rem 1rem;
-  font-weight: bold;
   font-size: large;
-  border-bottom: 2px solid blue;
   text-decoration: none;
   color: rgb(255, 255, 255);
   background-color: #ffad28;
 }
 
+.navLinkIsActive {
+  font-weight: bold;
+  border-bottom: 2px solid blue;
+}
+
 .navLinkIsNotActive {
-  padding: 0.5rem 1rem;
   font-weight: normal;
-  font-size: large;
   border-bottom: none;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  background-color: #ffad28;
+}
+
+@media (min-width: 1024px) {
+  .tabNavContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
 }
