@@ -151,7 +151,7 @@ export const VINYLS: Vinyl[] = [
   },
   {
     id: "783323",
-    artist: "Black Sabbath",
+    artist: "Vangelis",
     album: "Heaven and Hell",
     price: 100,
     createdAt: "2022-03-01",

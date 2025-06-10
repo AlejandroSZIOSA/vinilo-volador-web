@@ -13,8 +13,8 @@ const TableItemBtn: FC<TableItemBtnProps> = ({
   children,
   variant,
   item,
-  onRemoveFn, // Call Back FN  X 4
-  onEditFn, // Call Back FN  X 4
+  onRemoveFn, // Call Back FN  X 3
+  onEditFn, // Call Back FN  X 3
 }) => {
   const { id } = item;
   return (

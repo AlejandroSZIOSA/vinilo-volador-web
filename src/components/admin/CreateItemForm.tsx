@@ -96,7 +96,6 @@ const CreateItemForm: FC = () => {
             placeholder="price"
             id="price"
             type="number"
-            className={classes.inputPrice}
             name="price"
             ref={price}
             required

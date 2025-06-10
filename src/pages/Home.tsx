@@ -1,16 +1,16 @@
 import { type FC } from "react";
 import Tabs from "../components/user/Tabs";
-import News from "../components/user/News";
-import SearchSection from "../components/SearchSection";
 import classes from "./Home.module.css";
+import HomeSection from "../components/user/HomeSection";
+import NewsSection from "../components/user/NewsSection";
 
 const HomePage: FC = () => {
   const tabData = [
     {
       label: "HOME",
-      content: <SearchSection variant="user" tableListVariant="user" />,
+      content: <HomeSection />,
     },
-    { label: "NEWS", content: <News /> },
+    { label: "NEWS", content: <NewsSection /> },
   ];
 
   return (

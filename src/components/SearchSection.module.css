@@ -1,7 +1,7 @@
 .searchSectionContainer {
   display: flex;
   flex-direction: column;
-  height: 700px;
+  height: 650px;
   background-color: white;
   margin-top: 10px;
 }

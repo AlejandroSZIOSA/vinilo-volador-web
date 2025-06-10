@@ -22,12 +22,14 @@
   background-color: red;
 }
 .tdImageDelete div {
-  margin-left: 24px;
+  display: flex;
+  justify-content: center;
 }
 
 .tdImageEdit {
   background-color: rgb(218, 149, 0);
 }
 .tdImageEdit div {
-  margin-left: 10px;
+  display: flex;
+  justify-content: center;
 }

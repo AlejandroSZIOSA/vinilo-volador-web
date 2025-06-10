@@ -79,7 +79,7 @@ EditFormProps) {
             disabled={isDisabled}
           />
         </div>
-        <div>
+        <div className={classes.priceContainer}>
           <label>Price</label>
           <input
             name="price"

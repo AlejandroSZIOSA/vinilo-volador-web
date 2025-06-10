@@ -1,9 +1,9 @@
 import { type FC } from "react";
 import TableListShow from "../TableListShow";
 import { useAdmin_Ctx } from "../../store/admin-Context";
-import classes from "./News.module.css";
+import classes from "./NewsSection.module.css";
 
-const News: FC = () => {
+const NewsSection: FC = () => {
   const { next_Event } = useAdmin_Ctx();
   return (
     <section className={classes.newsSectionContainer}>
@@ -48,4 +48,4 @@ const News: FC = () => {
   );
 };
 
-export default News;
+export default NewsSection;

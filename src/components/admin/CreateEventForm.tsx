@@ -101,8 +101,8 @@ const CreateEventForm: FC = () => {
               type="time"
               id="timeFrom"
               name="timeFrom"
-              min="09:00"
-              max="17:00"
+              min="08:00"
+              max="22:00"
               ref={timeFrom}
             />
           </div>
@@ -112,8 +112,8 @@ const CreateEventForm: FC = () => {
               type="time"
               id="timeTo"
               name="timeTo"
-              min="09:00"
-              max="17:00"
+              min="08:00"
+              max="22:00"
               ref={timeTo}
             />
           </div>

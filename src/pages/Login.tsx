@@ -15,7 +15,7 @@ const LoginPage: FC = () => {
   }
   return (
     <div className={classes.loginPageContainer}>
-      <h1>Login Admin Account</h1>
+      <h1>Login Admin</h1>
       <div className={classes.loginFormOuterContainer}>
         <LoginForm handleLoginFn={handleLogin} />
       </div>
