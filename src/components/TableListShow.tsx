@@ -39,7 +39,7 @@ const TableListShow: FC<TableListShowProps> = ({ variant }) => {
       <thead>{contentTh}</thead>
       <tbody>
         {vinyls_
-          ?.slice(-8)
+          ?.slice(-9)
           .reverse()
           .map((v) => (
             <tr key={v.id}>
