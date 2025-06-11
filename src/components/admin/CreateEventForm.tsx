@@ -125,7 +125,7 @@ const CreateEventForm: FC = () => {
       <ConfirmDialog
         ref={dialogRef}
         title="Create Event"
-        message="Are you sure you want to Create this item?"
+        message="Are you sure you want to Create this <Pick Up Point>?"
         onConfirm={confirmAction}
         onCancel={cancelAction}
       />

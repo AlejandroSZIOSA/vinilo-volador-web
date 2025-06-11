@@ -8,7 +8,7 @@ const NewsSection: FC = () => {
   return (
     <section className={classes.newsSectionContainer}>
       <div className={classes.pickUpPlaceContainer}>
-        <h1>Next Pick up place</h1>
+        <h1>Next Pick Up Point</h1>
         <div className={classes.newPlaceInfoOuterContainer}>
           <div className={classes.newPlaceInfoInnerContainer}>
             <div>
