@@ -80,6 +80,7 @@ const CreateEventForm: FC = () => {
             name="address"
             maxLength={20}
             ref={address}
+            required
           />
         </div>
         <div>
@@ -90,6 +91,7 @@ const CreateEventForm: FC = () => {
             type="date"
             name="date"
             ref={date}
+            required
           />
         </div>
 
