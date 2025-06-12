@@ -8,11 +8,11 @@ export const ADMIN: Admin = {
 
 //Default next event "Pick up point" information
 export const NEXT_EVENT: Event = {
-  place: "",
-  address: "",
-  date: "",
-  from: "",
-  to: "",
+  place: "Some place",
+  address: "Some Address",
+  date: "Some Date",
+  from: "Time",
+  to: "Time",
 };
 
 export const VINYLS: Vinyl[] = [

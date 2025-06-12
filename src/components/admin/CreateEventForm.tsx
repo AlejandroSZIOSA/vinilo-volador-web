@@ -104,6 +104,7 @@ const CreateEventForm: FC = () => {
               min="08:00"
               max="22:00"
               ref={timeFrom}
+              required
             />
           </div>
           <div>
@@ -115,6 +116,7 @@ const CreateEventForm: FC = () => {
               min="08:00"
               max="22:00"
               ref={timeTo}
+              required
             />
           </div>
         </div>
