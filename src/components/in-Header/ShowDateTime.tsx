@@ -7,7 +7,7 @@ const ShowDateTime: FC = () => {
   return (
     <div className={classes.showDateTimeContainer}>
       <img src="/src/assets/icons/updated.svg" width={15} height={15}></img>
-      <p>{updated_ListDate}</p>
+      <div>{updated_ListDate}</div>
     </div>
   );
 };

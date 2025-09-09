@@ -1,12 +1,16 @@
 .footerContainer {
   display: flex;
-  justify-content: space-evenly;
-  height: 58px;
+
   align-items: center;
-  background: #b51717;
-  color: white;
-  font-size: larger;
+  justify-content: center;
+  height: 8vh;
+  background-color: rgb(255, 193, 127);
 }
+
+/* .footerContainer div {
+  display: block;
+  justify-content: center;
+} */
 
 .socialMediaContainer {
   display: flex;
@@ -31,6 +35,7 @@
   .footerContainer {
     height: 68px;
     justify-content: space-between;
+    margin-top: 8rem;
   }
   .socialMediaContainer {
     /* width: 700px; */

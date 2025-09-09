@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-evenly;
   padding: 12px 12px;
-  font-size: x-large;
   background-color: #d0d0d0;
 }
 
@@ -10,9 +9,13 @@
   display: flex;
   width: 90px;
   justify-content: space-evenly;
+  font-size: 1rem;
   /* background-color: brown; */
 }
 
 .radiogroupContainer input {
-  transform: scale(1.5); /* Increase size */
+  transform: scale(1.2); /* Increase size of the selección circle */
+}
+
+@media (min-width: 1024px) {
 }

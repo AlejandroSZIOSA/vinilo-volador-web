@@ -4,6 +4,7 @@ import classes from "./Home.module.css";
 import HomeSection from "../components/user/HomeSection";
 import NewsSection from "../components/user/NewsSection";
 
+//tabs and content for each tab
 const HomePage: FC = () => {
   const tabData = [
     {

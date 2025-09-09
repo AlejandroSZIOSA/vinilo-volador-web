@@ -108,13 +108,26 @@ button:focus-visible {
 body {
   display: flex;
   flex-direction: column;
-  width: 430px;
-  height: 932px;
+  /* width: 430px;
+  height: 932px; */
+  height: auto;
   background-color: #d0d0d0;
 }
 
 h1 {
   font-size: xx-large;
+}
+
+p {
+  font-size: 1rem;
+}
+
+th {
+  font-size: 1.1rem;
+}
+
+tr {
+  font-size: 1rem;
 }
 
 /* Responsive to macBook Air m1 */

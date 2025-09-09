@@ -34,6 +34,7 @@
   .searchSectionInnerContainer {
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     background-color: #d0d0d0;
     padding: 20px 20px;
   }
