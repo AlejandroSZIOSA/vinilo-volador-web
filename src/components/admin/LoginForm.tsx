@@ -26,7 +26,7 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
 
   return (
     <form className={classes.loginFormContainer} onSubmit={handleSubmit}>
-      <label>Alias</label>
+      <label htmlFor="alias">Alias</label>
       <input
         placeholder={ADMIN.alias}
         id="alias"
@@ -35,7 +35,7 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
         ref={alias}
         required
       />
-      <label>Password</label>
+      <label htmlFor="password">Password</label>
       <div className={classes.passwordInputContainer}>
         <input
           placeholder={ADMIN.password}

@@ -115,7 +115,7 @@ body {
 }
 
 h1 {
-  font-size: xx-large;
+  font-size: 1.8rem;
 }
 
 p {
@@ -128,6 +128,18 @@ th {
 
 tr {
   font-size: 1rem;
+}
+
+label {
+  font-size: 1.4rem;
+}
+
+input {
+  font-size: 1rem;
+}
+
+button {
+  font-size: 1.1rem;
 }
 
 /* Responsive to macBook Air m1 */

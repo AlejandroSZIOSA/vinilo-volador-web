@@ -67,7 +67,7 @@ const CreateItemForm: FC = () => {
         ref={formRef}
       >
         <div>
-          <label>Artist</label>
+          <label htmlFor="artist">Artist</label>
           <input
             placeholder="artist"
             id="artist"
@@ -78,7 +78,7 @@ const CreateItemForm: FC = () => {
           />
         </div>
         <div>
-          <label>Album</label>
+          <label htmlFor="album">Album</label>
           <input
             placeholder="album"
             id="album"
@@ -91,7 +91,7 @@ const CreateItemForm: FC = () => {
         </div>
 
         <div className={classes.priceContainer}>
-          <label>Price</label>
+          <label htmlFor="price">Price</label>
           <input
             placeholder="price"
             id="price"

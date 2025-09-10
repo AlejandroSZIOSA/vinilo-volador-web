@@ -7,7 +7,7 @@
 .loginFormContainer label {
   text-align: center;
   padding: 5px 5px;
-  font-size: x-large;
+  /* font-size: x-large; */
 }
 
 .loginFormContainer input {
@@ -32,7 +32,7 @@
   height: 50px;
   background: #000000;
   color: white;
-  font-size: large;
+  font-size: 14px;
   margin-left: 10px;
   border-radius: 5px;
 }
@@ -46,7 +46,7 @@
   width: 120px;
   height: 45px;
   background: #ffad28;
-  font-size: larger;
+  /* font-size: larger; */
 }
 
 @media (min-width: 1024px) {

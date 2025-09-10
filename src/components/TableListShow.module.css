@@ -1,7 +1,7 @@
 .tableShowContainer {
   width: 100%;
   border-collapse: collapse;
-  font-size: larger;
+  /* font-size: larger; */
   background-color: white;
 }
 
@@ -14,7 +14,7 @@
 
 .tableShowContainer th {
   border: 1px solid #000000;
-  font-size: x-large;
+  /* font-size: x-large; */
 }
 
 .tableShowContainer td {

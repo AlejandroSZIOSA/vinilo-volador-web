@@ -8,10 +8,10 @@ import NewsSection from "../components/user/NewsSection";
 const HomePage: FC = () => {
   const tabData = [
     {
-      label: "HOME",
+      label: "Home",
       content: <HomeSection />,
     },
-    { label: "NEWS", content: <NewsSection /> },
+    { label: "News", content: <NewsSection /> },
   ];
 
   return (

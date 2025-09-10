@@ -1,21 +1,21 @@
 .newsSectionContainer {
-  height: 710px;
+  height: 76vh;
 }
 .newsSectionContainer h1 {
   text-align: center;
-  padding: 15px 15px;
+  padding: 0.9rem 0.9px;
 }
 
 .newPlaceInfoOuterContainer {
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 21vh;
   align-items: center;
   justify-content: center;
   background-color: #fbffb0;
   border: 3px solid black;
-  border-radius: 2%;
-  font-size: larger;
+  border-radius: 10px;
+  /*   font-size: larger; */
 }
 
 .timeContainer {
@@ -24,7 +24,7 @@
 }
 
 .newPlaceInfoOuterContainer p {
-  padding: 5px 5px;
+  padding: 0.4rem 0.4rem;
 }
 
 .newPlaceInfoInnerContainer {
@@ -33,7 +33,7 @@
 }
 
 .tableShowOuterContainer {
-  font-size: large;
+  /* font-size: large; */
 }
 
 @media (min-width: 1024px) {
@@ -58,7 +58,7 @@
   }
 
   .newPlaceInfoInnerContainer p {
-    font-size: 35px;
+    /*   font-size: 35px; */
     padding: 10px 10px;
   }
 
@@ -71,9 +71,9 @@
     width: 650px;
   }
 
-  .tableShowOuterContainer th,
+  /* .tableShowOuterContainer th,
   tr,
   td {
     font-size: 30px;
-  }
+  } */
 }
