@@ -1,23 +1,22 @@
 .addPageContainer {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  /* background-color: rgb(255, 255, 255); */
   text-align: center;
   align-items: center;
 }
 
 .addPageContainer h1 {
-  padding: 12px 12px;
+  padding: 0.7rem 0.7rem;
 }
+
 .formOuterContainer {
-  height: 250px;
-  width: 95%;
+  width: 95vw;
   background-color: #fbffb0;
   border: 2px solid black;
   border-radius: 5%;
 }
 
-.tableOuterContainer {
-  margin: 0px 10px 0px 10px;
+/* .tableOuterContainer {
+  margin: 0rem 0.2rem;
 }
+ */

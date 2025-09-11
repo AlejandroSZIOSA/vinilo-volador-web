@@ -17,13 +17,15 @@ export const SearchBar = ({
   };
 
   return (
-    <input
-      className={classes.searchBarInput}
-      type="text"
-      value={value}
-      name="search"
-      onChange={handleChange}
-      placeholder={placeholder}
-    />
+    <div className={classes.searchBarOuterContainer}>
+      <input
+        className={classes.searchBarInput}
+        type="text"
+        value={value}
+        name="search"
+        onChange={handleChange}
+        placeholder={placeholder}
+      />
+    </div>
   );
 };

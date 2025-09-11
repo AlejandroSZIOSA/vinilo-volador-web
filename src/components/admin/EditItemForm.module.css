@@ -1,19 +1,19 @@
 .editItemFormContainer {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 1rem;
 }
 
 .editItemFormContainer label {
   text-align: center;
-  padding: 5px 5px;
+  padding: 0.4rem 0.4rem;
   /* font-size: large; */
 }
 
 .editItemFormContainer input {
-  width: 84%;
+  width: 70%;
   font-size: medium;
-  padding: 8px;
+  padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid #000000;
   border-radius: 6px;
@@ -25,11 +25,11 @@
 .priceContainer {
   display: flex;
   align-items: baseline;
-  width: 30%;
+  width: 35%;
 }
 
 .submitBtnContainer {
   display: flex;
   justify-content: center;
-  margin-top: 5px;
+  margin-top: 0.3rem;
 }

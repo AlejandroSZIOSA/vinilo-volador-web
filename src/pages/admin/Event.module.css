@@ -1,19 +1,20 @@
 .eventPageContainer {
   display: flex;
   flex-direction: column;
-  padding: 0px 13px 0px 13px;
+  padding: 0rem 0.8rem;
   align-items: center;
 }
 
 .eventPageContainer h1 {
-  padding-top: 40px;
+  text-align: center;
+  padding-top: 2rem;
 }
 
 .formOuterContainer {
-  height: 450px;
-  width: 95%;
+  height: 50vh;
+  width: 95vw;
   background-color: #fbffb0;
   border: 2px solid black;
   border-radius: 5%;
-  margin-top: 50px;
+  margin-top: 2.2rem;
 }

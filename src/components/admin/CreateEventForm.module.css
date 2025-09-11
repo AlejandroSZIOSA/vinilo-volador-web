@@ -1,17 +1,18 @@
 .formContainer {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  width: 97vw;
+  padding: 1.1rem;
 }
 
 .formContainer label {
   text-align: center;
-  padding: 5px 5px;
+  padding: 0.3rem 0.3rem;
   /* font-size: large; */
 }
 
 .formContainer input {
-  width: 80%;
+  width: 75%;
   font-size: medium;
   padding: 0.75rem;
   margin-bottom: 1rem;
@@ -24,7 +25,7 @@
 
 .formContainer h2 {
   text-align: center;
-  padding: 10px 10px;
+  padding: 0.7rem 0rem;
 }
 
 .timeContainer {
@@ -35,5 +36,5 @@
 .submitButtonContainer {
   display: flex;
   justify-content: center;
-  padding-top: 15px;
+  padding-top: 1rem;
 }

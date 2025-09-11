@@ -7,19 +7,19 @@
 
 .editPageContainer h1 {
   text-align: center;
-  padding: 12px 12px;
+  padding: 0.7rem 0.7rem;
 }
 
 .formOuterContainer {
-  height: 250px;
-  width: 95%;
+  /*   height: 250px; */
+  width: 95vw;
   background-color: #fbffb0;
   border: 2px solid black;
   border-radius: 5%;
-  margin-bottom: 20px;
+  /*   margin-bottom: 20px; */
 }
 
 .searchSectionOuterContainer {
-  width: 100%;
-  padding: 0px 14px 0px 14px;
+  width: 100vw;
+  padding: 0rem 0.7rem;
 }

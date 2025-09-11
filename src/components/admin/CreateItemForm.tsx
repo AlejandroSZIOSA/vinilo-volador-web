@@ -73,6 +73,7 @@ const CreateItemForm: FC = () => {
             id="artist"
             type="text"
             name="artist"
+            maxLength={30}
             ref={artist}
             required
           />
@@ -84,7 +85,7 @@ const CreateItemForm: FC = () => {
             id="album"
             type="text"
             name="album"
-            maxLength={20}
+            maxLength={30}
             ref={album}
             required
           />
@@ -97,6 +98,7 @@ const CreateItemForm: FC = () => {
             id="price"
             type="number"
             name="price"
+            maxLength={3}
             ref={price}
             required
           />

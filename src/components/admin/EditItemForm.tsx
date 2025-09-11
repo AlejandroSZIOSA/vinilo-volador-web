@@ -62,8 +62,10 @@ EditFormProps) {
         className={classes.editItemFormContainer}
       >
         <div>
-          <label>Artist</label>
+          <label htmlFor="artist">Artist</label>
           <input
+            placeholder="artist"
+            id="artist"
             name="artist"
             value={form.artist}
             onChange={handleChange}
@@ -71,8 +73,10 @@ EditFormProps) {
           />
         </div>
         <div>
-          <label>Album</label>
+          <label htmlFor="album">Album</label>
           <input
+            placeholder="album"
+            id="album"
             name="album"
             value={form.album}
             onChange={handleChange}
@@ -80,8 +84,9 @@ EditFormProps) {
           />
         </div>
         <div className={classes.priceContainer}>
-          <label>Price</label>
+          <label htmlFor="price">Price</label>
           <input
+            id="price"
             name="price"
             value={form.price}
             onChange={handleChange}

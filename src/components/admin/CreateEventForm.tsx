@@ -61,7 +61,7 @@ const CreateEventForm: FC = () => {
         ref={formRef}
       >
         <div>
-          <label>Place</label>
+          <label htmlFor="place">Place</label>
           <input
             placeholder="place"
             id="place"
@@ -72,7 +72,7 @@ const CreateEventForm: FC = () => {
           />
         </div>
         <div>
-          <label>Address</label>
+          <label htmlFor="address">Address</label>
           <input
             placeholder="address"
             id="address"
@@ -84,7 +84,7 @@ const CreateEventForm: FC = () => {
           />
         </div>
         <div>
-          <label>Date</label>
+          <label htmlFor="date">Date</label>
           <input
             placeholder="date"
             id="date"
@@ -98,7 +98,7 @@ const CreateEventForm: FC = () => {
         <h2>Time</h2>
         <div className={classes.timeContainer}>
           <div>
-            <label>From</label>
+            <label htmlFor="timeFrom">From</label>
             <input
               type="time"
               id="timeFrom"
@@ -110,7 +110,7 @@ const CreateEventForm: FC = () => {
             />
           </div>
           <div>
-            <label>To</label>
+            <label htmlFor="timeTo">To</label>
             <input
               type="time"
               id="timeTo"
