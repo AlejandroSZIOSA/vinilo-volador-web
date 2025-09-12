@@ -1,20 +1,21 @@
 .formContainer {
   display: flex;
   flex-direction: column;
-  width: 97vw;
-  padding: 1.1rem;
+  /* width: 97vw; */
+  padding: 1rem;
 }
 
 .formContainer label {
   text-align: center;
-  padding: 0.3rem 0.3rem;
+  /*   padding: 0.3rem 0.3rem; */
   /* font-size: large; */
+  padding-right: 0.5rem;
 }
 
 .formContainer input {
   width: 75%;
   font-size: medium;
-  padding: 0.75rem;
+  padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid #000000;
   border-radius: 6px;
@@ -23,18 +24,27 @@
   transition: border-color 0.2s;
 }
 
+.dateContainer input {
+  width: 35%;
+}
+
 .formContainer h2 {
   text-align: center;
-  padding: 0.7rem 0rem;
+  padding-bottom: 1rem;
 }
 
 .timeContainer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+
+.timeContainer input {
+  width: 30%;
 }
 
 .submitButtonContainer {
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
+  padding-top: 0.6rem;
 }

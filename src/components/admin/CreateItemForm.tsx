@@ -91,6 +91,7 @@ const CreateItemForm: FC = () => {
           />
         </div>
 
+        {/*   TODO:ADD max input number attribute */}
         <div className={classes.priceContainer}>
           <label htmlFor="price">Price</label>
           <input
@@ -98,7 +99,6 @@ const CreateItemForm: FC = () => {
             id="price"
             type="number"
             name="price"
-            maxLength={3}
             ref={price}
             required
           />

@@ -1,12 +1,12 @@
 .loginFormContainer {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 0.6rem;
 }
 
 .loginFormContainer label {
   text-align: center;
-  padding: 5px 5px;
+  padding: 0.4rem 0rem;
   /* font-size: x-large; */
 }
 
@@ -28,12 +28,12 @@
 }
 
 .showHideBtn {
-  width: 60px;
-  height: 50px;
+  width: 12vw;
+  height: 5vh;
   background: #000000;
   color: white;
-  font-size: 14px;
-  margin-left: 10px;
+  font-size: 0.9rem;
+  margin-left: 0.6rem;
   border-radius: 5px;
 }
 

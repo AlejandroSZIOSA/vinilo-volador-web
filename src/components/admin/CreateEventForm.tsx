@@ -60,6 +60,7 @@ const CreateEventForm: FC = () => {
         className={classes.formContainer}
         ref={formRef}
       >
+        <h2>Place</h2>
         <div>
           <label htmlFor="place">Place</label>
           <input
@@ -67,6 +68,7 @@ const CreateEventForm: FC = () => {
             id="place"
             type="text"
             name="place"
+            maxLength={40}
             ref={place}
             required
           />
@@ -78,12 +80,12 @@ const CreateEventForm: FC = () => {
             id="address"
             type="text"
             name="address"
-            maxLength={20}
+            maxLength={40}
             ref={address}
             required
           />
         </div>
-        <div>
+        <div className={classes.dateContainer}>
           <label htmlFor="date">Date</label>
           <input
             placeholder="date"
