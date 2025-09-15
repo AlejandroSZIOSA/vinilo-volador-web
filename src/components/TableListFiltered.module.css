@@ -1,7 +1,6 @@
 .tableFilteredContainer {
-  /*   width: 100%; */
   border-collapse: collapse;
-  font-size: larger;
+  /* font-size: larger; */
 }
 
 .tableFilteredContainer thead {
@@ -32,4 +31,10 @@
 .tdImageEdit div {
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .tableFilteredContainer {
+    width: 100%;
+  }
 }
