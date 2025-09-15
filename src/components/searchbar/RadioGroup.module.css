@@ -18,4 +18,8 @@
 }
 
 @media (min-width: 1024px) {
+  .radiogroupContainer label {
+    font-size: 1.4rem;
+    /* background-color: brown; */
+  }
 }

@@ -1,15 +1,3 @@
-.mainHeaderContainer {
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  top: 0;
-  color: rgb(0, 0, 0);
-  /* padding-top: 10px; */
-  text-align: center;
-  z-index: 1000;
-  background-color: #e9e9e9;
-}
-
 .headerInnerContainer {
   display: flex;
   flex-direction: row;

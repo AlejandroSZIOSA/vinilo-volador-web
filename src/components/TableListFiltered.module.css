@@ -1,6 +1,6 @@
 .tableFilteredContainer {
   border-collapse: collapse;
-  /* font-size: larger; */
+  width: stretch; /* fix problem with the table */
 }
 
 .tableFilteredContainer thead {

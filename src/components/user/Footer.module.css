@@ -1,55 +1,11 @@
-.footerContainer {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-  height: 8vh;
-  background-color: rgb(255, 193, 127);
-}
-
-/* .footerContainer div {
-  display: block;
-  justify-content: center;
-} */
-
-.socialMediaContainer {
-  display: flex;
-  flex-direction: row;
-  margin-left: 20px;
-}
-
-.socialMediaContainer p {
-  display: none;
-}
-
-.phoneContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 180px;
-  /*   background-color: rgb(0, 0, 0);
- */
+.contactLogo {
+  width: 35px;
+  height: auto; /* maintain the aspect ratio */
 }
 
 @media (min-width: 1024px) {
-  .footerContainer {
-    height: 68px;
-    justify-content: space-between;
-    margin-top: 8rem;
-  }
-  .socialMediaContainer {
-    /* width: 700px; */
-    /* background: black; */
-    justify-content: space-between;
-    align-items: center;
-    /* margin-left: 10px; */
-  }
-  .socialMediaContainer p {
-    display: block;
-    font-size: 35px;
-  }
-  .phoneContainer {
-    width: 200px;
-    margin-right: 20px;
+  .contactLogo {
+    width: 90px;
+    height: auto;
   }
 }

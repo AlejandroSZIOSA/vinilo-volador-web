@@ -2,7 +2,9 @@ import { type FC } from "react";
 import classes from "./DarkLightToggle.module.css";
 
 import { useUi_Ctx } from "../../store/ui-Context";
-const DarkLightToggle: FC = () => {
+
+/* TODO:change the name of the component
+ */ const DarkLightToggle: FC = () => {
   const { theme_, toggleTheme_Fn } = useUi_Ctx();
   return (
     <button

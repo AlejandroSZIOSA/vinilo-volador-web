@@ -12,7 +12,7 @@ const MainHeader: FC = () => {
   const { width, height } = HEADER_ICONS_SIZES;
 
   return (
-    <header className={classes.mainHeaderContainer}>
+    <header>
       <div className={classes.headerInnerContainer}>
         {is_Authenticated ? (
           <img
