@@ -31,7 +31,7 @@
 
   .loginFormOuterContainer {
     width: 500px;
-    height: 330px;
+    /* height: 330px; */
     margin-top: 80px;
     padding: 20px;
   }

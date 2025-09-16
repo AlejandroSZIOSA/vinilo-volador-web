@@ -9,13 +9,13 @@
 .newPlaceInfoOuterContainer {
   display: flex;
   flex-direction: column;
-  height: 21vh;
+  /* height: 21vh; */
+  padding: 0.5rem;
   align-items: center;
   justify-content: center;
   background-color: #fbffb0;
   border: 3px solid black;
   border-radius: 10px;
-  /*   font-size: larger; */
 }
 
 .timeContainer {
@@ -49,8 +49,9 @@
   }
 
   .newPlaceInfoOuterContainer {
-    width: 27vw;
-    height: 26vh;
+    /*   width: 27vw;
+    height: 26vh; */
+    height: auto;
   }
 
   .newsSectionContainer h1 {

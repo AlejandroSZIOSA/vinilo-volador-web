@@ -28,8 +28,9 @@
 }
 
 .showHideBtn {
-  width: 12vw;
+  width: 13vw;
   height: 5vh;
+  min-width: fit-content;
   background: #000000;
   color: white;
   font-size: 0.9rem;
@@ -42,15 +43,12 @@
   justify-content: center;
 }
 
-.submitBtn {
-  width: 120px;
-  height: 45px;
-  background: #ffad28;
-  /* font-size: larger; */
-}
-
 @media (min-width: 1024px) {
   .submitBtnOuterContainer {
-    padding: 15px;
+    padding: 1rem;
+  }
+  .showHideBtn {
+    width: 5vw;
+    height: 5vh;
   }
 }

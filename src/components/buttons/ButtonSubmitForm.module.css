@@ -2,5 +2,11 @@
   width: 21vw;
   height: 5.4vh;
   background-color: #ffad28;
-  /* font-size: large; */
+}
+@media (min-width: 1024px) {
+  .buttonSubmitContainer {
+    width: 7vw;
+    height: 5vh;
+    background-color: #ffad28;
+  }
 }
