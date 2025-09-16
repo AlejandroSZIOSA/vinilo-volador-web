@@ -32,10 +32,6 @@
   height: 90%;
 }
 
-/* .tableShowOuterContainer {
-  font-size: large;
-} */
-
 @media (min-width: 1024px) {
   .newsSectionContainer {
     display: flex;
@@ -45,36 +41,26 @@
   }
 
   .pickUpPlaceContainer {
-    margin-right: 10px;
+    margin-right: 0.7rem;
   }
 
   .newPlaceInfoOuterContainer {
-    /*   width: 27vw;
-    height: 26vh; */
     height: auto;
   }
 
   .newsSectionContainer h1 {
-    padding: 25px 25px;
+    padding: 1.6rem 1.6rem;
   }
 
   .newPlaceInfoInnerContainer p {
-    /*   font-size: 35px; */
-    padding: 10px 10px;
+    padding: 0.6rem 0.6rem;
   }
 
   .latestAddedItemsContainer {
-    margin-left: 50px;
-    /* background-color: bisque; */
+    margin-left: 4rem;
   }
 
   .tableShowOuterContainer {
-    width: 650px;
+    width: 50vw;
   }
-
-  /* .tableShowOuterContainer th,
-  tr,
-  td {
-    font-size: 30px;
-  } */
 }

@@ -45,3 +45,21 @@
 .buttonConfirm {
   background-color: rgb(0, 255, 21);
 }
+
+@media (min-width: 1024px) {
+  .confirmDialogContainer {
+    left: 25%;
+  }
+
+  .confirmDialogContainer h1 {
+    font-size: 3rem;
+  }
+
+  .confirmDialogContainer p {
+    font-size: 1.6rem;
+  }
+
+  .buttonContainer button {
+    font-size: 1.2rem;
+  }
+}

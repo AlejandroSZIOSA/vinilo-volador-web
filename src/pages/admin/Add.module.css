@@ -5,8 +5,21 @@
   align-items: center;
 }
 
-.addPageContainer h1 {
-  padding: 0.7rem 0.7rem;
+.addVinylContainer {
+  text-align: center;
+}
+
+.addVinylContainer h1 {
+  padding: 0.8rem 0rem;
+}
+
+.latestAddedListContainer {
+  text-align: center;
+}
+
+.latestAddedListContainer h1 {
+  padding: 0.8rem 0rem;
+  text-align: center;
 }
 
 .formOuterContainer {
@@ -19,3 +32,24 @@
 /* .tableOuterContainer {
   margin: 0rem 0.2rem;
 } */
+@media (min-width: 1024px) {
+  .addPageContainer {
+    flex-direction: row;
+    /*   text-align: center; */
+    align-items: anchor-center;
+    justify-content: center;
+    height: 76vh;
+  }
+
+  .addVinylContainer {
+    margin-right: 0.7rem;
+  }
+
+  .formOuterContainer {
+    max-width: 18vw;
+  }
+
+  .latestAddedListContainer {
+    margin-left: 4rem;
+  }
+}
