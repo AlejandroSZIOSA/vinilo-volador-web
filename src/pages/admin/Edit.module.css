@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 0px 5px 0px 5px; */
+}
+
+.editSectionContainer {
 }
 
 .editPageContainer h1 {
@@ -10,16 +12,40 @@
   padding: 0.7rem 0.7rem;
 }
 
-.formOuterContainer {
-  /*   height: 250px; */
+.formEditItemOuterContainer {
   width: 95vw;
   background-color: #fbffb0;
   border: 2px solid black;
   border-radius: 5%;
-  /*   margin-bottom: 20px; */
 }
 
-.searchSectionOuterContainer {
+.searchSectionEditOuterContainer {
   width: 100vw;
   padding: 0rem 0.7rem;
+}
+
+@media (min-width: 1024px) {
+  .editPageContainer {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    height: 76vh;
+  }
+
+  .editSectionContainer h1 {
+    text-align: center;
+  }
+
+  .editSectionContainer {
+    margin-right: 0.7rem;
+  }
+
+  .formEditItemOuterContainer {
+    max-width: 18vw;
+  }
+
+  .searchSectionEditOuterContainer {
+    width: 65vw;
+    margin-left: 4rem;
+  }
 }

@@ -36,15 +36,18 @@ const EditPage: FC = () => {
 
   return (
     <div className={classes.editPageContainer}>
-      <h1>Edit</h1>
-      <div className={classes.formOuterContainer}>
-        <EditItemForm
-          initialData={vinyl}
-          onSave={handleSave}
-          isDisabled={isDisabled}
-        />
+      <div className={classes.editSectionContainer}>
+        <h1>Edit</h1>
+        <div className={classes.formEditItemOuterContainer}>
+          <EditItemForm
+            initialData={vinyl}
+            onSave={handleSave}
+            isDisabled={isDisabled}
+          />
+        </div>
       </div>
-      <div className={classes.searchSectionOuterContainer}>
+
+      <div className={classes.searchSectionEditOuterContainer}>
         <SearchSection
           variant="admin"
           tableListVariant="admin-edit"

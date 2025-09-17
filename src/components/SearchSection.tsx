@@ -72,9 +72,28 @@ const SearchSection: FC<SearchSectionProps> = ({
   }
 
   return (
-    <div className={classes.searchSectionContainer}>
-      <div className={classes.searchSectionInnerContainer}>
-        <div className={classes.searchbarOuterContainer}>
+    <div
+      className={
+        tableListVariant === "admin-show"
+          ? classes.searchSectionContainerAdminShow
+          : classes.searchSectionContainer
+      }
+    >
+      <div
+        className={
+          tableListVariant == "admin-edit"
+            ? classes.searchSectionInnerContainerAdminEdit
+            : classes.searchSectionInnerContainer
+        }
+      >
+        {/* Change the class dynamic when user is in desktop view */}
+        <div
+          className={
+            tableListVariant == "admin-edit"
+              ? classes.searchbarOuterContainerAdminEdit
+              : classes.searchbarOuterContainer
+          }
+        >
           <SearchBar value={search} onChange={setSearch} />
         </div>
         {/*  RadioGroup Component using generic types */}
@@ -87,7 +106,13 @@ const SearchSection: FC<SearchSectionProps> = ({
           />
         </div>
       </div>
-      <div className={classes.tableFilteredOuterContainer}>
+      <div
+        className={
+          tableListVariant == "admin-show"
+            ? classes.tableFilteredOuterContainerAdminShow
+            : classes.tableFilteredOuterContainer
+        }
+      >
         <TableListFiltered
           variant={tableListVariant}
           filteredItems={filtered}

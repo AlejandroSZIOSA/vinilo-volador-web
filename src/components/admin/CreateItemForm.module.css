@@ -31,11 +31,14 @@
 .submitBtnContainer {
   display: inline-flex;
   justify-content: center;
-  padding-top: 1rem;
 }
 
 @media (min-width: 1024px) {
   .priceContainer {
     width: 42%;
+  }
+
+  .submitBtnContainer {
+    padding-top: 1rem;
   }
 }
