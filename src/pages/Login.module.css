@@ -10,10 +10,10 @@
   margin-top: 7rem;
 }
 
-.loginFormOuterContainer {
+.loginPageFormOuterContainer {
   display: flex;
   flex-direction: column;
-  width: 93vw;
+  width: 90vw;
   background-color: rgb(255, 255, 255);
   margin-top: 8rem;
   border: 2px solid black;
@@ -25,7 +25,7 @@
     margin-top: 3rem;
   }
 
-  .loginFormOuterContainer {
+  .loginPageFormOuterContainer {
     width: 20vw;
     /* height: 330px; */
     margin-top: 3rem;

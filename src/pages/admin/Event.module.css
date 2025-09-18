@@ -11,10 +11,17 @@
 }
 
 .formOuterContainer {
-  height: 47vh;
   width: 95vw;
+  height: 52vh;
   background-color: #fbffb0;
   border: 2px solid black;
   border-radius: 5%;
   margin-top: 2.2rem;
+}
+
+@media (min-width: 1024px) {
+  .formOuterContainer {
+    width: 23vw;
+    height: auto;
+  }
 }

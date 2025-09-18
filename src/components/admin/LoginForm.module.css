@@ -28,7 +28,7 @@
 }
 
 .showHideBtn {
-  width: 13vw;
+  width: 6vw;
   height: 5vh;
   min-width: fit-content;
   background: #000000;
@@ -48,7 +48,7 @@
     padding: 1rem;
   }
   .showHideBtn {
-    width: 3vw;
-    height: 4vh;
+    width: 6vw;
+    height: 6vh;
   }
 }

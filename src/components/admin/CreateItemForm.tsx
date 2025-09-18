@@ -102,6 +102,7 @@ const CreateItemForm: FC = () => {
             ref={price}
             required
           />
+          <span>$</span>
         </div>
         <div className={classes.submitBtnContainer}>
           <ButtonSubmitForm type="submit">Add</ButtonSubmitForm>

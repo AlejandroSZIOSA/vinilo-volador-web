@@ -92,6 +92,7 @@ EditFormProps) {
             onChange={handleChange}
             disabled={isDisabled}
           />
+          <span>$</span>
         </div>
 
         <div className={classes.submitBtnContainer}>

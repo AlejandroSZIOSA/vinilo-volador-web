@@ -1,7 +1,7 @@
 .searchSectionContainer {
   display: flex;
   flex-direction: column;
-  height: 72vh;
+  height: 74vh;
 }
 
 .searchSectionInnerContainer {
@@ -43,16 +43,19 @@
   }
 
   .searchbarOuterContainer {
-    width: 15%;
+    width: 20%;
   }
   /* fixed! */
   .searchbarOuterContainerAdminEdit {
-    width: 20%;
+    width: 33%;
   }
 
   /* searchSectioContainer */
 
   .tableFilteredOuterContainerAdminShow {
+    max-height: 62vh; /* Set a fixed height for the table container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 2px solid #000;
     width: 80%;
   }
 

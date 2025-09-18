@@ -23,13 +23,33 @@
 }
 
 .priceContainer {
-  display: flex;
+  display: inline-flex;
   align-items: baseline;
-  width: 35%;
+  width: 40%;
+}
+
+.priceContainer span {
+  margin-left: 0.5rem;
+  font-size: large;
 }
 
 .submitBtnContainer {
   display: flex;
   justify-content: center;
   margin-top: 0.3rem;
+}
+
+@media (min-width: 1024px) {
+  .priceContainer {
+    min-width: 30%;
+  }
+
+  .priceContainer input {
+    width: 80px;
+  }
+
+  .priceContainer span {
+    margin-left: 0.5rem;
+    font-size: x-large;
+  }
 }
