@@ -20,23 +20,29 @@ const NavBar: FC = () => {
   if (is_Authenticated) {
     content = (
       <li>
-        <img
-          src="/src/assets/icons/logout-lock.svg"
-          width={width}
-          height={height}
-          onClick={handleLogOut}
-        ></img>
+        <div>
+          <p>LogOut</p>
+          <img
+            src="/src/assets/icons/logout-lock.svg"
+            width={width}
+            height={height}
+            onClick={handleLogOut}
+          ></img>
+        </div>
       </li>
     );
   } else {
     content = (
       <li>
         <NavLink to="/login">
-          <img
-            src="/src/assets/icons/adminLock.svg"
-            width={width}
-            height={height}
-          ></img>
+          <div>
+            <p>LogIn</p>
+            <img
+              src="/src/assets/icons/adminLock.svg"
+              width={width}
+              height={height}
+            ></img>
+          </div>
         </NavLink>
       </li>
     );

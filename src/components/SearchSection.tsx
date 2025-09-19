@@ -110,7 +110,7 @@ const SearchSection: FC<SearchSectionProps> = ({
         className={
           tableListVariant == "admin-show"
             ? classes.tableFilteredOuterContainerAdminShow
-            : classes.tableFilteredOuterContainer
+            : classes.tableFilteredOuterContainerUser
         }
       >
         <TableListFiltered

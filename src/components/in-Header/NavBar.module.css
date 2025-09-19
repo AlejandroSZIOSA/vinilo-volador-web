@@ -1,3 +1,19 @@
 .listStyle {
   list-style: none;
 }
+
+.listStyle li div {
+  display: flex;
+  align-items: center;
+  padding-right: 0.2rem;
+}
+.listStyle li div p {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .listStyle li div p {
+    display: block;
+    padding-right: 0.5rem;
+  }
+}

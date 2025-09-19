@@ -6,23 +6,22 @@
   background-color: #b51717;
   padding: 10px 10px;
 }
-
 .navLink {
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 1rem;
   font-size: large;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   background-color: #ffad28;
 }
-
 .navLinkIsActive {
   font-weight: bold;
   border-bottom: 2px solid blue;
 }
-
 .navLinkIsNotActive {
   font-weight: normal;
   border-bottom: none;
+  color: white;
+  opacity: 0.6;
 }
 
 @media (min-width: 1024px) {
@@ -32,7 +31,6 @@
     gap: 20px;
   }
   .navLink {
-    width: 150px;
-    text-align: center;
+    padding: 0.6rem 4rem;
   }
 }

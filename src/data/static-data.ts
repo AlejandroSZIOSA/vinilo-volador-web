@@ -213,5 +213,27 @@ export const VINYLS: Vinyl[] = [
     createdAt: "2022-03-01",
   },
 
+  {
+    id: "903345",
+    artist: "Los jaivas",
+    album: "Death or Glory",
+    price: 100,
+    createdAt: "2022-03-01",
+  },
+  {
+    id: "604542",
+    artist: "Amaranto",
+    album: "Animals",
+    price: 200,
+    createdAt: "2022-03-01",
+  },
+  {
+    id: "090128",
+    artist: "La ley",
+    album: "Blood of the Nations",
+    price: 100,
+    createdAt: "2022-03-01",
+  },
+
   //... more vinyls
 ];

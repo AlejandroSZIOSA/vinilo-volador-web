@@ -15,11 +15,14 @@ const MainHeader: FC = () => {
     <header>
       <div className={classes.headerInnerContainer}>
         {is_Authenticated ? (
-          <img
-            src="/src/assets/icons/adminUnlock.svg"
-            width={width}
-            height={height}
-          ></img>
+          <div className={classes.userLogoContainer}>
+            <img
+              src="/src/assets/icons/adminUnlock.svg"
+              width={width}
+              height={height}
+            ></img>
+            <p>Admin</p>
+          </div>
         ) : (
           <Link to={"/"}>
             <div className={classes.userLogoContainer}>
@@ -28,11 +31,12 @@ const MainHeader: FC = () => {
                 width={width}
                 height={height}
               ></img>
-              <p>Vinyls</p>
+              <p>Home</p>
             </div>
           </Link>
         )}
-        <div className={classes.darkLightToggleOuterContainer}>
+        {/* fix: Using dynamic css classes */}
+        <div>
           <DarkLightToggle />
         </div>
         <NavBar />

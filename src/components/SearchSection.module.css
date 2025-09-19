@@ -1,7 +1,7 @@
 .searchSectionContainer {
   display: flex;
   flex-direction: column;
-  height: 74vh;
+  height: 77vh;
 }
 
 .searchSectionInnerContainer {
@@ -13,12 +13,18 @@
   width: 100%;
 }
 
-.tableFilteredOuterContainer {
+.tableFilteredOuterContainerUser {
   /*   max-height: 100%; */
   overflow-y: auto;
   border: 1px solid #000000;
   /* background: red; */
   /* margin-top: 10px; */
+}
+
+.tableFilteredOuterContainerAdminShow {
+  max-height: 62vh; /* Set a fixed height for the table container */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #000;
 }
 
 @media (min-width: 1024px) {
@@ -53,13 +59,9 @@
   /* searchSectioContainer */
 
   .tableFilteredOuterContainerAdminShow {
-    max-height: 62vh; /* Set a fixed height for the table container */
+    max-height: 68vh; /* Set a fixed height for the table container */
     overflow-y: auto; /* Enable vertical scrolling */
     border: 2px solid #000;
     width: 80%;
-  }
-
-  .radiogroupOuterContainer {
-    /* width: 50%; */
   }
 }

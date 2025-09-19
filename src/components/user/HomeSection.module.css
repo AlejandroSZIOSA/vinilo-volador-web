@@ -1,9 +1,9 @@
 .searchSectionOuterContainer {
-  padding: 23px 0px 27px 0px;
+  padding-top: 0.8rem;
 }
 
 @media (min-width: 1024px) {
   .searchSectionOuterContainer {
-    padding: 0px;
+    padding: 0;
   }
 }

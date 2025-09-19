@@ -13,7 +13,7 @@ interface TabsProps {
 const Tabs = ({ tabs }: TabsProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div>
+    <>
       <div className={classes.tabOuterContainer}>
         {tabs.map((tab, index) => (
           <button
@@ -33,7 +33,7 @@ const Tabs = ({ tabs }: TabsProps) => {
       <div className={classes.rootContentContainer}>
         {tabs[activeIndex].content}
       </div>
-    </div>
+    </>
   );
 };
 

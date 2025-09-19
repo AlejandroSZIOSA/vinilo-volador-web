@@ -15,9 +15,8 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  padding: 0.5rem 4rem;
+  padding: 0.3rem 4rem;
   background: #ffad28;
-  color: white;
   cursor: pointer;
   font-size: 1rem;
 }
@@ -30,12 +29,18 @@
 .tabBtnDisabled {
   border-bottom: none;
   font-weight: normal;
+  color: white;
+  opacity: 0.6;
 }
 
 @media (min-width: 1024px) {
   .rootContentContainer {
     padding: 0px 20px;
     margin-bottom: 14px;
+  }
+
+  .tabBtn {
+    padding: 0.6rem 5rem;
   }
   .tabOuterContainer {
     justify-content: center;
