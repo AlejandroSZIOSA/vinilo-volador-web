@@ -2,8 +2,8 @@ import { useRef, type FC, type FormEvent } from "react";
 import { useAdmin_Ctx } from "../../store/admin-Context";
 import ConfirmDialog, { type ConfirmDialogRef } from "./ConfirmDialog";
 import { getCurrentDateTime } from "../../utils/functions";
-import classes from "./CreateEventForm.module.css";
 import ButtonSubmitForm from "../buttons/ButtonSubmitForm";
+import classes from "./CreateEventForm.module.css";
 
 const CreateEventForm: FC = () => {
   const { setNextEvent_Fn, setUpdatedListDate_Fn } = useAdmin_Ctx();
@@ -57,7 +57,7 @@ const CreateEventForm: FC = () => {
     <>
       <form
         onSubmit={handleOpenDialog}
-        className={classes.formContainer}
+        className={classes.createEventForm}
         ref={formRef}
       >
         <h2>Place</h2>
@@ -124,7 +124,7 @@ const CreateEventForm: FC = () => {
             />
           </div>
         </div>
-        <div className={classes.submitButtonContainer}>
+        <div className={classes.submitButtonOuterContainer}>
           <ButtonSubmitForm type="submit">Create</ButtonSubmitForm>
         </div>
       </form>

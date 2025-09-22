@@ -1,55 +1,50 @@
 .addPageContainer {
   display: flex;
   flex-direction: column;
-  /*   text-align: center; */
   align-items: center;
 }
 
-.addVinylContainer {
+.addPageVinylContainer {
   text-align: center;
 }
 
-.addVinylContainer h1 {
+.addPageVinylContainer h1 {
   padding: 0.8rem 0rem;
 }
 
-.latestAddedListContainer {
+.addPageShowLatestItemsContainer {
   text-align: center;
 }
 
-.latestAddedListContainer h1 {
+.addPageShowLatestItemsContainer h1 {
   padding: 0.8rem 0rem;
   text-align: center;
 }
 
-.formOuterContainer {
+.addPageFormOuterContainer {
   width: 95vw;
   background-color: #fbffb0;
   border: 2px solid black;
   border-radius: 5%;
 }
 
-/* .tableOuterContainer {
-  margin: 0rem 0.2rem;
-} */
 @media (min-width: 1024px) {
   .addPageContainer {
     flex-direction: row;
-    /*   text-align: center; */
     align-items: anchor-center;
     justify-content: center;
     height: 76vh;
   }
 
-  .addVinylContainer {
+  .addPageVinylContainer {
     margin-right: 0.7rem;
   }
 
-  .formOuterContainer {
+  .addPageFormOuterContainer {
     max-width: 20vw;
   }
 
-  .latestAddedListContainer {
+  .addPageShowLatestItemsContainer {
     margin-left: 4rem;
   }
 }

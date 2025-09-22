@@ -36,9 +36,9 @@ const EditPage: FC = () => {
 
   return (
     <div className={classes.editPageContainer}>
-      <div className={classes.editSectionContainer}>
+      <div className={classes.editPageEditVinylContainer}>
         <h1>Edit</h1>
-        <div className={classes.formEditItemOuterContainer}>
+        <div className={classes.editPageFormOuterContainer}>
           <EditItemForm
             initialData={vinyl}
             onSave={handleSave}
@@ -46,8 +46,7 @@ const EditPage: FC = () => {
           />
         </div>
       </div>
-
-      <div className={classes.searchSectionEditOuterContainer}>
+      <div className={classes.editPageSearchSectionOuterContainer}>
         <SearchSection
           variant="admin"
           tableListVariant="admin-edit"

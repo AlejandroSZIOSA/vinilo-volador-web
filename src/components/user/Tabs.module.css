@@ -2,9 +2,8 @@
   padding: 0px 10px 12px 10px;
 }
 
-.tabOuterContainer {
+.tabsContainer {
   display: flex;
-  /*  gap: "1rem", */
   border-bottom: 2px solid #ccc;
   background: #b51717;
   padding: 0.4rem;
@@ -30,19 +29,21 @@
   border-bottom: none;
   font-weight: normal;
   color: white;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 @media (min-width: 1024px) {
   .rootContentContainer {
     padding: 0px 20px;
     margin-bottom: 14px;
+    /* justify-items: center; */
   }
 
   .tabBtn {
     padding: 0.6rem 5rem;
   }
-  .tabOuterContainer {
+
+  .tabsContainer {
     justify-content: center;
     gap: 8rem;
   }

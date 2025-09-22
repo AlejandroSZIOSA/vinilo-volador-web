@@ -7,8 +7,8 @@ import {
 } from "react";
 import type { Vinyl } from "../../types/shared";
 import ConfirmDialog, { type ConfirmDialogRef } from "./ConfirmDialog";
-import classes from "./EditItemForm.module.css";
 import ButtonSubmitForm from "../buttons/ButtonSubmitForm";
+import classes from "./EditItemForm.module.css";
 
 type EditFormProps = {
   initialData: Vinyl;
@@ -57,10 +57,7 @@ EditFormProps) {
 
   return (
     <>
-      <form
-        onSubmit={handleOpenDialog}
-        className={classes.editItemFormContainer}
-      >
+      <form onSubmit={handleOpenDialog} className={classes.editItemForm}>
         <div>
           <label htmlFor="artist">Artist</label>
           <input
@@ -95,7 +92,7 @@ EditFormProps) {
           <span>$</span>
         </div>
 
-        <div className={classes.submitBtnContainer}>
+        <div className={classes.submitBtnOuterContainer}>
           <ButtonSubmitForm type="submit" disabled={isDisabled}>
             Done
           </ButtonSubmitForm>

@@ -1,9 +1,8 @@
 import { type FC } from "react";
-import { Navigate, Outlet } from "react-router-dom";
 import { useAuth_Ctx } from "../store/auth-Context";
 import MainHeader from "../components/MainHeader";
 import TabNav from "../components/admin/TabNav";
-
+import { Navigate, Outlet } from "react-router-dom";
 import classes from "./AdminRoot.module.css";
 
 const AdminRootLayout: FC = () => {
@@ -16,7 +15,7 @@ const AdminRootLayout: FC = () => {
         <TabNav />
         <Outlet />
       </main>
-      <div className={classes.mobileBottomArea}></div>
+      <div className={classes.adminBottomArea}></div>
     </>
   ) : (
     <Navigate to="/" />

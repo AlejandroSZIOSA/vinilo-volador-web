@@ -4,7 +4,7 @@ import classes from "./Footer.module.css";
 const Footer: FC = () => {
   return (
     <footer>
-      {/* change the the logo image to responsive desktop */}
+      {/* This changes the the logo image to responsive desktop */}
       <picture>
         <source
           srcSet="/src/assets/icons/facebook_d.png"

@@ -1,5 +1,6 @@
 import type { Event, Admin, Vinyl } from "../types/shared";
 
+//Admin Credentials
 export const ADMIN: Admin = {
   id: "adminTest",
   alias: "admin",
@@ -11,8 +12,8 @@ export const NEXT_EVENT: Event = {
   place: "Some place",
   address: "Some Address",
   date: "Some Date",
-  from: "Time",
-  to: "Time",
+  from: "Some Time",
+  to: "Some Time",
 };
 
 export const VINYLS: Vinyl[] = [
@@ -216,24 +217,22 @@ export const VINYLS: Vinyl[] = [
   {
     id: "903345",
     artist: "Los jaivas",
-    album: "Death or Glory",
-    price: 100,
-    createdAt: "2022-03-01",
+    album: "Alturas de Machu Pichu",
+    price: 150,
+    createdAt: "2022-03-10",
   },
   {
     id: "604542",
     artist: "Amaranto",
-    album: "Animals",
+    album: "El Hacer",
     price: 200,
-    createdAt: "2022-03-01",
+    createdAt: "2024-06-09",
   },
   {
     id: "090128",
     artist: "La ley",
-    album: "Blood of the Nations",
-    price: 100,
-    createdAt: "2022-03-01",
+    album: "Vértigo",
+    price: 140,
+    createdAt: "2021-00-01",
   },
-
-  //... more vinyls
 ];

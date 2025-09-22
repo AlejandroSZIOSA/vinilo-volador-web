@@ -12,6 +12,7 @@ interface RadioGroupProps<T> {
   onChange: (value: T) => void;
 }
 
+// Using generics
 export function RadioGroup<T extends string>({
   name,
   options,

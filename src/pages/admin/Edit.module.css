@@ -4,22 +4,19 @@
   align-items: center;
 }
 
-.editSectionContainer {
-}
-
 .editPageContainer h1 {
   text-align: center;
   padding: 0.7rem 0.7rem;
 }
 
-.formEditItemOuterContainer {
+.editPageFormOuterContainer {
   width: 95vw;
   background-color: #fbffb0;
   border: 2px solid black;
   border-radius: 5%;
 }
 
-.searchSectionEditOuterContainer {
+.editPageSearchSectionOuterContainer {
   width: 100vw;
   padding: 0rem 0.7rem;
 }
@@ -32,19 +29,19 @@
     height: 76vh;
   }
 
-  .editSectionContainer h1 {
+  .editPageEditVinylContainer h1 {
     text-align: center;
   }
 
-  .editSectionContainer {
+  .editPageEditVinylContainer {
     margin-right: 0.7rem;
   }
 
-  .formEditItemOuterContainer {
+  .editPageFormOuterContainer {
     max-width: 18vw;
   }
 
-  .searchSectionEditOuterContainer {
+  .editPageSearchSectionOuterContainer {
     width: 65vw;
     margin-left: 4rem;
   }

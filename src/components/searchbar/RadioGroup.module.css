@@ -10,7 +10,6 @@
   width: 90px;
   justify-content: space-evenly;
   font-size: 1rem;
-  /* background-color: brown; */
 }
 
 .radiogroupContainer input {
@@ -20,6 +19,5 @@
 @media (min-width: 1024px) {
   .radiogroupContainer label {
     font-size: 1.4rem;
-    /* background-color: brown; */
   }
 }

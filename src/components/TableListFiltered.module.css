@@ -1,19 +1,19 @@
-.tableFilteredContainer {
+.tableFiltered {
   border-collapse: collapse;
   width: stretch; /* fix problem with the table */
 }
 
-.tableFilteredContainer thead {
+.tableFiltered thead {
   position: sticky;
   top: 0; /* or left/right/bottom */
   z-index: 10; /* optional: keep it above other content */
 }
 
-.tableFilteredContainer th {
+.tableFiltered th {
   border: 1px solid #000000;
 }
 
-.tableFilteredContainer td {
+.tableFiltered td {
   border: 1px solid #000000;
 }
 
@@ -34,7 +34,7 @@
 }
 
 @media (min-width: 1024px) {
-  .tableFilteredContainer {
+  .tableFiltered {
     width: 100%;
   }
 }

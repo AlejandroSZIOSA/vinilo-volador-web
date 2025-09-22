@@ -6,7 +6,7 @@ const EventPage: FC = () => {
   return (
     <div className={classes.eventPageContainer}>
       <h1> Create "A Pick Up Point"</h1>
-      <div className={classes.formOuterContainer}>
+      <div className={classes.eventPageFormOuterContainer}>
         <CreateEventForm />
       </div>
     </div>

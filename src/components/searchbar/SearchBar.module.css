@@ -1,4 +1,4 @@
-.searchBarOuterContainer {
+.searchBarContainer {
   display: flex;
   justify-content: center;
   padding: 0.8rem 0rem;
@@ -11,7 +11,4 @@
   border-radius: 6px;
   width: 80vw;
   height: 4vh;
-  /*   max-width: 400px;
- */
-  /* margin-bottom: 1rem; */
 }

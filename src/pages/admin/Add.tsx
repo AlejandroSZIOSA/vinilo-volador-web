@@ -6,15 +6,15 @@ import classes from "./Add.module.css";
 const AddPage: FC = () => {
   return (
     <div className={classes.addPageContainer}>
-      <div className={classes.addVinylContainer}>
+      <div className={classes.addPageVinylContainer}>
         <h1>Add Vinyl</h1>
-        <div className={classes.formOuterContainer}>
+        <div className={classes.addPageFormOuterContainer}>
           <CreateItemForm />
         </div>
       </div>
-      <div className={classes.latestAddedListContainer}>
+      <div className={classes.addPageShowLatestItemsContainer}>
         <h1>Latest Added Items</h1>
-        <div className={classes.tableOuterContainer}>
+        <div>
           <TableListShow variant="admin-latest" />
         </div>
       </div>

@@ -80,7 +80,7 @@ const TableListFiltered: FC<TableListProps> = ({
   }
 
   return (
-    <table className={classes.tableFilteredContainer}>
+    <table className={classes.tableFiltered}>
       <thead>
         <tr>
           {USER_TH_KEYS.map((k, index) => (

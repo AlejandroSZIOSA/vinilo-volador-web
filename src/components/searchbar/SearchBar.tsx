@@ -17,7 +17,7 @@ export const SearchBar = ({
   };
 
   return (
-    <div className={classes.searchBarOuterContainer}>
+    <div className={classes.searchBarContainer}>
       <input
         className={classes.searchBarInput}
         type="text"

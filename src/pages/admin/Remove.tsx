@@ -30,14 +30,13 @@ const RemovePage: FC = () => {
   return (
     <div className={classes.removePageContainer}>
       <h1>Remove</h1>
-      <div className={classes.searchRemovePageOuterContainer}>
+      <div className={classes.removePageSearchSectionOuterContainer}>
         <SearchSection
           variant="admin"
           tableListVariant="admin-remove"
           onRemoveFn={handleRemoveClick}
         />
       </div>
-
       <ConfirmDialog
         ref={dialogRef}
         title="Remove Item"

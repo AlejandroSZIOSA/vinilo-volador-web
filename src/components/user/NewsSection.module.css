@@ -1,15 +1,20 @@
 .newsSectionContainer {
   height: 76vh;
+  align-content: center;
 }
-.newsSectionContainer h1 {
-  text-align: center;
+
+.pickUpPlaceContainer {
+  margin-bottom: 1rem;
+}
+
+.newsSectionContainer div h1 {
   padding: 0.9rem 0rem;
+  text-align: center;
 }
 
 .newPlaceInfoOuterContainer {
   display: flex;
   flex-direction: column;
-  /* height: 21vh; */
   padding: 0.5rem;
   align-items: center;
   justify-content: center;
@@ -27,7 +32,7 @@
   padding: 0.4rem 0.4rem;
 }
 
-.newPlaceInfoInnerContainer {
+.newPlaceInfoContainer {
   width: 90%;
   height: 90%;
 }
@@ -48,11 +53,11 @@
     height: auto;
   }
 
-  .newsSectionContainer h1 {
+  .newsSectionContainer div h1 {
     padding: 1.6rem 1.6rem;
   }
 
-  .newPlaceInfoInnerContainer p {
+  .newPlaceInfoContainer p {
     padding: 0.6rem 0.6rem;
   }
 

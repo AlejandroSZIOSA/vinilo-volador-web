@@ -1,23 +1,20 @@
-.createFormContainer {
+.createItemForm {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
 
-.createFormContainer label {
+.createItemForm label {
   text-align: center;
   padding-right: 0.5rem;
-  /* font-size: large; */
 }
 
-.createFormContainer input {
+.createItemForm input {
   width: 70%;
-  /* font-size: medium; */
   padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid #000000;
   border-radius: 6px;
-  /* font-size: larger; */
   background: antiquewhite;
   transition: border-color 0.2s;
 }
@@ -33,7 +30,7 @@
   font-size: large;
 }
 
-.submitBtnContainer {
+.submitBtnOuterContainer {
   display: inline-flex;
   justify-content: center;
 }
@@ -51,7 +48,7 @@
     margin-left: 0.5rem;
     font-size: x-large;
   }
-  .submitBtnContainer {
+  .submitBtnOuterContainer {
     padding-top: 1rem;
   }
 }

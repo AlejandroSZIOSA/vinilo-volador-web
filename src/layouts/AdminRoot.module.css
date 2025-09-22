@@ -1,9 +1,3 @@
-.mobileBottomArea {
+.adminBottomArea {
   height: 2vh;
-}
-
-@media (min-width: 1024px) {
-  .mobileBottomArea {
-    display: none;
-  }
 }

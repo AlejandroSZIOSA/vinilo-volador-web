@@ -1,21 +1,21 @@
-.tableShowContainer {
+.tableListShow {
   width: 100%;
   border-collapse: collapse;
   background-color: white;
 }
 
-.tableShowContainer thead {
+.tableListShow thead {
   position: sticky;
   top: 0; /* or left/right/bottom */
   z-index: 10; /* optional: keep it above other content */
   background-color: rgb(190, 190, 190);
 }
 
-.tableShowContainer th {
+.tableListShow th {
   border: 1px solid #000000;
   /* font-size: x-large; */
 }
 
-.tableShowContainer td {
+.tableListShow td {
   border: 1px solid #000000;
 }

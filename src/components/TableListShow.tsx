@@ -35,7 +35,7 @@ const TableListShow: FC<TableListShowProps> = ({ variant }) => {
     );
   }
   return (
-    <table className={classes.tableShowContainer}>
+    <table className={classes.tableListShow}>
       <thead>{contentTh}</thead>
       <tbody>
         {vinyls_

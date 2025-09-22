@@ -63,7 +63,7 @@ const CreateItemForm: FC = () => {
     <>
       <form
         onSubmit={handleOpenDialog}
-        className={classes.createFormContainer}
+        className={classes.createItemForm}
         ref={formRef}
       >
         <div>
@@ -104,7 +104,7 @@ const CreateItemForm: FC = () => {
           />
           <span>$</span>
         </div>
-        <div className={classes.submitBtnContainer}>
+        <div className={classes.submitBtnOuterContainer}>
           <ButtonSubmitForm type="submit">Add</ButtonSubmitForm>
         </div>
       </form>

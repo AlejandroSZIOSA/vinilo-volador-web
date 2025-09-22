@@ -1,8 +1,8 @@
 import { type FC, type ReactNode } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { HEADER_ICONS_SIZES } from "../../utils/constants";
-import classes from "./NavBar.module.css";
 import { useAuth_Ctx } from "../../store/auth-Context";
+import classes from "./NavBar.module.css";
 
 const NavBar: FC = () => {
   const { is_Authenticated, logout_Fn } = useAuth_Ctx();

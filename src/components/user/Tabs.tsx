@@ -14,7 +14,7 @@ const Tabs = ({ tabs }: TabsProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <>
-      <div className={classes.tabOuterContainer}>
+      <div className={classes.tabsContainer}>
         {tabs.map((tab, index) => (
           <button
             key={index}
