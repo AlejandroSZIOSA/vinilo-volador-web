@@ -76,9 +76,9 @@ const SearchSection: FC<SearchSectionProps> = ({
       className={
         tableListVariant === "admin-show"
           ? classes.searchSectionContainerAdminShow
-          : /* : variant === "user"
-          ? classes.searchSectionContainerUser */
-            classes.searchSectionContainer
+          : tableListVariant === "admin-edit"
+          ? classes.searchSectionContainerAdminEdit
+          : classes.searchSectionContainer
       }
     >
       <div
@@ -112,6 +112,10 @@ const SearchSection: FC<SearchSectionProps> = ({
         className={
           tableListVariant == "admin-show"
             ? classes.tableFilteredOuterContainerAdminShow
+            : tableListVariant == "admin-remove"
+            ? classes.tableFilteredOuterContainerAdminRemove
+            : tableListVariant == "admin-edit"
+            ? classes.tableFilteredOuterContainerAdminEdit
             : classes.tableFilteredOuterContainerUser
         }
       >
