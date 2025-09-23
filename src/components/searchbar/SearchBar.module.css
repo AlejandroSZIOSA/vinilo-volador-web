@@ -2,13 +2,22 @@
   display: flex;
   justify-content: center;
   padding: 0.8rem 0rem;
-  background-color: #d0d0d0;
 }
 
 .searchBarInput {
   padding: 0.5rem;
   border: 1px solid #000000;
   border-radius: 6px;
-  width: 80vw;
+  width: 90%;
   height: 4vh;
+}
+
+@media (min-width: 1024px) {
+  .searchBarContainer {
+    justify-content: unset;
+  }
+
+  .searchBarInput {
+    width: 20vw;
+  }
 }

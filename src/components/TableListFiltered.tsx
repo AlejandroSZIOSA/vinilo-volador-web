@@ -94,15 +94,15 @@ const TableListFiltered: FC<TableListProps> = ({
           <tr key={v.id}>
             <td>{v.artist}</td>
             <td>{v.album}</td>
-            <td>{v.price}</td>
-            <td>{v.id}</td>
+            <td id="priceTd">{v.price}</td>
+            <td id="idTd">{v.id}</td>
             {variant !== "user" &&
               AdminContentTd(v.createdAt, variant, v, onRemoveFn, onEditFn)}
           </tr>
         ))}
         {filteredItems?.length === 0 && (
           <tr>
-            <td>No Matches!</td>
+            <td>Not Found!</td>
           </tr>
         )}
       </tbody>

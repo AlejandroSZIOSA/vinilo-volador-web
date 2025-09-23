@@ -5,6 +5,7 @@
 
 .pickUpPlaceContainer {
   margin-bottom: 1rem;
+  justify-items: center;
 }
 
 .newsSectionContainer div h1 {
@@ -21,6 +22,7 @@
   background-color: #fbffb0;
   border: 3px solid black;
   border-radius: 10px;
+  width: 70vw;
 }
 
 .timeContainer {
@@ -45,16 +47,20 @@
     align-items: anchor-center;
   }
 
+  .newPlaceInfoOuterContainer {
+    width: unset;
+  }
   .pickUpPlaceContainer {
     margin-right: 0.7rem;
   }
 
-  .newPlaceInfoOuterContainer {
-    height: auto;
-  }
-
   .newsSectionContainer div h1 {
     padding: 1.6rem 1.6rem;
+  }
+
+  .newPlaceInfoContainer {
+    width: auto;
+    height: auto;
   }
 
   .newPlaceInfoContainer p {
@@ -63,9 +69,5 @@
 
   .latestAddedItemsContainer {
     margin-left: 4rem;
-  }
-
-  .tableShowOuterContainer {
-    width: 50vw;
   }
 }

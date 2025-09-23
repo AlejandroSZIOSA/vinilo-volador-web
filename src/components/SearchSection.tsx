@@ -75,17 +75,23 @@ const SearchSection: FC<SearchSectionProps> = ({
     <div
       className={
         tableListVariant === "admin-show"
-          ? classes.searchSectionContainerAdminShow
+          ? classes.searchSectionContainerAdminRemove
           : tableListVariant === "admin-edit"
           ? classes.searchSectionContainerAdminEdit
-          : classes.searchSectionContainer
+          : tableListVariant === "admin-remove"
+          ? classes.searchSectionContainerAdminRemove
+          : classes.searchSectionContainerUser
       }
     >
       <div
         className={
           tableListVariant == "admin-edit"
             ? classes.searchSectionInnerContainerAdminEdit
-            : classes.searchSectionInnerContainer
+            : tableListVariant === "admin-show"
+            ? classes.searchSectionInnerContainerAdminRemove
+            : tableListVariant == "admin-remove"
+            ? classes.searchSectionInnerContainerAdminRemove
+            : classes.searchSectionInnerContainerUser
         }
       >
         {/* Change the class dynamic when user is in desktop view */}
@@ -93,7 +99,11 @@ const SearchSection: FC<SearchSectionProps> = ({
           className={
             tableListVariant == "admin-edit"
               ? classes.searchbarOuterContainerAdminEdit
-              : classes.searchbarOuterContainer
+              : tableListVariant == "admin-show"
+              ? classes.searchbarOuterContainerAdminRemove
+              : tableListVariant == "admin-remove"
+              ? classes.searchbarOuterContainerAdminRemove
+              : classes.searchbarOuterContainerUser
           }
         >
           <SearchBar value={search} onChange={setSearch} />

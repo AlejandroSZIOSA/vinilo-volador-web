@@ -36,7 +36,7 @@
   .rootContentContainer {
     padding: 0px 20px;
     margin-bottom: 14px;
-    /* justify-items: center; */
+    justify-items: center;
   }
 
   .tabBtn {

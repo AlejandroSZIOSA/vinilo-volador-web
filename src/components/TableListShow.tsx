@@ -45,8 +45,8 @@ const TableListShow: FC<TableListShowProps> = ({ variant }) => {
             <tr key={v.id}>
               <td>{v.artist}</td>
               <td>{v.album}</td>
-              <td>{v.price}</td>
-              <td>{v.id}</td>
+              <td id="priceTd">{v.price}</td>
+              <td id="idTd">{v.id}</td>
               {variant === "admin-latest" && <td>{v.createdAt}</td>}
             </tr>
           ))}

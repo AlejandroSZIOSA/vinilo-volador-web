@@ -24,12 +24,11 @@
 .passwordInputContainer {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
 }
 
 .showHideBtn {
-  width: 6vw;
-  height: 5vh;
+  width: 55px;
+  height: 45px;
   min-width: fit-content;
   background: #000000;
   color: white;
@@ -48,7 +47,7 @@
     padding: 1rem;
   }
   .showHideBtn {
-    width: 4vw;
-    height: 4vh;
+    width: 58px;
+    height: 48px;
   }
 }
