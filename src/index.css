@@ -75,6 +75,10 @@ button {
   text-align: center;
 }
 
+#createdAtTd {
+  text-align: center;
+}
+
 /* Dark Mode */
 .dark table {
   background-color: rgb(0, 0, 0);

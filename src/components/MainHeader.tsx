@@ -2,10 +2,10 @@ import { type FC } from "react";
 import NavBar from "./in-Header/NavBar";
 import { useAuth_Ctx } from "../store/auth-Context";
 import ShowDateTime from "./in-Header/ShowDateTime";
-import DarkLightToggle from "./in-Header/DarkLightToggle";
-import classes from "./MainHeader.module.css";
+import DarkLightToggleBtn from "./in-Header/DarkLightToggleBtn";
 import { Link } from "react-router-dom";
 import { HEADER_ICONS_SIZES } from "../utils/constants";
+import classes from "./MainHeader.module.css";
 
 const MainHeader: FC = () => {
   const { is_Authenticated } = useAuth_Ctx();
@@ -37,7 +37,7 @@ const MainHeader: FC = () => {
         )}
         {/* fix: Using dynamic css classes */}
         <div>
-          <DarkLightToggle />
+          <DarkLightToggleBtn />
         </div>
         <NavBar />
       </div>

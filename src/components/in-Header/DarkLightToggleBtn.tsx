@@ -1,10 +1,8 @@
 import { type FC } from "react";
-import classes from "./DarkLightToggle.module.css";
-
 import { useUi_Ctx } from "../../store/ui-Context";
+import classes from "./DarkLightToggleBtn.module.css";
 
-/* TODO:change the name of the component
- */ const DarkLightToggle: FC = () => {
+const DarkLightToggleBtn: FC = () => {
   const { theme_, toggleTheme_Fn } = useUi_Ctx();
   return (
     <button
@@ -20,4 +18,4 @@ import { useUi_Ctx } from "../../store/ui-Context";
   );
 };
 
-export default DarkLightToggle;
+export default DarkLightToggleBtn;

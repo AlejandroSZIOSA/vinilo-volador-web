@@ -23,7 +23,7 @@ const AdminContentTd = (
 ) => {
   switch (variant) {
     case "admin-show":
-      return <td>{createdAt}</td>;
+      return <td id="createdAtTd">{createdAt}</td>;
     case "admin-remove":
       return (
         <td className={classes.tdImageDelete}>
@@ -90,16 +90,19 @@ const TableListFiltered: FC<TableListProps> = ({
         </tr>
       </thead>
       <tbody>
-        {filteredItems?.map((v) => (
-          <tr key={v.id}>
-            <td>{v.artist}</td>
-            <td>{v.album}</td>
-            <td id="priceTd">{v.price}</td>
-            <td id="idTd">{v.id}</td>
-            {variant !== "user" &&
-              AdminContentTd(v.createdAt, variant, v, onRemoveFn, onEditFn)}
-          </tr>
-        ))}
+        {filteredItems
+          ?.slice()
+          .reverse() /* reverse the order of the list */
+          .map((v) => (
+            <tr key={v.id}>
+              <td>{v.artist}</td>
+              <td>{v.album}</td>
+              <td id="priceTd">{v.price}</td>
+              <td id="idTd">{v.id}</td>
+              {variant !== "user" &&
+                AdminContentTd(v.createdAt, variant, v, onRemoveFn, onEditFn)}
+            </tr>
+          ))}
         {filteredItems?.length === 0 && (
           <tr>
             <td>Not Found!</td>
