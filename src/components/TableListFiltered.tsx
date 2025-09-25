@@ -2,8 +2,10 @@ import { type ReactNode, type FC } from "react";
 import TableItemBtn from "./buttons/TableItemBtn";
 import type { Vinyl } from "../types/shared";
 import { USER_TH_KEYS } from "../utils/constants";
-import { TABLE_ICONS_SIZES } from "../utils/constants";
 
+import { TABLE_ICONS_SIZES } from "../utils/constants";
+import DeleteIcon from "../assets/icons/delete.svg";
+import EditIcon from "../assets/icons/edit.svg";
 import classes from "./TableListFiltered.module.css";
 
 type TableListProps = {
@@ -30,7 +32,7 @@ const AdminContentTd = (
           <div>
             <TableItemBtn variant="remove" item={item} onRemoveFn={onRemoveFn}>
               <img
-                src="/src/assets/icons/delete.svg"
+                src={DeleteIcon}
                 width={TABLE_ICONS_SIZES.width}
                 height={TABLE_ICONS_SIZES.height}
               ></img>
@@ -45,7 +47,7 @@ const AdminContentTd = (
           <div>
             <TableItemBtn variant="edit" item={item} onEditFn={onEditFn}>
               <img
-                src="/src/assets/icons/edit.svg"
+                src={EditIcon}
                 width={TABLE_ICONS_SIZES.width}
                 height={TABLE_ICONS_SIZES.height}
               ></img>

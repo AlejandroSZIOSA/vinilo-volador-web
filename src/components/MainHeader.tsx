@@ -5,8 +5,9 @@ import ShowDateTime from "./in-Header/ShowDateTime";
 import DarkLightToggleBtn from "./in-Header/DarkLightToggleBtn";
 import { Link } from "react-router-dom";
 import { HEADER_ICONS_SIZES } from "../utils/constants";
-import classes from "./MainHeader.module.css";
 import HomeIcon from "../assets/icons/home.svg";
+import AdminModeIcon from "../assets/icons/adminUnlock.svg";
+import classes from "./MainHeader.module.css";
 
 const MainHeader: FC = () => {
   const { is_Authenticated } = useAuth_Ctx();
@@ -17,11 +18,7 @@ const MainHeader: FC = () => {
       <div className={classes.headerInnerContainer}>
         {is_Authenticated ? (
           <div className={classes.userLogoContainer}>
-            <img
-              src="/src/assets/icons/adminUnlock.svg"
-              width={width}
-              height={height}
-            ></img>
+            <img src={AdminModeIcon} width={width} height={height}></img>
             <p>Admin</p>
           </div>
         ) : (

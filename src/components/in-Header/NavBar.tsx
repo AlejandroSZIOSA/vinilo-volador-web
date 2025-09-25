@@ -2,6 +2,8 @@ import { type FC, type ReactNode } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { HEADER_ICONS_SIZES } from "../../utils/constants";
 import { useAuth_Ctx } from "../../store/auth-Context";
+import AdminLogoutLockIcon from "../../assets/icons/logout-lock.svg";
+import AdminLoginLockIcon from "../../assets/icons/adminLock.svg";
 import classes from "./NavBar.module.css";
 
 const NavBar: FC = () => {
@@ -16,14 +18,13 @@ const NavBar: FC = () => {
   }
 
   let content: ReactNode;
-
   if (is_Authenticated) {
     content = (
       <li>
         <div>
           <p>LogOut</p>
           <img
-            src="/src/assets/icons/logout-lock.svg"
+            src={AdminLogoutLockIcon}
             width={width}
             height={height}
             onClick={handleLogOut}
@@ -37,11 +38,7 @@ const NavBar: FC = () => {
         <NavLink to="/login">
           <div>
             <p>LogIn</p>
-            <img
-              src="/src/assets/icons/adminLock.svg"
-              width={width}
-              height={height}
-            ></img>
+            <img src={AdminLoginLockIcon} width={width} height={height}></img>
           </div>
         </NavLink>
       </li>

@@ -1,4 +1,6 @@
 import { type FC } from "react";
+import FacebookIcon from "../../assets/icons/facebook-icon.svg";
+import FacebookLogoIcon from "../../assets/icons/facebook-logo.png";
 import classes from "./Footer.module.css";
 
 const Footer: FC = () => {
@@ -6,12 +8,9 @@ const Footer: FC = () => {
     <footer>
       {/* This changes the the logo image to responsive desktop */}
       <picture>
-        <source
-          srcSet="/src/assets/icons/facebook_d.png"
-          media="(min-width: 1024px)"
-        />
+        <source srcSet={FacebookLogoIcon} media="(min-width: 1024px)" />
         <img
-          src="/src/assets/icons/facebook.svg"
+          src={FacebookIcon}
           className={classes.contactLogo}
           alt="Facebook Icon"
         ></img>

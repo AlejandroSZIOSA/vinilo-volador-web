@@ -1,5 +1,6 @@
 import { type FC } from "react";
 import { useAdmin_Ctx } from "../../store/admin-Context";
+import UpdatedIcon from "../../assets/icons/updated.svg";
 import classes from "./showDateTime.module.css";
 
 const ShowDateTime: FC = () => {
@@ -7,7 +8,7 @@ const ShowDateTime: FC = () => {
 
   return (
     <div className={classes.showDateTimeContainer}>
-      <img src="/src/assets/icons/updated.svg" width={13} height="auto"></img>
+      <img src={UpdatedIcon} width={13} height="auto"></img>
       <div>{updated_ListDate}</div>
     </div>
   );
