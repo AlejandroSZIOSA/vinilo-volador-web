@@ -6,6 +6,7 @@ import DarkLightToggleBtn from "./in-Header/DarkLightToggleBtn";
 import { Link } from "react-router-dom";
 import { HEADER_ICONS_SIZES } from "../utils/constants";
 import classes from "./MainHeader.module.css";
+import HomeIcon from "../assets/icons/home.svg";
 
 const MainHeader: FC = () => {
   const { is_Authenticated } = useAuth_Ctx();
@@ -26,11 +27,7 @@ const MainHeader: FC = () => {
         ) : (
           <Link to={"/"}>
             <div className={classes.userLogoContainer}>
-              <img
-                src="/src/assets/icons/home.svg"
-                width={width}
-                height={height}
-              ></img>
+              <img src={HomeIcon} width={width} height={height}></img>
               <p>Home</p>
             </div>
           </Link>
