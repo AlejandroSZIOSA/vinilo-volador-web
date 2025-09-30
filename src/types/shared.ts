@@ -9,7 +9,7 @@ export type Event = {
 export type Admin = {
   id: string;
   alias: string;
-  password: "123" | "234";
+  password: "12" | "123";
 };
 
 export type Vinyl = {

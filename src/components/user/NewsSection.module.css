@@ -22,7 +22,7 @@
   background-color: #fbffb0;
   border: 3px solid black;
   border-radius: 10px;
-  width: 70vw;
+  width: 75vw;
 }
 
 .timeContainer {
@@ -48,7 +48,7 @@
   }
 
   .newPlaceInfoOuterContainer {
-    width: unset;
+    width: 19vw;
   }
   .pickUpPlaceContainer {
     margin-right: 0.7rem;

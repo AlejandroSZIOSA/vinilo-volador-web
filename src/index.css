@@ -112,6 +112,10 @@ button {
 
 /* Responsive styles to Desktop */
 @media (min-width: 1024px) {
+  footer {
+    height: 5vh;
+  }
+
   h1 {
     font-size: 3rem;
   }

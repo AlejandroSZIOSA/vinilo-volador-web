@@ -2,18 +2,18 @@ import type { Event, Admin, Vinyl } from "../types/shared";
 
 //Admin Credentials
 export const ADMIN: Admin = {
-  id: "adminTest",
+  id: "adminCredential",
   alias: "admin",
-  password: "123",
+  password: "12",
 };
 
 //Default next event "Pick up point" information
 export const NEXT_EVENT: Event = {
-  place: "Some place",
-  address: "Some Address",
-  date: "Some Date",
-  from: "Some Time",
-  to: "Some Time",
+  place: "Nothing yet",
+  address: "Nothing yet",
+  date: "Nothing yet",
+  from: "Nothing yet",
+  to: "Nothing yet",
 };
 
 export const VINYLS: Vinyl[] = [

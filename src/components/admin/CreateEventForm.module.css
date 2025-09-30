@@ -10,7 +10,7 @@
 }
 
 .createEventForm input {
-  width: 75%;
+  width: 74%;
   font-size: medium;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -33,7 +33,6 @@
 .timeContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .timeContainer input {
@@ -47,7 +46,14 @@
 }
 
 @media (min-width: 1024px) {
+  .createEventForm input {
+    width: 70%;
+  }
+  .dateContainer input {
+    width: 40%;
+  }
   .timeContainer input {
+    flex-direction: column;
     width: 35%;
   }
 }
