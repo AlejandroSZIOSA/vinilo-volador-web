@@ -29,7 +29,7 @@ const RemovePage: FC = () => {
 
   return (
     <div className={classes.removePageContainer}>
-      <h1>Remove</h1>
+      <h1>Remove Vinyl</h1>
       <div className={classes.removePageSearchSectionOuterContainer}>
         <SearchSection
           variant="admin"

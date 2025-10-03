@@ -37,7 +37,7 @@ const EditPage: FC = () => {
   return (
     <div className={classes.editPageContainer}>
       <div className={classes.editPageEditVinylContainer}>
-        <h1>Edit</h1>
+        <h1>Edit Vinyl</h1>
         <div className={classes.editPageFormOuterContainer}>
           <EditItemForm
             initialData={vinyl}

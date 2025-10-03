@@ -39,7 +39,7 @@ const NewsSection: FC = () => {
       </div>
 
       <div className={classes.latestAddedItemsContainer}>
-        <h1>Latest Added Items</h1>
+        <h1>Latest Added Vinyls</h1>
         <div>
           <TableListShow variant="user-latest" />
         </div>

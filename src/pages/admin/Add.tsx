@@ -13,7 +13,7 @@ const AddPage: FC = () => {
         </div>
       </div>
       <div className={classes.addPageShowLatestItemsContainer}>
-        <h1>Latest Added Items</h1>
+        <h1>Latest Added Vinyls</h1>
         <div>
           <TableListShow variant="admin-latest" />
         </div>
