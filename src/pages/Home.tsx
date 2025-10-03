@@ -7,7 +7,7 @@ import NewsSection from "../components/user/NewsSection";
 const HomePage: FC = () => {
   const tabData = [
     {
-      label: "Vinyl Stack",
+      label: "Vinyls",
       content: <HomeSection />,
     },
     { label: "News", content: <NewsSection /> },
