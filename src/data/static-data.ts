@@ -3,7 +3,7 @@ import type { Event, Admin, Vinyl } from "../types/shared";
 //Admin Credentials
 export const ADMIN: Admin = {
   id: "adminCredential",
-  alias: "admin",
+  alias: "ADMIN",
   password: "12",
 };
 
