@@ -42,7 +42,7 @@ usability across different user roles (e.g., User, Admin) and devices (mobile an
 .tableFilteredOuterContainerUser {
   overflow-y: auto;
   border: 1px solid #000000;
-  height: 67vh;
+  height: 64vh;
 }
 
 .tableFilteredOuterContainerAdminShow {

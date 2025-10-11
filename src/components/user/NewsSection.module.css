@@ -4,12 +4,11 @@
 }
 
 .pickUpPlaceContainer {
-  margin-bottom: 1rem;
   justify-items: center;
 }
 
 .newsSectionContainer div h1 {
-  padding: 0.9rem 0rem;
+  padding: 0.5rem 0rem;
   text-align: center;
 }
 
