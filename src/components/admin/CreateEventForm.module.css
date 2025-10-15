@@ -4,6 +4,13 @@
   padding: 1rem;
 }
 
+.placeAdressContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  /*   justify-content: center; */
+}
+
 .createEventForm label {
   text-align: center;
   padding-right: 0.5rem;

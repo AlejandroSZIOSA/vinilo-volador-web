@@ -1,16 +1,19 @@
 .rootContentContainer {
-  padding: 0px 10px 12px 10px;
+  padding: 0 0.3rem;
 }
 
 .tabsContainer {
   display: flex;
   border-bottom: 2px solid #ccc;
   background: #b51717;
-  padding: 0.4rem;
+  padding: 0.6rem;
   justify-content: space-around;
 }
 
 .tabBtn {
+  display: flex;
+  width: 9rem;
+  justify-content: center;
   border-top: none;
   border-left: none;
   border-right: none;

@@ -61,7 +61,7 @@ const CreateEventForm: FC = () => {
         ref={formRef}
       >
         <h2>Place</h2>
-        <div>
+        <div className={classes.placeAdressContainer}>
           <label htmlFor="place">Place</label>
           <input
             placeholder="place"
@@ -73,7 +73,7 @@ const CreateEventForm: FC = () => {
             required
           />
         </div>
-        <div>
+        <div className={classes.placeAdressContainer}>
           <label htmlFor="address">Address</label>
           <input
             placeholder="address"

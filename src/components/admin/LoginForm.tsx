@@ -46,6 +46,7 @@ const LoginForm: FC<LoginFormProps> = ({ handleLoginFn }) => {
           ref={password}
           required
         />
+
         <button
           type="button"
           onClick={toggleShowPassword}
